@@ -1,4 +1,5 @@
 deploy-claim.json
 
 .netlify/
-
+.env
+.env.*
