@@ -1,0 +1,16 @@
+【公众号封面】
+- 上传用 assets/cover-combined.jpg（亦见 slug 根目录 cover-combined.jpg），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版封面裁左侧 900×383；方形封面裁右侧 383×383。
+- 封面为扁平科技风抽象节点/芯片，无文字；封面不进正文。
+
+【正文配图】（主机名已虚化为 LAOLI-PC，无真实用户名）
+1. assets/fig-overview-engines.jpg —「引擎：接管本机 Ollama」下。Overview：LOCAL + Ollama 开，LM Studio/llama.cpp 下载按钮。
+2. assets/fig-jobs-warm.jpg —「实测数字」下。Jobs 两次 qwen3:4b 完成。
+3. assets/fig-overview-final.jpg — 数字段末。最终 Overview。
+4. assets/fig-welcome.jpg — 可选（欢迎弹层）；本稿正文未嵌入，留作备用。
+
+跳过：01-full-desktop、02-pair-overview.png（拍摄质量差）。
+
+【文中广告位】正文内短占位【广告位1】【广告位2】；编辑器原位插入广告替换。详见 AD-SLOTS.txt。
+
+【虚拟路径】正文仅用 C:\Users\laoli\projects\pair-test\ …，禁止真实 Windows 用户名 / demo。

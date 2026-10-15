@@ -1,0 +1,23 @@
+【公众号封面】
+- 上传用 assets/cover-combined.jpg（slug 根目录亦有 cover-combined.jpg），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版封面裁左侧 900×383；方形封面裁右侧 383×383。
+- 封面为高对比扁平风：可读销售表（脏格琥珀/红）+ 抓头崩溃办公人像焦点；无封面文字、无路径、无上传提示；封面不进正文。
+
+【正文配图】
+1. assets/fig4-dirty-sample.jpg —「脏表长啥样」下。样例表抽样，黄底标脏点。
+2. assets/fig1-ui-home.jpg —「打开 WorkBuddy」下。主界面真屏摄；红框分别框住「分析数据」快捷入口与输入框「+」附件。
+3. assets/fig2-t1-running.jpg —「约 3 分钟：51→48」下。红框框任务标题「清洗门店周销售明细表」与改小脚本 / 跑检查段落。
+4. assets/fig6-t1-sheets.jpg — 五张表交齐示意；红框框住五张 sheet 卡片。
+5. assets/fig5-mismatch.jpg —「金额不一致清单」表可视化（6 行）；红框框住整张清单表。
+6. assets/fig3-t4-building.jpg —「再花 1–2 分钟：Excel 里真插了柱状图」下。红框框住「统计型建表 + 柱状图」相关日志（build workbook / build.py / 执行建表）。
+7. assets/fig7-store-bars.jpg — 各门店销售金额对比柱状图；红框框住柱状图区域。
+
+备用（未嵌入正文）：assets/fig0-loggedin.jpg。
+内部原图仅留 shots/，含可能的本机信息；对外只用 assets/ 已裁切 UI 屏。
+
+【文中广告位】正文短占位【广告位1】【广告位2】；编辑器原位插入广告替换。详见 AD-SLOTS.txt。
+
+【虚拟路径】正文与图说一律 C:\Users\laoli\projects\workbuddy-excel\ …，禁止真实本机用户名、demo、真实主机名。
+
+【字形修复 2026-10-15】
+合成图 fig4/fig5/fig6/fig7 与红框标注改用 Noto Sans CJK SC（index=2），「门店」一律简体「门」，避免 JP 字形把 U+95E8 画成類門/闩。xlsx 内文本本身已是简体门。

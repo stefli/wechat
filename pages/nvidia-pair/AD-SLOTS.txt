@@ -1,0 +1,20 @@
+微信公众号 · 文中广告位（nvidia-pair 稿）
+========================================
+
+本稿两处占位（已写入 COPY-standalone.html / BODY.html 正文）
+----------------------------------------------------------
+1) 广告位1 — 节后：「本机环境」
+   节前：「安装：正式要管理员，我这趟先解压跑通」
+   位置：环境讲完之后
+
+2) 广告位2 — 节后：「实测数字」
+   节前：「这趟踩过的坑」
+   位置：结果与截图之后、踩坑/判断之前
+
+占位 HTML
+---------
+<section data-mp-ad-slot="N" style="margin:24px 0;padding:18px 14px;background-color:#F8FAFC;border-radius:12px;text-align:center;">
+  <p style="margin:0;padding:0;font-size:13px;line-height:1.7;color:#64748B;text-align:center;">【广告位N】</p>
+</section>
+
+操作：复制正文 → 公众号编辑器粘贴 → 找到两个灰框 → 删除灰框 → 在原位「插入广告」。

@@ -1,0 +1,12 @@
+【推荐】本机 RTX 刚装上：NVIDIA PAIR 1.0 把局域网显卡串起来了
+【媒体体】
+NVIDIA PAIR 1.0 实测：Windows + RTX 5060，Ollama 代理聊天跑通
+8G 显卡笔记本上手 PAIR 1.0：单机通了，多机还没串
+本机装上 RTX 之后：我用 NVIDIA PAIR 1.0 把本地推理接进代理
+【博主体】
+本机 RTX 刚装上：NVIDIA PAIR 1.0 把局域网显卡串起来了
+别只看发布会：老李本机把 PAIR 1.0 解压跑通了
+冷 67 秒、热 34 秒：PAIR 接管 Ollama 后我记下的数
+正式安装要管理员——PAIR 1.0 我先解压摸了一遍
+一块 8G 笔记本显卡，PAIR + qwen3:4b 本机聊通了
+局域网显卡池？PAIR 1.0 我这边先把单机跑实了

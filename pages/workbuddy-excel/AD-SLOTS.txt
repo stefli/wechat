@@ -1,0 +1,20 @@
+微信公众号 · 文中广告位（workbuddy-excel 稿）
+========================================
+
+本稿两处占位（已写入 COPY-standalone.html / BODY.html 正文）
+----------------------------------------------------------
+1) 广告位1 — 节后：「打开 WorkBuddy：办公快捷入口就在那」
+   节前：「约 3 分钟：51→48，还顺手把汇总也做了」
+   位置：环境/界面讲完之后、主清洗流程之前
+
+2) 广告位2 — 节后：「再花 1–2 分钟：Excel 里真插了柱状图」
+   节前：「一句话结论：可直接交差」
+   位置：结果与图表之后、结论/使用建议/品牌区之前
+
+占位 HTML
+---------
+<section data-mp-ad-slot="N" style="margin:24px 0;padding:18px 14px;background-color:#F8FAFC;border-radius:12px;text-align:center;">
+  <p style="margin:0;padding:0;font-size:13px;line-height:1.7;color:#64748B;text-align:center;">【广告位N】</p>
+</section>
+
+操作：复制正文 → 公众号编辑器粘贴 → 找到两个灰框 → 删除灰框 → 在原位「插入广告」。
