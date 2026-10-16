@@ -7,11 +7,11 @@
 1. assets/fig-01-cli-free-models.png —「菜单上真有免费菜」下。真屏：CLI 免费模型列表 + smoke 摘要。
 2. assets/fig-02-docs-free-models.png — 同节。官方 Free models 文档节真屏。
 3. assets/fig-04-code-compare.png —「同一道题」下。双模型代码导出对比证据卡（非聊天正文 UI）。
-4. assets/fig-03-webui-sessions.png — 同节。据本机 Web 会话列表重绘，主机名 scrub 为 laoli；会话正文 UI 未截全，图说已标明。
+4. assets/fig-03-webui-sessions.png — 同节。本机 Web 会话列表示意（读者可见路径 /home/laoli/...）；会话正文 UI 未截全，图说已标明。
 
 【未交付截图】
 - OpenCode Web／TUI 会话正文流（pair/CDP 不稳未截全）——不以假图充真屏；以 fig-01/04 与 smoke 导出为准。
 
 【文中广告位】【广告位1】装完/看见列表后；【广告位2】对比与「无限/本地」之后、缺点之前。详见 AD-SLOTS.txt。
 
-【虚拟路径】正文与图说一律 /home/laoli/... ；禁止真实本机用户名与真实主机名（一律用 laoli）。
+【虚拟路径｜作者备忘｜勿写入正文】读者可见路径直接写成 /home/laoli/...（或本篇对应 OS 形态），不要在正文解释「对外一律／scrub」规则；禁止真实本机用户名与真实主机名。
