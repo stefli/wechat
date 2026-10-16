@@ -15,20 +15,26 @@
   html, body {
     margin: 0; padding: 0; background: var(--bg); color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden; /* no outer document scrollbar — columns scroll internally */
   }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 16px 14px 48px; }
+  .wrap {
+    max-width: 1180px; margin: 0 auto;
+    height: 100%;
+    padding: 12px 14px;
+    display: flex; flex-direction: column;
+    min-height: 0;
+  }
   .layout {
+    flex: 1; min-height: 0;
     display: grid;
     grid-template-columns: minmax(260px, 2fr) minmax(340px, 3fr);
     gap: 14px;
-    align-items: start;
+    align-items: stretch;
   }
-  .col-left, .col-right { min-width: 0; }
+  .col-left, .col-right { min-width: 0; min-height: 0; height: 100%; }
   .col-right {
-    position: sticky;
-    top: 12px;
-    align-self: start;
-    max-height: calc(100vh - 24px);
     display: flex;
     flex-direction: column;
   }
@@ -101,7 +107,7 @@
   }
   .body-card {
     margin: 0; display: flex; flex-direction: column; flex: 1; min-height: 0;
-    max-height: calc(100vh - 24px); padding-bottom: 10px;
+    padding-bottom: 10px;
   }
   .body-head {
     display: flex; align-items: center; justify-content: space-between; gap: 10px;
@@ -115,15 +121,11 @@
     zoom: 0.9;
   }
   .article-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-  /* Always-reserve gutter + thin scrollbar (no hover width jump) */
+  /* Left + article scroll; hover-show bars; stable gutter so width never jumps */
   .col-left {
-    max-height: calc(100vh - 24px);
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    position: sticky;
-    top: 12px;
-    align-self: start;
     scrollbar-gutter: stable;
   }
   .article-scroll {
@@ -131,18 +133,26 @@
   }
   .col-left,
   .article-scroll {
+    scrollbar-width: none; /* Firefox: hide until hover */
+  }
+  .col-left:hover,
+  .article-scroll:hover {
     scrollbar-width: thin;
     scrollbar-color: rgba(100, 116, 139, .45) transparent;
   }
   .col-left::-webkit-scrollbar,
   .article-scroll::-webkit-scrollbar {
-    width: 6px;
+    width: 6px; /* keep track size; gutter already reserved */
     height: 6px;
   }
   .col-left::-webkit-scrollbar-thumb,
   .article-scroll::-webkit-scrollbar-thumb {
-    background: rgba(100, 116, 139, .45);
+    background: transparent;
     border-radius: 999px;
+  }
+  .col-left:hover::-webkit-scrollbar-thumb,
+  .article-scroll:hover::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, .45);
   }
   .col-left::-webkit-scrollbar-track,
   .article-scroll::-webkit-scrollbar-track {
@@ -153,11 +163,14 @@
     display: none; gap: 8px; padding: 10px 14px; margin: 0 -14px 12px;
     background: rgba(241,245,249,.96); border-bottom: 1px solid var(--line);
     position: sticky; top: 0; z-index: 40; backdrop-filter: blur(8px);
+    flex-shrink: 0;
   }
   .mobile-sticky-bar .btn { flex: 1; text-align: center; padding: 10px 8px; font-size: 13px; }
   @media (max-width: 720px) {
-    .layout { grid-template-columns: 1fr; }
-    .col-left, .col-right { position: static; max-height: none; overflow: visible; }
+    html, body { height: auto; overflow: auto; }
+    .wrap { height: auto; padding: 16px 14px 48px; }
+    .layout { display: block; height: auto; }
+    .col-left, .col-right { height: auto; max-height: none; overflow: visible; }
     .body-card { max-height: none; }
     .article-scroll { overflow: visible; }
     .mobile-sticky-bar { display: flex; }
