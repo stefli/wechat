@@ -2,7 +2,8 @@
 """Rebuild the article listing from public/<slug>/index.html.
 
 Writes the same page to public/index.html and pages/index.html (they are
-mirrors). publish.sh calls this after syncing a slug.
+mirrors). Styles live in public/index.css and are copied to pages/index.css
+so the mirror stays styled. publish.sh calls this after syncing a slug.
 
 Date: a publication date in the article (meta, <time>, <title>, or a byline
 such as 发布于 / 写于 / 日期：). Dates that only appear inside the body
@@ -16,6 +17,7 @@ from __future__ import annotations
 
 import html
 import re
+import shutil
 import subprocess
 import sys
 from datetime import datetime
@@ -25,6 +27,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 PAGES_INDEX = ROOT / "pages" / "index.html"
+PUBLIC_CSS = PUBLIC / "index.css"
+PAGES_CSS = ROOT / "pages" / "index.css"
 SHANGHAI = ZoneInfo("Asia/Shanghai")
 
 CHROME_HEADINGS = {
@@ -284,48 +288,39 @@ def render(rows: list[dict]) -> str:
             )
         )
     body = "\n".join(items)
+    count = len(rows)
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="robots" content="noindex,nofollow"/>
-  <title>WeChat COPY pages</title>
-  <style>
-    body {{
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-      max-width: 40rem;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      color: #111;
-      line-height: 1.5;
-    }}
-    h1 {{ font-size: 1.35rem; font-weight: 600; margin: 0 0 .35rem; }}
-    .lead {{ margin: 0 0 1.25rem; color: #64748b; font-size: .9rem; }}
-    ul {{ list-style: none; margin: 0; padding: 0; }}
-    li {{ border-top: 1px solid #e5e7eb; }}
-    li:last-child {{ border-bottom: 1px solid #e5e7eb; }}
-    a.row {{ display: block; padding: .85rem 0; text-decoration: none; color: inherit; }}
-    a.row:hover .title, a.row:focus .title {{ text-decoration: underline; }}
-    time {{
-      display: block;
-      font-size: .82rem;
-      color: #64748b;
-      font-variant-numeric: tabular-nums;
-    }}
-    .title {{ display: block; margin-top: .15rem; color: #07c; font-size: 1.05rem; line-height: 1.45; }}
-    .slug {{ display: block; margin-top: .15rem; color: #94a3b8; font-size: .75rem; }}
-  </style>
+  <meta name="color-scheme" content="light dark"/>
+  <title>文稿索引 · WeChat COPY</title>
+  <link rel="stylesheet" href="./index.css"/>
 </head>
 <body>
-  <h1>WeChat COPY pages</h1>
-  <p class="lead">文章按日期排列，新的在前。点进去可在手机上复制标题和正文。</p>
-  <ul>
+  <div class="wrap">
+    <header class="mast">
+      <p class="kicker">WeChat COPY</p>
+      <h1>文稿索引</h1>
+      <p class="lead">共 {count} 篇，按日期排列，新的在前。点进去可在手机上复制标题和正文。</p>
+    </header>
+    <ul class="articles">
 {body}
-  </ul>
+    </ul>
+  </div>
 </body>
 </html>
 """
+
+
+def mirror_css() -> None:
+    if not PUBLIC_CSS.is_file():
+        print(f"missing {PUBLIC_CSS.relative_to(ROOT)}", file=sys.stderr)
+        raise SystemExit(1)
+    PAGES_CSS.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(PUBLIC_CSS, PAGES_CSS)
 
 
 def main() -> int:
@@ -338,9 +333,13 @@ def main() -> int:
     out.write_text(page, encoding="utf-8")
     PAGES_INDEX.parent.mkdir(parents=True, exist_ok=True)
     PAGES_INDEX.write_text(page, encoding="utf-8")
+    mirror_css()
     for row in rows:
         print(f"{row['date']}\t{row['source']}\t{row['slug']}\t{row['title']}")
-    print(f"wrote {out.relative_to(ROOT)} and {PAGES_INDEX.relative_to(ROOT)}")
+    print(
+        f"wrote {out.relative_to(ROOT)} and {PAGES_INDEX.relative_to(ROOT)}; "
+        f"copied {PUBLIC_CSS.relative_to(ROOT)} to {PAGES_CSS.relative_to(ROOT)}"
+    )
     return 0
 
 

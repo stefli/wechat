@@ -1,0 +1,183 @@
+/* Homepage for the WeChat COPY index. Linked from the page that
+   scripts/build-index.py writes to public/index.html and pages/index.html. */
+
+:root {
+  color-scheme: light;
+  --bg: #fafafa;
+  --ink: #1a1a1a;
+  --muted: #5f5f5f;
+  --faint: #6e6e6e;
+  --line: #e4e4e4;
+  --hover: #f0f0f0;
+  --focus: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #171717;
+    --ink: #f3f3f3;
+    --muted: #c4c4c4;
+    --faint: #a3a3a3;
+    --line: #333333;
+    --hover: #222222;
+    --focus: #f3f3f3;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC",
+    "Microsoft YaHei", "WenQuanYi Micro Hei", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: min(40rem, 100%);
+  margin: 0 auto;
+  padding:
+    max(1.5rem, env(safe-area-inset-top))
+    max(1.15rem, env(safe-area-inset-right))
+    max(2.75rem, env(safe-area-inset-bottom))
+    max(1.15rem, env(safe-area-inset-left));
+}
+
+.mast {
+  margin: 0 0 0.35rem;
+  padding-bottom: 1rem;
+}
+
+.kicker {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.lead {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.articles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.articles li {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+a.row {
+  display: grid;
+  grid-template-areas:
+    "date"
+    "title"
+    "slug";
+  gap: 0.15rem;
+  min-height: 3.25rem;
+  margin: 0 -0.35rem;
+  padding: 0.95rem 0.35rem;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+time {
+  grid-area: date;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+
+.title {
+  grid-area: title;
+  color: var(--ink);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.slug {
+  grid-area: slug;
+  color: var(--faint);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+a.row:hover {
+  background: var(--hover);
+}
+
+a.row:hover .title,
+a.row:focus-visible .title {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+a.row:focus {
+  outline: none;
+}
+
+a.row:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+a.row:active {
+  background: var(--hover);
+}
+
+@media (min-width: 40rem) {
+  .wrap {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  a.row {
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    grid-template-areas:
+      "date title"
+      "date slug";
+    column-gap: 1rem;
+    align-items: baseline;
+    padding-top: 1rem;
+    padding-bottom: 0.95rem;
+  }
+}
