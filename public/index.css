@@ -49,7 +49,7 @@ body {
 }
 
 .wrap {
-  width: min(40rem, 100%);
+  width: min(56rem, 100%);
   margin: 0 auto;
   padding:
     max(1.5rem, env(safe-area-inset-top))
@@ -126,6 +126,10 @@ time {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .slug {
