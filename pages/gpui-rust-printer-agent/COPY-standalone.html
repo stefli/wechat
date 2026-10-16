@@ -68,7 +68,7 @@
     overflow-wrap: anywhere; word-break: break-word; white-space: normal;
   }
   .score-line {
-    margin: 8px 0 10px; display: inline-flex; align-items: center; gap: 6px;
+    margin: 8px 0 0; display: inline-flex; align-items: center; gap: 6px;
     background: var(--teal-soft); color: var(--teal);
     border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600;
   }
@@ -122,6 +122,54 @@
     zoom: 0.9;
   }
   .article-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  /* Hover-only scrollbars: left column + right article stage */
+  .col-left {
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: sticky;
+    top: 12px;
+    align-self: start;
+  }
+  .col-left,
+  .article-scroll,
+  ol.titles {
+    scrollbar-width: none;
+  }
+  .col-left:hover,
+  .article-scroll:hover,
+  ol.titles:hover {
+    scrollbar-width: thin;
+  }
+  .col-left::-webkit-scrollbar,
+  .article-scroll::-webkit-scrollbar,
+  ol.titles::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .col-left:hover::-webkit-scrollbar,
+  .article-scroll:hover::-webkit-scrollbar,
+  ol.titles:hover::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .col-left::-webkit-scrollbar-thumb,
+  .article-scroll::-webkit-scrollbar-thumb,
+  ol.titles::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 999px;
+  }
+  .col-left:hover::-webkit-scrollbar-thumb,
+  .article-scroll:hover::-webkit-scrollbar-thumb,
+  ol.titles:hover::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, .45);
+  }
+  .col-left::-webkit-scrollbar-track,
+  .article-scroll::-webkit-scrollbar-track,
+  ol.titles::-webkit-scrollbar-track {
+    background: transparent;
+  }
   #body { padding: 8px 12px 16px; background: #fff; }
   .mobile-sticky-bar {
     display: none; gap: 8px; padding: 10px 14px; margin: 0 -14px 12px;
@@ -131,7 +179,7 @@
   .mobile-sticky-bar .btn { flex: 1; text-align: center; padding: 10px 8px; font-size: 13px; }
   @media (max-width: 720px) {
     .layout { grid-template-columns: 1fr; }
-    .col-right { position: static; max-height: none; }
+    .col-left, .col-right { position: static; max-height: none; overflow: visible; }
     .body-card { max-height: none; }
     .article-scroll { overflow: visible; }
     .mobile-sticky-bar { display: flex; }
@@ -154,12 +202,12 @@
   <div class="layout">
     <aside class="col-left">
       <section class="card">
-        <h3><span class="dot"></span>推荐标题</h3>
-        <p id="rec" class="rec-title">用 Rust 写了个工厂数字孪生桌面，gpui-kit 跑起来是这样</p>
-        <div class="score-line">综合评分 <strong>8.75</strong>／10</div>
-        <div class="actions">
+        <div class="body-head">
+          <h3><span class="dot"></span>推荐标题</h3>
           <button type="button" class="btn btn-blue" onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
         </div>
+        <p id="rec" class="rec-title">用 Rust 写了个工厂数字孪生桌面，gpui-kit 跑起来是这样</p>
+        <div class="score-line">综合评分 <strong>8.75</strong>／10</div>
       </section>
 
       <section class="card cover-card">
