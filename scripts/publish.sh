@@ -29,19 +29,8 @@ for slug in "$@"; do
   cp -a "$src" "$ROOT/pages/$slug/COPY-standalone.html"
   echo "synced $slug"
 done
-# refresh listing
-{
-  echo '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>'
-  echo '<meta name="robots" content="noindex,nofollow"/><title>WeChat COPY pages</title>'
-  echo '<style>body{font-family:system-ui;max-width:40rem;margin:2rem auto;padding:0 1rem}a{color:#07c}</style></head><body>'
-  echo '<h1>WeChat COPY pages</h1><ul>'
-  for d in "$PUB"/*/; do
-    [[ -d "$d" ]] || continue
-    name=$(basename "$d")
-    echo "<li><a href=\"./$name/\">$name</a></li>"
-  done
-  echo '</ul></body></html>'
-} > "$PUB/index.html"
+# refresh listing (public/index.html + pages/index.html mirror)
+python3 "$ROOT/scripts/build-index.py"
 printf 'User-agent: *\nDisallow: /\n' > "$PUB/robots.txt"
 
 NETLIFY_BIN="${NETLIFY_BIN:-}"
