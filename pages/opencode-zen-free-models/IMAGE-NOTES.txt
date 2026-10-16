@@ -1,0 +1,17 @@
+【公众号封面】
+- 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版裁左侧；方形裁右侧。
+- 主题：OpenCode 免费自助餐——左 DeepSeek V4.1 Flash Free（2.2s/$0）与 GLM-5.3 Flash Free（6.3s/$0）双卡；右 FREE 徽章「装 OpenCode 就能点／勿裸 curl」。软色卡片非空洞渐变。Pillow 自绘。
+
+【正文配图】
+1. assets/fig-01-cli-free-models.png —「菜单上真有免费菜」下。真屏：CLI 免费模型列表 + smoke 摘要。
+2. assets/fig-02-docs-free-models.png — 同节。官方 Free models 文档节真屏。
+3. assets/fig-04-code-compare.png —「同一道题」下。双模型代码导出对比证据卡（非聊天正文 UI）。
+4. assets/fig-03-webui-sessions.png — 同节。据本机 Web 会话列表重绘，主机名 scrub 为 laoli；会话正文 UI 未截全，图说已标明。
+
+【未交付截图】
+- OpenCode Web／TUI 会话正文流（pair/CDP 不稳未截全）——不以假图充真屏；以 fig-01/04 与 smoke 导出为准。
+
+【文中广告位】【广告位1】装完/看见列表后；【广告位2】对比与「无限/本地」之后、缺点之前。详见 AD-SLOTS.txt。
+
+【虚拟路径】正文与图说一律 /home/laoli/... ；禁止真实本机用户名与真实主机名（一律用 laoli）。

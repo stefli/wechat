@@ -1,0 +1,18 @@
+微信公众号 · 文中广告位（opencode-zen-free-models 稿）
+========================================
+
+1) 广告位1 — 节后：「菜单上真有免费菜」+ 安装 tip
+   节前：「同一道题：两个 Flash 免费档对打」
+   位置：环境/安装/列表讲完之后、样例实测之前
+
+2) 广告位2 — 节后：「和无限 token／本地部署怎么放」
+   节前：「缺点直说」
+   位置：对比叙事之后、缺点与结论/品牌区之前
+
+占位 HTML
+---------
+<section data-mp-ad-slot="N" style="margin:24px 0;padding:18px 14px;background-color:#F8FAFC;border-radius:12px;text-align:center;">
+  <p style="margin:0;padding:0;font-size:13px;line-height:1.7;color:#64748B;text-align:center;">【广告位N】</p>
+</section>
+
+操作：复制正文 → 公众号编辑器粘贴 → 找到两个灰框 → 删除灰框 → 在原位「插入广告」。

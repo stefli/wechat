@@ -1,0 +1,12 @@
+【推荐】OpenCode 免费自助餐：DeepSeek 和 GLM Flash 我今天白嫖跑通了
+【博主体】
+OpenCode 免费自助餐：DeepSeek 和 GLM Flash 我今天白嫖跑通了
+别再纠结无限 token 还是本地：OpenCode 这桌免费菜先吃为敬
+模型墙？OpenCode 里 DeepSeek／GLM Flash 先免费用着
+限时免费没写截止日期：DeepSeek 和 GLM 我都扔了同一道编码题
+装完 OpenCode 不用先充值：两个 Flash 免费档直接回了代码
+【媒体体】
+OpenCode Zen 实测：DeepSeek V4.1 与 GLM-5.3 Flash 限时免费，同题编码 2.2s / 6.3s
+OpenCode 免费模型清单核验：12 款可点，DeepSeek／GLM Flash 零费用出代码
+免模型墙？OpenCode 免费档须客户端调用，裸 API 仍 403
+OpenCode 限时免费 Flash 对照付费价：GLM $0.15、DeepSeek $0.30 每百万输入
