@@ -1,0 +1,18 @@
+【公众号封面】
+- 上传用 cover-combined.jpg（slug 根目录与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版封面裁左侧 900×383；方形封面裁右侧 383×383。
+- 封面主题：普通人非程序员视角——汽车产品设计/机械装配：市面高保真汽车模型爆炸装配静帧（CAD/概念车/零件装配方向）。软色冷调统一左右；同主体远景（整车爆炸）/近景（悬浮钣金与前脸总成）拼接。禁止 IDE/代码/程序员界面；禁止信息卡片、密密麻麻标签、「开闸/双桶」示意图。无封面标题大字、无提示字。COPY 封面区只展示这张。已弃用 Pixel CAD 手机爆炸封面、ADK 写代码界面封面、Desk Racer / Apollo cornhole 封面。
+- 源图：assets/src-cover-auto-cad.jpg（Unsplash 公开图「Exploded view of a red volkswagen car」uTvueDwJHvo，约 2400×1800；汽车零件爆炸装配高保真静帧，非 IDE）。
+
+【正文插图】（观点分享 · 市面已有真实案例静帧，非自制信息海报，非个人实测）
+1. assets/fig-case-cornhole.jpg — 官方案例节。来源：Google / DeepMind Apollo cornhole 公开 demo 静帧。图说：看人类视频 → MuJoCo → Apollo 连进 7 球。
+2. assets/fig-case-desk-racer.jpg — 同上。来源：Desk Racer 公开演示静帧（Google AI Studio Showcase / Geneviève 公开材料）。图说：照片变桌面微型赛车（Blender MCP + Three.js）。
+3. assets/fig-case-pagoda.jpg — 同上。来源：Google Blog Argon 介绍页 Blender 宝塔 demo 静帧裁切。图说：多代理雕 Blender 场景。
+4. assets/fig-case-water-physics.jpg — 同上。来源：市面公开 Argon 作品「江南水镇物理沙盘」静帧。图说：可交互水物理。
+5. assets/fig-case-chess3d.jpg — 同上。来源：市面公开 Argon 3D 棋盘对战场景静帧（已裁底部水印带）。图说：Three.js 风格游戏场景；并点名 Showcase 还有碎裂物理 / 3D 毛发等。
+已弃用（不再嵌入正文）：fig-effect-agentic/chrome/security/localize、fig-poster-* 自制「+35%/数月→数周」信息海报。
+
+【文中广告位】
+【广告位1】在「前提清单」之后、「Argon 能玩真场景」之前。
+【广告位2】在市面案例图组之后、「周额度才是过日子的细节」之前。
+详见 AD-SLOTS.txt。
