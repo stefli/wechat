@@ -1,0 +1,24 @@
+【公众号封面】
+- 上传用 cover-combined.jpg（slug 根目录与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版封面裁左侧 900×383；方形封面裁右侧 383×383。
+- 封面主题：Magpie 作本地 hub，连接 DeepSeek / Claude / Gemini / Cursor；软紫蓝科技底 + 无字产品构图；保持不动。
+- 源：real brand icons + make_cover_icons.py。cover-combined.jpg 保持不动。
+
+【正文插图】（操作手册 · 真机中文桌面版 shots-v2 + 红框中文标注；Noto Sans CJK Regular index=2；脚本 annotate_real_v2.py）
+1. assets/fig-01-install.jpg ← 00-desktop-panorama：中文桌面全景。
+2. assets/fig-02-deepseek-key.jpg ← 02-providers-deepseek：DeepSeek 供应商（示例 Key sk-laoli-deepseek-demo-xxxx）。
+3. assets/fig-03-models.jpg ← 05-gateway-models-deepseek：deepseek/deepseek-flash、deepseek-v4-pro。
+4. assets/fig-04-gateway-ok.jpg ← 04-gateway-connect：3425 + Base URL / OPENAI 导出。
+5. assets/fig-05-claude.jpg ← 06-claude-deepseek：Claude → DeepSeek。
+6. assets/fig-06-gemini.jpg ← 08-gemini-deepseek：Gemini CLI → DeepSeek。
+7. assets/fig-07-cursor.jpg ← 说明卡（09-cursor-NOTE + RESULTS）：Can't connect + Base URL 旁路。
+8. assets/fig-08-pi.jpg ← 说明卡：Pi 已装 + Magpie→DeepSeek 实测 pong。
+9. assets/fig-09-hermes.jpg ← 说明卡：Hermes 已装 + Magpie→DeepSeek 实测 pong。
+10. assets/fig-10-codex.jpg ← 07-codex-deepseek：Codex → DeepSeek。
+11. assets/fig-11-agents-overview.jpg ← 01-agents-deepseek：三客户端 DeepSeek 总览。
+12. assets/fig-12-workflow.jpg ← CLI 实测结果表（RESULTS.md）。
+
+【文中广告位】
+【广告位1】在 DeepSeek 配置与模型目录之后、「验证网关通了」之前。
+【广告位2】在 Cursor 节之后、「Pi」之前。
+详见 AD-SLOTS.txt。

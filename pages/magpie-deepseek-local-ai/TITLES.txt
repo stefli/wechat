@@ -1,0 +1,13 @@
+【推荐】Magpie 实测：DeepSeek Key 一把钥匙开 Claude／Codex／Gemini／Pi／Hermes
+【博主体】
+Magpie 实测：DeepSeek Key 一把钥匙开 Claude／Codex／Gemini／Pi／Hermes
+DeepSeek Key 只贴一次：Magpie 中文桌面版带飞 Claude／Codex／Gemini
+本机 3425 实测：Claude／Codex／Gemini 都回了 pong
+Cursor Can't connect？Base URL 旁路照样跑 DeepSeek
+Magpie 中文桌面：供应商 DeepSeek → Agent 一把钥匙
+从装 Magpie 到 CLI 打出 pong，按手册点一遍
+【媒体体】
+操作手册：Magpie 中文桌面版配置 DeepSeek 并接入多款编码客户端
+本机网关 127.0.0.1:3425：一套 DeepSeek Key 服务 Claude／Codex／Gemini
+Magpie 中文路径：供应商加 DeepSeek，网关 3425，Agent 选模型
+CLI 实测纪要：Gateway／Claude／Codex／Gemini 均 ok · pong
