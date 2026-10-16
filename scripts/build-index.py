@@ -86,10 +86,7 @@ def meaningful_heading(text: str) -> bool:
 
 
 def extract_title(raw: str, slug: str) -> str:
-    for fragment in re.findall(r"<h1\b[^>]*>(.*?)</h1>", raw, flags=re.I | re.S):
-        title = clean_title(strip_tags(fragment))
-        if meaningful_heading(title):
-            return title
+    # Prefer 推荐标题 (#rec) — hero/short h1 labels are chrome, not the lead title.
     rec = re.search(
         r"<p\b[^>]*\bid=[\"']rec[\"'][^>]*>(.*?)</p>",
         raw,
@@ -97,6 +94,10 @@ def extract_title(raw: str, slug: str) -> str:
     )
     if rec:
         title = clean_title(strip_tags(rec.group(1)))
+        if meaningful_heading(title):
+            return title
+    for fragment in re.findall(r"<h1\b[^>]*>(.*?)</h1>", raw, flags=re.I | re.S):
+        title = clean_title(strip_tags(fragment))
         if meaningful_heading(title):
             return title
     titled = re.search(r"<title\b[^>]*>(.*?)</title>", raw, flags=re.I | re.S)
