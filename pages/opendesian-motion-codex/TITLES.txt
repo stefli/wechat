@@ -1,0 +1,14 @@
+# 标题池（综合分见 TITLE-SCORES.md；推荐默认博主体）
+
+## 博主体
+不花 OpenDesign Cloud 钱，本机 Codex 也做出产品介绍动效
+OpenDesign 动效：Cloud 额度没动，15 秒片已经出来了
+Codex + Magpie + 免费 DeepSeek：这条 OpenDesign 动效省钱路我留下了
+产品介绍短片不用 Opus：OpenDesign 本机 CLI 我跑通了
+OpenDesign Motion 实测：筛简历三步短片，积分 101.7K 纹丝不动
+
+## 媒体体
+Open Design 0.25 动效实测：本机 Codex 通道零 Cloud 扣费出片
+实测 OpenDesign Motion：Codex CLI 接 Magpie 免费 DeepSeek 出 15 秒片
+不用 Claude Opus？OpenDesign 本机 CLI 动效通道评测
+OpenDesign 动效设计评测：省 Cloud 额度的 Codex→Magpie 路径
