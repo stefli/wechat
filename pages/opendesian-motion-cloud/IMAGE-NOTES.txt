@@ -1,0 +1,19 @@
+【公众号封面】
+- 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版裁左侧；方形裁右侧。
+- 主题：OpenDesign Cloud 免费档 Motion——左：不用 Opus／三步／v4.1-flash／$0.50→$0.43／15s1080p；右：成片「一键出片」帧 + Free 徽章。软色 Magpie 风自绘，非空洞渐变。
+
+【正文配图】（均用 screenshots/cloud-free 遮罩版；邮箱已打码；勿用 cloud-raw）
+1. assets/fig-01-settings-cloud-free.jpg —「先搞清楚」节。设置页：OpenDesign 官方 Free + v4.1-flash。红框①官方 Free；红框②模型。
+2. assets/fig-02-motion-mode.jpg —「创作类型」节。首页绿胶囊「动效设计」。
+3. assets/fig-03-prompt-ready.jpg —「提示词」节。提示词正文 + 动效设计 + 运行按钮三框。
+4. assets/fig-04-generating.jpg —「大约 6 分钟」节。左侧 OpenDesign 官方通道状态。
+5. assets/fig-05-result.jpg — 同节。结果预览卡片底部 Cloud v4.1-flash。
+6. assets/fig-07-frames.jpg —「成片抽帧」节。t≈1s / 7s / 14s 三帧条。
+7. assets/fig-06-quota-after.jpg —「额度账单」节。生成后 Free + $0.43（邮箱已打码）。
+
+【文中广告位】【广告位1】动效类型讲完、提示词实测前；【广告位2】额度账单后、缺点前。详见 AD-SLOTS.txt。
+
+【虚拟路径｜作者备忘｜勿写入正文】读者可见路径直接写成 C:\Users\laoli\...（本篇 Windows 实测）；禁止真实本机用户名与真实主机名。cloud-raw 含邮箱，不得进 COPY／发布仓。
+
+【Pages slug】opendesian-motion-cloud
