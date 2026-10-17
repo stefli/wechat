@@ -1,7 +1,7 @@
 【公众号封面】
 - 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
 - 后台上传这一张后：横版裁左侧；方形裁右侧。
-- 公式：(1) Cursor logo+字标 (2) 短任务「把 Agent 甩的密表 → 变成能点的看板」(3) 真实 Canvas 库存周转看板截图。深色海报风，蓝强调条；左右同主体。封面不进正文。
+- 公式：全出血 Canvas 看板截图作底（压暗+品牌黑洗）+ 顶栏 Cursor logo/字标（黑底蓝条）+ 大号中文标题叠字。禁止右侧小缩略图。字体 Noto Sans SC Black。封面不进正文。
 
 【正文配图】
 1. assets/fig0-demo-folder.jpg —「先把演示目录单独打开」下。红框框住演示目录文件树（inventory.csv + README）。

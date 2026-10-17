@@ -1,7 +1,7 @@
 【公众号封面】
 - 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
 - 后台上传这一张后：横版裁左侧；方形裁右侧。
-- 公式：(1) OpenDesign logo+字标 + CLOUD FREE (2) 短任务「用免费档做 15 秒产品 Motion」(3) 成片「一键出片」真实 motion 帧。紫调海报，区别于 Codex 青绿。封面不进正文。
+- 公式：全出血成片 motion 帧作底（压暗+OpenDesign 橄榄绿洗）+ 顶栏 OpenDesign logo/字标 + CLOUD FREE 绿条（品牌色 #87EA5C）+ 大号中文标题叠字。禁止右侧小缩略图。区别于 Codex 青绿。字体 Noto Sans SC Black。封面不进正文。
 
 【Pages slug】opendesian-motion-cloud
 
@@ -17,4 +17,3 @@
 【文中广告位】【广告位1】动效类型讲完、提示词实测前；【广告位2】额度账单后、缺点前。详见 AD-SLOTS.txt。
 
 【虚拟路径｜作者备忘｜勿写入正文】读者可见路径直接写成 C:\Users\laoli\...（本篇 Windows 实测）；禁止真实本机用户名与真实主机名。cloud-raw 含邮箱，不得进 COPY／发布仓。
-
