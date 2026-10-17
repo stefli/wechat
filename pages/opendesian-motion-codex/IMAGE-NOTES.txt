@@ -1,0 +1,18 @@
+【公众号封面】
+- 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版裁左侧；方形裁右侧。
+- 主题：OpenDesign 动效本机免费通道——左 Codex→Magpie→免费 DeepSeek；右 Cloud $0。软色卡片非空洞渐变。
+
+【正文配图】
+1. assets/fig-01-home-quota.jpg — 开篇后。首页积分 101.7K（红框），生成前后未变。
+2. assets/fig-02-settings-codex.jpg —「先把通道切对本机」节。设置→本机 CLI→Codex CLI 已选中（邮箱/Cloud 额度已打码）。
+3. assets/fig-03-generating.jpg —「贴一条提示词，只跑一次」节。Codex 进行中 + Default (CLI config)。
+4. assets/fig-04-result.jpg — 同节收尾。Codex 已完成约 44s；仍是 CLI config。
+5. assets/fig-05-frame.jpg … fig-08-frame.jpg — 成片四关键帧（上传/打分/短名单/片尾）。
+
+【未用】
+- best-02 / best-03 源图被版本更新弹窗盖住，无法证明「动效模式/提示词就绪」，未进 COPY。
+
+【文中广告位】见 AD-SLOTS.txt。
+
+【虚拟路径｜作者备忘｜勿写入正文】读者可见 Windows 路径写成 C:\Users\laoli\...；禁止 jl7134／真实主机名；设置私密已用 masked 图。
