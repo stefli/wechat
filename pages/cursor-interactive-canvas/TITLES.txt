@@ -1,10 +1,10 @@
-【推荐】Agent 又甩一堵字墙？Cursor Canvas 把库存表变成能点的看板
+【推荐】Agent 又甩密密麻麻的文字表格？Cursor Canvas 把它变成能点的看板
 【博主体】
-Agent 又甩一堵字墙？Cursor Canvas 把库存表变成能点的看板
-字墙变看板：Cursor Canvas 四分钟铺开库存周转桌面
+Agent 又甩密密麻麻的文字表格？Cursor Canvas 把它变成能点的看板
+密密麻麻的文字表格变能点的看板：Cursor Canvas 四分钟铺开库存桌面
 别再让 Agent 甩表了：点名 Interactive Canvas，库存能筛能点
-聊天旁突然多了张可点的库存看板，我才信 Canvas 不是噱头
-Markdown 字墙 VS Canvas：同一份假库存，眼睛站哪边很清楚
+聊天旁突然多了张能点的看板，我才信 Cursor Canvas 不是噱头
+Markdown 密密麻麻的文字表格 VS Canvas：同一份假库存，眼睛站哪边很清楚
 Design 一点亮，看板颜色也能拧——Cursor Canvas 今晚手测
 【媒体体】
 Cursor 3.24.18 Interactive Canvas 实测：4m15s 生成库存周转看板
