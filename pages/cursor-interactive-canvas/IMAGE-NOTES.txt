@@ -1,0 +1,18 @@
+【公众号封面】
+- 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
+- 后台上传这一张后：横版裁左侧；方形裁右侧。
+- 主题：字墙表 → 能点的库存看板（KPI／筛选芯片／柱图＋点击示意）；软色 Magpie 卡片风，Pillow 自绘；无封面标题字、无路径、无上传提示。封面不进正文。
+
+【正文配图】
+1. assets/fig0-demo-folder.jpg —「先把演示目录单独打开」下。红框框住演示目录文件树（inventory.csv + README）。
+2. assets/fig1-canvas-chat.jpg —「四分钟出看板」下。主图左 chat 右 Canvas；红框①顶部 KPI，②仓库图+状态环图。
+3. assets/fig3-filters-table.jpg — 同节。红框①仓库/状态筛选 ②搜索+排序 ③可点明细表。
+4. assets/fig2-markdown-vs-canvas.jpg —「对照：只要 Markdown」下。红框① Markdown 字墙 ② Canvas 预览卡。
+5. assets/fig4-design-mode.jpg —「Design 模式」下。红框框住顶栏 Design 高亮按钮（旁 Publish／Canvas）。
+6. assets/fig5-design-annotate.jpg — 同节。红框框住 Design 点选／描述更改浮层。
+
+备用未嵌正文：assets/fig6-canvas-only.jpg（canvas 紧裁）。内部原图在 screenshots/，已过隐私扫描；对外只用 assets/。
+
+【文中广告位】【广告位1】提示词/环境后、主流程出看板前；【广告位2】Design 之后、缺点/结论前。详见 AD-SLOTS.txt。
+
+【虚拟路径｜作者备忘｜勿写入正文】读者可见路径直接写成 C:\Users\laoli\canvas-demo\ ；禁止真实本机用户名与真实主机名。框选已按源图目检：Design／KPI／筛选／字墙对比均对准图说。

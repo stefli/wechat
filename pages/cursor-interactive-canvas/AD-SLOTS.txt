@@ -1,0 +1,18 @@
+微信公众号 · 文中广告位（cursor-interactive-canvas 稿）
+========================================
+
+1) 广告位1 — 节后：「提示词：点名要 Canvas，别再甩表」+ tip
+   节前：「四分钟出看板：聊天旁就能点」
+   位置：环境/提示词讲完之后、主流程出看板之前
+
+2) 广告位2 — 节后：「Design 模式：点一下就能改观感」+ 配图
+   节前：「缺点直说」
+   位置：结果与 Design 之后、缺点与结论/品牌区之前
+
+占位 HTML
+---------
+<section data-mp-ad-slot="N" style="margin:24px 0;padding:18px 14px;background-color:#F8FAFC;border-radius:12px;text-align:center;">
+  <p style="margin:0;padding:0;font-size:13px;line-height:1.7;color:#64748B;text-align:center;">【广告位N】</p>
+</section>
+
+操作：复制正文 → 公众号编辑器粘贴 → 找到两个灰框 → 删除灰框 → 在原位「插入广告」。
