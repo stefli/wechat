@@ -1,7 +1,7 @@
 【公众号封面】
 - 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
 - 后台上传这一张后：横版裁左侧；方形裁右侧。
-- 主题：OpenDesign 动效本机免费通道——左 Codex→Magpie→免费 DeepSeek；右 Cloud $0。软色卡片非空洞渐变。
+- 公式：(1) OpenDesign logo+字标 + Cloud $0 (2) 短任务「本机 Codex 出产品介绍动效」(3) 成片产品介绍帧（上传简历 UI）。青绿海报，区别于 Cloud 紫调。封面不进正文。
 
 【正文配图】
 1. assets/fig-01-home-quota.jpg — 开篇后。首页积分 101.7K（红框），生成前后未变。

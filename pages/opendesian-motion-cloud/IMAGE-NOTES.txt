@@ -1,7 +1,9 @@
 【公众号封面】
 - 上传用 cover-combined.jpg（slug 根与 assets/ 各一份），1283×383：左 900×383 横版，右 383×383 方图。
 - 后台上传这一张后：横版裁左侧；方形裁右侧。
-- 主题：OpenDesign Cloud 免费档 Motion——左：不用 Opus／三步／v4.1-flash／$0.50→$0.43／15s1080p；右：成片「一键出片」帧 + Free 徽章。软色 Magpie 风自绘，非空洞渐变。
+- 公式：(1) OpenDesign logo+字标 + CLOUD FREE (2) 短任务「用免费档做 15 秒产品 Motion」(3) 成片「一键出片」真实 motion 帧。紫调海报，区别于 Codex 青绿。封面不进正文。
+
+【Pages slug】opendesian-motion-cloud
 
 【正文配图】（均用 screenshots/cloud-free 遮罩版；邮箱已打码；勿用 cloud-raw）
 1. assets/fig-01-settings-cloud-free.jpg —「先搞清楚」节。设置页：OpenDesign 官方 Free + v4.1-flash。红框①官方 Free；红框②模型。
@@ -16,6 +18,3 @@
 
 【虚拟路径｜作者备忘｜勿写入正文】读者可见路径直接写成 C:\Users\laoli\...（本篇 Windows 实测）；禁止真实本机用户名与真实主机名。cloud-raw 含邮箱，不得进 COPY／发布仓。
 
-【Pages slug】opendesian-motion-cloud
-
-【成片视频占位】「成片抽帧」节：灰框【成片视频｜请在公众号编辑器此处插入视频】，Justin 自行插 MP4；其后为三帧条。
