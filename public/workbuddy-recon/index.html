@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<!-- CACHEBUST-NO-BG-BLEED-v4 -->
+<!-- CACHEBUST-PREVIEW-B64-v1 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta name="copy-engine-rev" content="2026-10-18-fix3"/>
@@ -204,7 +204,7 @@
     <button type="button" class="btn" onclick="cpBodyDesktop(this)">外链·电脑样式</button>
     <button type="button" class="btn btn-blue" onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
   </div>
-  <p class="copy-hint">手机助手优先试「手机图·压缩」（图嵌进正文，压缩 base64）；电脑端发稿用「电脑图·完整」（高清 base64，最稳）。外链两枚是备用。</p>
+  <p class="copy-hint">预览默认完整 base64（加载快）。手机助手优先试「手机图·压缩」（图嵌进正文，压缩 base64）；电脑端发稿用「电脑图·完整」（高清 base64，最稳）。外链两枚是备用。</p>
 
   <div class="layout">
     <aside class="col-left">
@@ -630,6 +630,26 @@ function cpBodyDesktop(b){
   alert("复制失败，请长按正文手动复制");
 }
 function cpBody(b){ cpBodyPhone(b); }
+
+
+(function applyFullB64Preview(){
+  function run(){
+    var map=window.IMG_B64_FULL; if(!map) return;
+    var body=document.getElementById("body"); if(!body) return;
+    Array.prototype.slice.call(body.querySelectorAll("img")).forEach(function(img){
+      var s=img.getAttribute("src")||"";
+      var b=null;
+      if(map[s]) b=map[s];
+      else {
+        var name=(s.split("/").pop()||"").split("?")[0];
+        if(map[name]) b=map[name];
+      }
+      if(b) img.setAttribute("src", b);
+    });
+  }
+  if(window.IMG_B64_FULL) run();
+  else window.addEventListener("load", run);
+})();
 
 applyHStyle();
 applyHrStyle();
