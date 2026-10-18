@@ -435,25 +435,48 @@ function cpBody(b){
   if(!el){alert("找不到正文"); return;}
   var html=el.innerHTML;
   var text=el.innerText || el.textContent || "";
+  function done(){ ok(b); }
+  function fail(){ alert("未能复制，请长按右侧正文手动复制"); }
   function fbHtml(){
+    var s=window.getSelection();
+    var r=document.createRange();
+    try{
+      r.selectNodeContents(el);
+      s.removeAllRanges();
+      s.addRange(r);
+      var okCmd=document.execCommand("copy");
+      s.removeAllRanges();
+      if(okCmd){ done(); return; }
+    }catch(e){
+      try{s.removeAllRanges();}catch(_e){}
+    }
     var host=document.createElement("div");
     host.setAttribute("contenteditable","true");
-    host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;";
+    host.style.cssText="position:fixed;left:0;top:0;width:2px;height:2px;opacity:0.01;z-index:-1;overflow:hidden;";
     host.innerHTML=html;
     document.body.appendChild(host);
-    var r=document.createRange(); r.selectNodeContents(host);
-    var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
-    s.removeAllRanges();
-    host.remove();
+    try{
+      r=document.createRange(); r.selectNodeContents(host);
+      s.removeAllRanges(); s.addRange(r);
+      var ok2=document.execCommand("copy");
+      s.removeAllRanges();
+      host.remove();
+      if(ok2){ done(); return; }
+    }catch(e2){
+      try{s.removeAllRanges();}catch(_e2){}
+      try{host.remove();}catch(_e3){}
+    }
+    fail();
   }
   if(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write && window.isSecureContext){
     try{
+      var htmlBlob=new Blob([html],{type:"text/html"});
+      var textBlob=new Blob([text],{type:"text/plain"});
       var item=new ClipboardItem({
-        "text/html": new Blob([html], {type:"text/html"}),
-        "text/plain": new Blob([text], {type:"text/plain"})
+        "text/html": Promise.resolve(htmlBlob),
+        "text/plain": Promise.resolve(textBlob)
       });
-      navigator.clipboard.write([item]).then(function(){ok(b)}, function(){fbHtml()});
+      navigator.clipboard.write([item]).then(done, function(){ fbHtml(); });
       return;
     }catch(e){}
   }
