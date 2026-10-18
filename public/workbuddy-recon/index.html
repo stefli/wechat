@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<!-- CACHEBUST-PHONE-PLAIN-v3 -->
+<!-- CACHEBUST-B64-DUAL-v1 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta name="copy-engine-rev" content="2026-10-18-fix3"/>
@@ -197,12 +197,14 @@
 </head>
 <body>
 <div class="wrap">
-          <div class="mobile-sticky-bar">
-    <button type="button" class="btn btn-phone" onclick="cpBodyPhone(this)">手机粘贴（无底色）</button>
-    <button type="button" class="btn" onclick="cpBodyDesktop(this)">电脑粘贴（带样式）</button>
+            <div class="mobile-sticky-bar">
+    <button type="button" class="btn btn-phone" onclick="cpBodyPhone(this)">外链·手机干净</button>
+    <button type="button" class="btn" onclick="cpBodyB64Phone(this)">手机图·压缩</button>
+    <button type="button" class="btn btn-blue" onclick="cpBodyB64Full(this)">电脑图·完整</button>
+    <button type="button" class="btn" onclick="cpBodyDesktop(this)">外链·电脑样式</button>
     <button type="button" class="btn btn-blue" onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
   </div>
-  <p class="copy-hint">手机公众号助手请用左侧「手机粘贴（无底色）」；会去掉灰底色块，只留文字和外链图。</p>
+  <p class="copy-hint">手机助手优先试「手机图·压缩」（图嵌进正文，压缩 base64）；电脑端发稿用「电脑图·完整」（高清 base64，最稳）。外链两枚是备用。</p>
 
   <div class="layout">
     <aside class="col-left">
@@ -263,8 +265,10 @@
         <div class="body-head">
           <h3><span class="dot"></span>正文</h3>
           <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;align-items:center">
-          <button type="button" class="btn btn-phone" onclick="cpBodyPhone(this)" style="background:#0ea5e9;color:#fff;border-color:#0ea5e9;font-weight:600">手机粘贴（无底色）</button>
-          <button type="button" class="btn" onclick="cpBodyDesktop(this)">电脑粘贴（带样式）</button>
+          <button type="button" class="btn btn-phone" onclick="cpBodyPhone(this)" style="background:#0ea5e9;color:#fff;border-color:#0ea5e9;font-weight:600">外链·手机干净</button>
+          <button type="button" class="btn" onclick="cpBodyB64Phone(this)">手机图·压缩</button>
+          <button type="button" class="btn btn-blue" onclick="cpBodyB64Full(this)">电脑图·完整</button>
+          <button type="button" class="btn" onclick="cpBodyDesktop(this)">外链·电脑样式</button>
         </div>
         </div>
         <div class="article-stage">
@@ -326,6 +330,7 @@
     </main>
   </div>
 </div>
+<script src="./b64-maps.js"></script>
 <script>
 var H_STYLE = "bracket";
 var H_NAMES = {
@@ -553,6 +558,44 @@ function copyHtml(html, b){
   if(okCmd){ ok(b); return true; }
   return false;
 }
+
+function lookupB64(map, src){
+  if(!map) return null;
+  if(!src) return null;
+  if(map[src]) return map[src];
+  var name=(src.split("/").pop()||"").split("?")[0];
+  if(map[name]) return map[name];
+  return null;
+}
+function applyB64Map(html, map){
+  var tmp=document.createElement("div");
+  tmp.innerHTML=html;
+  Array.prototype.slice.call(tmp.querySelectorAll("img")).forEach(function(img){
+    var s=img.getAttribute("src")||"";
+    var b=lookupB64(map, s);
+    if(b) img.setAttribute("src", b);
+  });
+  return tmp.innerHTML;
+}
+function cpBodyB64Phone(b){
+  var el=document.getElementById("body");
+  if(!el){alert("找不到正文"); return;}
+  if(!window.IMG_B64_PHONE){alert("压缩图包未加载，请刷新页面"); return;}
+  var html=scrubPhoneHtml(el.innerHTML);
+  html=applyB64Map(html, window.IMG_B64_PHONE);
+  if(copyHtml(html,b)) return;
+  alert("复制失败（压缩图可能仍偏大），请改用外链·手机干净");
+}
+function cpBodyB64Full(b){
+  var el=document.getElementById("body");
+  if(!el){alert("找不到正文"); return;}
+  if(!window.IMG_B64_FULL){alert("完整图包未加载，请刷新页面"); return;}
+  var html=buildDesktopHtml(el.innerHTML);
+  html=applyB64Map(html, window.IMG_B64_FULL);
+  if(copyHtml(html,b)) return;
+  alert("复制失败：完整 base64 较大，请在电脑浏览器再试，或改用外链·电脑样式");
+}
+
 function cpBodyPhone(b){
   var el=document.getElementById("body");
   if(!el){alert("找不到正文"); return;}
