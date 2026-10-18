@@ -11,7 +11,7 @@ body{margin:0;font-family:-apple-system,sans-serif;background:#f8fafc}
 #body{max-width:720px;margin:0 auto;padding:12px;background:#fff;-webkit-user-select:text;user-select:text}
 #body img{max-width:100%;height:auto}
 </style></head><body>
-<div class="bar"><button type="button" id="btn">复制正文 v-fix3</button></div>
+<div class="bar"><button type="button" id="btn">复制正文</button></div>
 <p class="hint">请用<strong>系统 Safari / Chrome</strong>打开（不要用微信内置浏览器）。图已改成外链，避免剪贴板爆掉。</p>
 <div id="body">
 <p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">朋友做财务的，月底对账总卡在同一类问题上：<strong>流水上有一笔 5600，票面上写 5599.99</strong>——户名对得上、日子也对得上，就差这一分钱。人眼对表容易糊过去，程序要是静默「凑合匹配」，后面查账更麻烦。</p>
@@ -86,7 +86,7 @@ document.getElementById("btn").onclick=function(){
   var sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
   var ok=false; try{ok=document.execCommand("copy");}catch(e){}
   sel.removeAllRanges(); host.remove();
-  if(ok){ b.textContent="已复制 ✓"; setTimeout(function(){b.textContent="复制正文 v-fix3";},1600); return; }
+  if(ok){ b.textContent="已复制"; setTimeout(function(){b.textContent="复制正文";},1600); return; }
   el.setAttribute("contenteditable","true"); el.focus();
   r=document.createRange(); r.selectNodeContents(el); sel.addRange(r);
   alert("自动复制失败：请长按已选中的正文，点「复制」");
