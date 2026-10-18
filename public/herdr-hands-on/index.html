@@ -161,6 +161,100 @@ document.getElementById('btnBody').onclick = async () => {
   if (fallbackCopy(node.innerText)) showToast('已复制纯文本');
   else showToast('复制失败，请手动选中正文');
 };
+
+
+
+function absifyImgs(root){
+  var pagesRoot = null;
+  if(location.hostname.indexOf("github.io")>=0){
+    pagesRoot = location.origin + location.pathname.replace(/\/[^\/]*$/, "/");
+    if(pagesRoot.slice(-1)!=="/") pagesRoot += "/";
+  }
+  root.querySelectorAll("img").forEach(function(img){
+    var s=img.getAttribute("src")||"";
+    if(!s || s.indexOf("data:")===0) return;
+    if(s.indexOf("http")===0) return;
+    if(pagesRoot){ img.setAttribute("src", pagesRoot + s.replace(/^\.\//,"")); return; }
+    var m=s.match(/(assets\/[^?#]+)/);
+    if(m){
+      var parts=location.pathname.split("/").filter(Boolean);
+      var slug=parts.length?parts[parts.length-1].replace(/\.html?$/i,""):"";
+      if(slug==="wechat"||!slug){ slug=(parts.length>=2?parts[parts.length-2]:""); }
+      if(location.protocol==="https:" || location.protocol==="http:"){
+        img.setAttribute("src", "https://stefli.github.io/wechat/"+slug+"/"+m[1]);
+      }
+    }
+  });
+}
+function scrubPhoneHtml(html){
+  var tmp=document.createElement("div");
+  tmp.innerHTML=html;
+  absifyImgs(tmp);
+  tmp.querySelectorAll("code").forEach(function(el){
+    var tn=document.createTextNode(el.textContent||"");
+    if(el.parentNode) el.parentNode.replaceChild(tn, el);
+  });
+  tmp.querySelectorAll("section").forEach(function(sec){
+    var p=document.createElement("p");
+    p.textContent=(sec.innerText||"").replace(/\s+\n/g,"\n").replace(/\n{3,}/g,"\n\n").trim();
+    if(sec.parentNode) sec.parentNode.replaceChild(p, sec);
+  });
+  tmp.querySelectorAll("*").forEach(function(el){
+    el.removeAttribute("class");
+    el.removeAttribute("style");
+    el.removeAttribute("data-mp-h");
+    el.removeAttribute("data-mp-h-text");
+    el.removeAttribute("data-mp-hr");
+    el.removeAttribute("data-mp-ad-slot");
+  });
+  tmp.querySelectorAll("img").forEach(function(img){
+    img.setAttribute("style","max-width:100% !important;height:auto;display:block;margin:12px auto;");
+  });
+  tmp.querySelectorAll("h2").forEach(function(h){
+    h.setAttribute("style","margin:24px 0 12px;font-size:17px;font-weight:700;color:#111;text-align:left;");
+  });
+  tmp.querySelectorAll("p").forEach(function(p){
+    p.setAttribute("style","margin:0 0 14px;font-size:15px;line-height:1.75;color:#222;text-align:left;");
+  });
+  return tmp.innerHTML;
+}
+function buildDesktopHtml(html){
+  var tmp=document.createElement("div");
+  tmp.innerHTML=html;
+  absifyImgs(tmp);
+  return tmp.innerHTML;
+}
+function copyHtml(html, b){
+  var host=document.createElement("div");
+  host.setAttribute("contenteditable","true");
+  host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;";
+  host.innerHTML=html;
+  document.body.appendChild(host);
+  var r=document.createRange(); r.selectNodeContents(host);
+  var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  var okCmd=false;
+  try{ okCmd=document.execCommand("copy"); }catch(e){ okCmd=false; }
+  try{s.removeAllRanges();}catch(_e){}
+  if(host.parentNode) host.parentNode.removeChild(host);
+  if(okCmd){ ok(b); return true; }
+  return false;
+}
+function cpBodyPhone(b){
+  var el=document.getElementById("body");
+  if(!el){alert("找不到正文"); return;}
+  var html=scrubPhoneHtml(el.innerHTML);
+  if(copyHtml(html,b)) return;
+  alert("复制失败，请长按正文手动复制");
+}
+function cpBodyDesktop(b){
+  var el=document.getElementById("body");
+  if(!el){alert("找不到正文"); return;}
+  var html=buildDesktopHtml(el.innerHTML);
+  if(copyHtml(html,b)) return;
+  alert("复制失败，请长按正文手动复制");
+}
+function cpBody(b){ cpBodyPhone(b); }
+
 </script>
 </body>
 </html>
