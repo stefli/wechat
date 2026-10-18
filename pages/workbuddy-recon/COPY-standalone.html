@@ -196,7 +196,7 @@
 <div class="wrap">
   <div class="mobile-sticky-bar">
     <button type="button" class="btn btn-blue" onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
-    <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-fix2</span></button>
+    <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-fix3</span></button>
   </div>
 
   <div class="layout">
@@ -257,7 +257,7 @@
       <section class="card body-card">
         <div class="body-head">
           <h3><span class="dot"></span>正文</h3>
-          <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-fix2</span></button>
+          <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-fix3</span></button>
         </div>
         <div class="article-stage">
           <div class="article-scroll">
@@ -435,55 +435,88 @@ function fb(t,b){
 function cpBody(b){
   var el=document.getElementById("body");
   if(!el){alert("找不到正文"); return;}
-  /* 禁止 navigator.clipboard.write / ClipboardItem：微信会弹系统提示「未能复制到剪贴板」 */
-  var s=window.getSelection();
-  var r=document.createRange();
-  var prevEd=el.getAttribute("contenteditable");
-  var prevTab=el.getAttribute("tabindex");
-  try{
-    el.setAttribute("contenteditable","true");
-    el.setAttribute("tabindex","-1");
-    el.focus();
-    r.selectNodeContents(el);
-    s.removeAllRanges();
-    s.addRange(r);
-    var okCmd=false;
-    try{ okCmd=document.execCommand("copy"); }catch(e1){ okCmd=false; }
-    if(okCmd){ ok(b); return; }
-  }catch(e){}
-  finally{
-    try{s.removeAllRanges();}catch(_e){}
-    if(prevEd===null) el.removeAttribute("contenteditable"); else el.setAttribute("contenteditable",prevEd);
-    if(prevTab===null) el.removeAttribute("tabindex"); else el.setAttribute("tabindex",prevTab);
-    try{el.blur();}catch(_e2){}
+  /* 微信会对 clipboard.write 弹「未能复制到剪贴板」；大 base64 也会装不下。只走同步 execCommand，过大则去掉图片。 */
+  function dirBase(){
+    var u=location.href.split("#")[0].split("?")[0];
+    if(/\.html?$/i.test(u)) u=u.replace(/[^\/]+$/,"");
+    if(u.slice(-1)!=="/") u+="/";
+    return u;
   }
-  var html=el.innerHTML;
+  function buildHtml(){
+    var tmp=document.createElement("div");
+    tmp.innerHTML=el.innerHTML;
+    var imgs=tmp.querySelectorAll("img");
+    var total=0;
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute("src")||"";
+      total+=s.length;
+    }
+    var stripped=false;
+    if(total>350000 || tmp.innerHTML.length>500000){
+      stripped=true;
+      for(var j=0;j<imgs.length;j++){
+        var img=imgs[j];
+        var alt=img.getAttribute("alt")||("配图"+(j+1));
+        var note=document.createElement("p");
+        note.setAttribute("data-mp-img-slot","1");
+        note.style.cssText="margin:12px 0;padding:10px 12px;background:#f1f5f9;border-radius:8px;color:#475569;font-size:13px;line-height:1.5;";
+        note.textContent="【请在此处插入图片："+alt+"】";
+        img.parentNode.replaceChild(note, img);
+      }
+    } else {
+      var base=dirBase();
+      for(var k=0;k<imgs.length;k++){
+        var src=imgs[k].getAttribute("src")||"";
+        if(src.indexOf("data:")===0){
+          var note2=document.createElement("p");
+          note2.style.cssText="margin:12px 0;color:#64748b;font-size:13px;";
+          note2.textContent="【请插入配图"+(k+1)+"】";
+          imgs[k].parentNode.replaceChild(note2, imgs[k]);
+          stripped=true;
+        } else if(src && src.indexOf("http")!==0){
+          imgs[k].setAttribute("src", base + src.replace(/^\.\//,""));
+        }
+      }
+    }
+    return {html:tmp.innerHTML, stripped:stripped};
+  }
+  var built=buildHtml();
+  var html=built.html;
   var host=document.createElement("div");
   host.setAttribute("contenteditable","true");
   host.setAttribute("tabindex","-1");
-  host.style.cssText="position:fixed;left:8px;top:8px;right:8px;bottom:8px;z-index:2147483647;background:#fff;overflow:auto;padding:12px;-webkit-user-select:text;user-select:text;border:2px solid #2563eb;";
+  host.style.cssText="position:fixed;left:0;top:0;width:1px;height:1px;opacity:0.01;z-index:-1;overflow:hidden;";
   host.innerHTML=html;
   document.body.appendChild(host);
+  var s=window.getSelection();
+  var r=document.createRange();
+  var okCmd=false;
   try{
     host.focus();
-    r=document.createRange(); r.selectNodeContents(host);
-    s.removeAllRanges(); s.addRange(r);
-    var ok2=false;
-    try{ ok2=document.execCommand("copy"); }catch(e2){ ok2=false; }
+    r.selectNodeContents(host);
     s.removeAllRanges();
-    host.remove();
-    if(ok2){ ok(b); return; }
-  }catch(e3){
-    try{s.removeAllRanges();}catch(_e3){}
-    try{host.remove();}catch(_e4){}
+    s.addRange(r);
+    okCmd=document.execCommand("copy");
+  }catch(e){ okCmd=false; }
+  try{s.removeAllRanges();}catch(_e){}
+  host.remove();
+  if(okCmd){
+    ok(b);
+    if(built.stripped){
+      setTimeout(function(){ alert("正文已复制。图片太大已改成占位，请按 IMAGE-NOTES 在公众号里手动插图。"); }, 50);
+    }
+    return;
   }
+  /* 可见选区兜底 */
   try{
     el.setAttribute("contenteditable","true");
     el.focus();
     r=document.createRange(); r.selectNodeContents(el);
     s.removeAllRanges(); s.addRange(r);
-  }catch(_e5){}
-  alert("自动复制被系统拦住了。正文已选中，请长按选区点「复制」");
+    okCmd=document.execCommand("copy");
+    if(okCmd){ ok(b); return; }
+  }catch(e2){}
+  alert("自动复制失败。请改用电脑 Chrome 打开本页复制，或长按正文手动复制。");
 }
 applyHStyle();
 applyHrStyle();
