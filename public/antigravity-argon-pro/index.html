@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
+<!-- CACHEBUST-PHONE-BTN-v2 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta name="copy-engine-rev" content="2026-10-18-fix3"/>
@@ -88,6 +89,8 @@
     font-size: 12px; color: var(--muted);
   }
   #body { padding: 8px 0 12px; background: #fff; }
+  .btn-phone { background:#0ea5e9; color:#fff; border-color:#0ea5e9; font-weight:600; }
+  .copy-hint { margin:0 0 10px; font-size:12px; color:#64748b; line-height:1.5; }
 </style>
 </head>
 <body>
@@ -139,9 +142,9 @@
   <section class="card">
     <div class="body-head">
       <h3><span class="dot"></span>正文</h3>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
-          <button type="button" class="btn" onclick="cpBodyPhone(this)">复制正文（手机）</button>
-          <button type="button" class="btn btn-blue" onclick="cpBodyDesktop(this)">复制正文（电脑）</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;align-items:center">
+          <button type="button" class="btn btn-phone" onclick="cpBodyPhone(this)" style="background:#0ea5e9;color:#fff;border-color:#0ea5e9;font-weight:600">手机粘贴（无底色）</button>
+          <button type="button" class="btn" onclick="cpBodyDesktop(this)">电脑粘贴（带样式）</button>
         </div>
         </div>
     <div class="article-stage">
