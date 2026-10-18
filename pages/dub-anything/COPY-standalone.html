@@ -1,4 +1,7 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>8G 显卡本机跑通：dub-anything 把中文样例配成了英文原声味</title></head>
+<!doctype html><html><head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="copy-engine-rev" content="2026-10-18-yest"/><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>8G 显卡本机跑通：dub-anything 把中文样例配成了英文原声味</title></head>
 <body style="margin:0;padding:12px;background:#fff;color:#111;max-width:760px;margin:0 auto">
 <h3>推荐标题</h3><p id="rec" style="font-size:18px;font-weight:700;user-select:text;-webkit-user-select:text">8G 显卡本机跑通：dub-anything 把中文样例配成了英文原声味</p>
 <button onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
@@ -12,7 +15,7 @@
 <li>视频：samples/sample-zh.en.mp4</li>
 <li>字幕：samples/sample-zh.en.srt</li>
 </ul>
-<h3>正文 <button onclick="cpBody(this)">复制正文</button></h3>
+<h3>正文 <button onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-yest</span></button></h3>
 <div id="body" style="border-top:1px solid #ddd;padding-top:12px"><section style="margin:0;padding:0;"><p style="margin:0 0 16px;padding:0;font-size:16px;line-height:1.8;color:#1F2937;text-align:left;">这回不是看 README 写观感。我把开源项目 <strong>dub-anything</strong> 装到自己的 Windows 笔记本上，用一块大约 <strong>8G 显存</strong> 的 RTX 5060，真跑了一段<strong>中文→英文</strong>短样例。能出片，也踩了坑。下面按上手顺序说。</p>
 <p style="margin:0 0 16px;padding:0;font-size:16px;line-height:1.8;color:#1F2937;text-align:left;">一句话先讲清它想干啥：把片子配成另一种语言，但声音尽量还是原演员自己的。音乐、音效留着，只换台词。官方玩法是让 Cursor、Claude Code 这类 AI 编程助手当“导演”，一句一句改剧本、卡时长。</p>
 <h2 style="margin:32px 0 16px;padding:0;font-size:18px;line-height:1.5;font-weight:700;color:#0F172A;text-align:center;">— 它想干啥 —</h2>
@@ -74,40 +77,5 @@
 function ok(b){var t=b.innerText;b.innerText='已复制';setTimeout(function(){b.innerText=t},1200)}
 function cp(t,b){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){ok(b)},function(){fb(t,b)})}else fb(t,b)}
 function fb(t,b){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok(b)}catch(e){alert('请长按手动复制')}a.remove()}
-function cpBody(b){
-  var el=document.getElementById("body");
-  if(!el){alert("找不到正文"); return;}
-  /* 同步选中可见正文再 copy：保留点击手势（微信/iOS）；勿先走异步 clipboard.write */
-  var s=window.getSelection();
-  var r=document.createRange();
-  try{
-    r.selectNodeContents(el);
-    s.removeAllRanges();
-    s.addRange(r);
-    var okCmd=false;
-    try{ okCmd=document.execCommand("copy"); }catch(e1){ okCmd=false; }
-    if(okCmd){ ok(b); return; }
-  }catch(e){}
-  finally{
-    try{s.removeAllRanges();}catch(_e){}
-  }
-  var html=el.innerHTML;
-  var text=el.innerText || el.textContent || "";
-  function fail(){ alert("未能复制到剪贴板，请长按右侧正文手动复制"); }
-  if(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write && window.isSecureContext){
-    try{
-      var item=new ClipboardItem({
-        "text/html": new Blob([html], {type:"text/html"}),
-        "text/plain": new Blob([text], {type:"text/plain"})
-      });
-      navigator.clipboard.write([item]).then(function(){ok(b)}, function(){fail()});
-      return;
-    }catch(e2){}
-  }
-  if(navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext){
-    navigator.clipboard.writeText(text).then(function(){ok(b)}, function(){fail()});
-    return;
-  }
-  fail();
-}
+function cpBody(b){var el=document.getElementById('body');var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');ok(b)}catch(e){alert('已选中，请手动复制')}}
 </script></body></html>

@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta name="copy-engine-rev" content="2026-10-18-yest"/>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
@@ -193,7 +196,7 @@
 <div class="wrap">
   <div class="mobile-sticky-bar">
     <button type="button" class="btn btn-blue" onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
-    <button type="button" class="btn" onclick="cpBody(this)">复制正文</button>
+    <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-yest</span></button>
   </div>
 
   <div class="layout">
@@ -254,7 +257,7 @@
       <section class="card body-card">
         <div class="body-head">
           <h3><span class="dot"></span>正文</h3>
-          <button type="button" class="btn" onclick="cpBody(this)">复制正文</button>
+          <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-yest</span></button>
         </div>
         <div class="article-stage">
           <div class="article-scroll">
@@ -436,38 +439,31 @@ function fb(t,b){
 function cpBody(b){
   var el=document.getElementById("body");
   if(!el){alert("找不到正文"); return;}
-  /* 同步选中可见正文再 copy：保留点击手势（微信/iOS）；勿先走异步 clipboard.write */
-  var s=window.getSelection();
-  var r=document.createRange();
-  try{
-    r.selectNodeContents(el);
-    s.removeAllRanges();
-    s.addRange(r);
-    var okCmd=false;
-    try{ okCmd=document.execCommand("copy"); }catch(e1){ okCmd=false; }
-    if(okCmd){ ok(b); return; }
-  }catch(e){}
-  finally{
-    try{s.removeAllRanges();}catch(_e){}
-  }
   var html=el.innerHTML;
   var text=el.innerText || el.textContent || "";
-  function fail(){ alert("未能复制到剪贴板，请长按右侧正文手动复制"); }
+  function fbHtml(){
+    var host=document.createElement("div");
+    host.setAttribute("contenteditable","true");
+    host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;";
+    host.innerHTML=html;
+    document.body.appendChild(host);
+    var r=document.createRange(); r.selectNodeContents(host);
+    var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
+    s.removeAllRanges();
+    host.remove();
+  }
   if(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write && window.isSecureContext){
     try{
       var item=new ClipboardItem({
         "text/html": new Blob([html], {type:"text/html"}),
         "text/plain": new Blob([text], {type:"text/plain"})
       });
-      navigator.clipboard.write([item]).then(function(){ok(b)}, function(){fail()});
+      navigator.clipboard.write([item]).then(function(){ok(b)}, function(){fbHtml()});
       return;
-    }catch(e2){}
+    }catch(e){}
   }
-  if(navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext){
-    navigator.clipboard.writeText(text).then(function(){ok(b)}, function(){fail()});
-    return;
-  }
-  fail();
+  fbHtml();
 }
 applyHStyle();
 applyHrStyle();
