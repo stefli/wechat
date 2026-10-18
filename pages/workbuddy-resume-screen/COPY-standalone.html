@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
-<meta name="copy-engine-rev" content="2026-10-18-yest"/>
+<meta name="copy-engine-rev" content="2026-10-18-fix2"/>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
@@ -196,7 +196,7 @@
 <div class="wrap">
   <div class="mobile-sticky-bar">
     <button type="button" class="btn btn-blue" onclick="cp(document.getElementById('rec').innerText,this)">复制推荐标题</button>
-    <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-yest</span></button>
+    <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-fix2</span></button>
   </div>
 
   <div class="layout">
@@ -257,7 +257,7 @@
       <section class="card body-card">
         <div class="body-head">
           <h3><span class="dot"></span>正文</h3>
-          <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-yest</span></button>
+          <button type="button" class="btn" onclick="cpBody(this)">复制正文 <span style="font-size:11px;color:#888;font-weight:400">v-fix2</span></button>
         </div>
         <div class="article-stage">
           <div class="article-scroll">
@@ -436,9 +436,8 @@ function ok(b){
   var t=b.innerText;b.innerText="已复制";setTimeout(function(){b.innerText=t},1200);
 }
 function cp(t,b){
-  if(navigator.clipboard && window.isSecureContext){
-    navigator.clipboard.writeText(t).then(function(){ok(b)}, function(){fb(t,b)});
-  } else fb(t,b);
+  /* 同步 textarea，避免微信 clipboard.writeText 弹「未能复制到剪贴板」 */
+  fb(t,b);
 }
 function fb(t,b){
   var a=document.createElement("textarea"); a.value=t; document.body.appendChild(a); a.select();
@@ -448,31 +447,55 @@ function fb(t,b){
 function cpBody(b){
   var el=document.getElementById("body");
   if(!el){alert("找不到正文"); return;}
+  /* 禁止 navigator.clipboard.write / ClipboardItem：微信会弹系统提示「未能复制到剪贴板」 */
+  var s=window.getSelection();
+  var r=document.createRange();
+  var prevEd=el.getAttribute("contenteditable");
+  var prevTab=el.getAttribute("tabindex");
+  try{
+    el.setAttribute("contenteditable","true");
+    el.setAttribute("tabindex","-1");
+    el.focus();
+    r.selectNodeContents(el);
+    s.removeAllRanges();
+    s.addRange(r);
+    var okCmd=false;
+    try{ okCmd=document.execCommand("copy"); }catch(e1){ okCmd=false; }
+    if(okCmd){ ok(b); return; }
+  }catch(e){}
+  finally{
+    try{s.removeAllRanges();}catch(_e){}
+    if(prevEd===null) el.removeAttribute("contenteditable"); else el.setAttribute("contenteditable",prevEd);
+    if(prevTab===null) el.removeAttribute("tabindex"); else el.setAttribute("tabindex",prevTab);
+    try{el.blur();}catch(_e2){}
+  }
   var html=el.innerHTML;
-  var text=el.innerText || el.textContent || "";
-  function fbHtml(){
-    var host=document.createElement("div");
-    host.setAttribute("contenteditable","true");
-    host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;";
-    host.innerHTML=html;
-    document.body.appendChild(host);
-    var r=document.createRange(); r.selectNodeContents(host);
-    var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
+  var host=document.createElement("div");
+  host.setAttribute("contenteditable","true");
+  host.setAttribute("tabindex","-1");
+  host.style.cssText="position:fixed;left:8px;top:8px;right:8px;bottom:8px;z-index:2147483647;background:#fff;overflow:auto;padding:12px;-webkit-user-select:text;user-select:text;border:2px solid #2563eb;";
+  host.innerHTML=html;
+  document.body.appendChild(host);
+  try{
+    host.focus();
+    r=document.createRange(); r.selectNodeContents(host);
+    s.removeAllRanges(); s.addRange(r);
+    var ok2=false;
+    try{ ok2=document.execCommand("copy"); }catch(e2){ ok2=false; }
     s.removeAllRanges();
     host.remove();
+    if(ok2){ ok(b); return; }
+  }catch(e3){
+    try{s.removeAllRanges();}catch(_e3){}
+    try{host.remove();}catch(_e4){}
   }
-  if(window.ClipboardItem && navigator.clipboard && navigator.clipboard.write && window.isSecureContext){
-    try{
-      var item=new ClipboardItem({
-        "text/html": new Blob([html], {type:"text/html"}),
-        "text/plain": new Blob([text], {type:"text/plain"})
-      });
-      navigator.clipboard.write([item]).then(function(){ok(b)}, function(){fbHtml()});
-      return;
-    }catch(e){}
-  }
-  fbHtml();
+  try{
+    el.setAttribute("contenteditable","true");
+    el.focus();
+    r=document.createRange(); r.selectNodeContents(el);
+    s.removeAllRanges(); s.addRange(r);
+  }catch(_e5){}
+  alert("自动复制被系统拦住了。正文已选中，请长按选区点「复制」");
 }
 applyHStyle();
 applyHrStyle();
