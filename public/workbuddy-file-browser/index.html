@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<!-- CACHEBUST-PHONE-PLAIN-v3 -->
+<!-- CACHEBUST-NO-BG-BLEED-v4 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta name="copy-engine-rev" content="2026-10-18-fix3"/>
@@ -516,43 +516,62 @@ function buildDesktopHtml(html){
   absifyImgs(tmp);
   return tmp.innerHTML;
 }
+function stripBgProps(html){
+  var tmp=document.createElement("div");
+  tmp.innerHTML=html;
+  /* 文末 CTA 色块 → 纯文字，避免整块灰/深蓝底 */
+  Array.prototype.slice.call(tmp.querySelectorAll("section")).forEach(function(sec){
+    var p=document.createElement("p");
+    p.setAttribute("style","margin:28px 0 8px;padding:0;font-size:15px;line-height:1.75;color:#334155;text-align:center;");
+    p.textContent=(sec.innerText||"").replace(/\s+/g," ").trim();
+    if(sec.parentNode) sec.parentNode.replaceChild(p, sec);
+  });
+  Array.prototype.slice.call(tmp.querySelectorAll("*")).forEach(function(el){
+    var st=el.getAttribute("style");
+    if(!st) return;
+    var kept=[];
+    st.split(";").forEach(function(part){
+      var s=part.trim(); if(!s) return;
+      var key=s.split(":")[0].trim().toLowerCase();
+      if(!key) return;
+      if(key==="background" || key.indexOf("background-")===0) return;
+      if(key==="border-radius" || key==="box-shadow" || key==="outline") return;
+      /* code 灰底常靠 padding+radius 衬出，一并去掉衬底感 */
+      kept.push(s);
+    });
+    if(kept.length) el.setAttribute("style", kept.join(";"));
+    else el.removeAttribute("style");
+  });
+  /* code 不再带任何底色 */
+  Array.prototype.slice.call(tmp.querySelectorAll("code")).forEach(function(el){
+    var st=el.getAttribute("style")||"";
+    var kept=[];
+    st.split(";").forEach(function(part){
+      var s=part.trim(); if(!s) return;
+      var key=s.split(":")[0].trim().toLowerCase();
+      if(key==="background" || key.indexOf("background-")===0) return;
+      if(key==="border-radius" || key==="padding") return;
+      kept.push(s);
+    });
+    if(kept.length) el.setAttribute("style", kept.join(";"));
+    else el.removeAttribute("style");
+  });
+  return tmp.innerHTML;
+}
 function copyHtml(html, b){
-  var iframe=document.createElement("iframe");
-  iframe.setAttribute("aria-hidden","true");
-  iframe.style.cssText="position:fixed;left:-9999px;top:0;width:2px;height:2px;opacity:0;border:0;";
-  document.body.appendChild(iframe);
-  var idoc=iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document);
+  /* 禁止再往 iframe 写 *{background:transparent}——会被写进剪贴板，公众号渲成灰蓝块 */
+  html=stripBgProps(html);
+  var host=document.createElement("div");
+  host.setAttribute("contenteditable","true");
+  host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;";
+  host.innerHTML=html;
+  document.body.appendChild(host);
+  var r=document.createRange(); r.selectNodeContents(host);
+  var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
   var okCmd=false;
-  try{
-    idoc.open();
-    idoc.write("<!doctype html><html><head><meta charset='utf-8'><style>html,body{margin:0;padding:0;background:transparent!important;}*{background:transparent!important;background-color:transparent!important;border-radius:0!important;box-shadow:none!important;}</style></head><body></body></html>");
-    idoc.close();
-    var host=idoc.createElement("div");
-    host.setAttribute("contenteditable","true");
-    host.innerHTML=html;
-    idoc.body.appendChild(host);
-    var win=iframe.contentWindow;
-    var r=idoc.createRange();
-    r.selectNodeContents(host);
-    var sel=win.getSelection();
-    sel.removeAllRanges();
-    sel.addRange(r);
-    okCmd=idoc.execCommand("copy");
-  }catch(e){ okCmd=false; }
-  if(iframe.parentNode) iframe.parentNode.removeChild(iframe);
-  if(okCmd){ ok(b); return true; }
-  var host2=document.createElement("div");
-  host2.setAttribute("contenteditable","true");
-  host2.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;background:transparent!important;";
-  host2.innerHTML=html;
-  document.body.appendChild(host2);
-  try{
-    var r2=document.createRange(); r2.selectNodeContents(host2);
-    var s2=window.getSelection(); s2.removeAllRanges(); s2.addRange(r2);
-    okCmd=document.execCommand("copy");
-    try{s2.removeAllRanges();}catch(_e){}
-  }catch(e2){ okCmd=false; }
-  if(host2.parentNode) host2.parentNode.removeChild(host2);
+  try{ okCmd=document.execCommand("copy"); }catch(e){ okCmd=false; }
+  try{s.removeAllRanges();}catch(_e){}
+  if(host.parentNode) host.parentNode.removeChild(host);
   if(okCmd){ ok(b); return true; }
   return false;
 }
