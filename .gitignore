@@ -3,3 +3,4 @@ deploy-claim.json
 .netlify/
 .env
 .env.*
+scripts/__pycache__/
