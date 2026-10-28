@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TVP · 科技快播选题库</title>
+<style>
+  :root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+  header h1 { margin:0 0 6px; font-size:22px; letter-spacing:.02em; }
+  header p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+  .grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+  .covers { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:#000; }
+  .covers a { display:block; aspect-ratio:3/4; overflow:hidden; }
+  .covers img { width:100%; height:100%; object-fit:cover; display:block; }
+  .body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .body h2 { margin:0; font-size:16px; line-height:1.35; }
+  .meta { color:var(--muted); font-size:12px; }
+  .links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+  .links a { color:var(--accent); font-size:13px; text-decoration:none; }
+  .links a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<header>
+  <h1>TVP · 科技快播选题库</h1>
+  <p>每条主题保留封面 A/B + PUBLISH 文案，方便对照发布。不含成片大文件（手机下载包另开临时目录）。</p>
+</header>
+<main class="grid">
+  <article class="card">
+    <div class="covers">
+      <a href="./teamviewer-oct27-security/cover_A.jpg" target="_blank" rel="noopener"><img src="./teamviewer-oct27-security/cover_A.jpg" alt="TeamViewer 封面 A"></a>
+      <a href="./teamviewer-oct27-security/cover_B.jpg" target="_blank" rel="noopener"><img src="./teamviewer-oct27-security/cover_B.jpg" alt="TeamViewer 封面 B"></a>
+    </div>
+    <div class="body">
+      <h2>TeamViewer 安全通告</h2>
+      <div class="meta">2026-10-27 · 升到 15.83 · CVSS ≤ 8.8</div>
+      <div class="links">
+        <a href="./teamviewer-oct27-security/PUBLISH.md">文案 A/B/C</a>
+        <a href="./teamviewer-oct27-security/cover_A.jpg">封面 A</a>
+        <a href="./teamviewer-oct27-security/cover_B.jpg">封面 B</a>
+      </div>
+    </div>
+  </article>
+  <article class="card">
+    <div class="covers">
+      <a href="./lfm3-liquid-ai/cover_A.jpg" target="_blank" rel="noopener"><img src="./lfm3-liquid-ai/cover_A.jpg" alt="LFM3 封面 A"></a>
+      <a href="./lfm3-liquid-ai/cover_B.jpg" target="_blank" rel="noopener"><img src="./lfm3-liquid-ai/cover_B.jpg" alt="LFM3 封面 B"></a>
+    </div>
+    <div class="body">
+      <h2>Liquid AI LFM3</h2>
+      <div class="meta">2026-10-27 · ~2B 端侧多模态家族</div>
+      <div class="links">
+        <a href="./lfm3-liquid-ai/PUBLISH.md">文案 A/B/C</a>
+        <a href="./lfm3-liquid-ai/cover_A.jpg">封面 A</a>
+        <a href="./lfm3-liquid-ai/cover_B.jpg">封面 B</a>
+      </div>
+    </div>
+  </article>
+  <article class="card">
+    <div class="covers">
+      <a href="./chatgpt-pro200-halved/cover_A.jpg" target="_blank" rel="noopener"><img src="./chatgpt-pro200-halved/cover_A.jpg" alt="Pro 200 封面 A"></a>
+      <a href="./chatgpt-pro200-halved/cover_B.jpg" target="_blank" rel="noopener"><img src="./chatgpt-pro200-halved/cover_B.jpg" alt="Pro 200 封面 B"></a>
+    </div>
+    <div class="body">
+      <h2>ChatGPT Pro 200 额度减半</h2>
+      <div class="meta">2026-10-30 生效 · 仍 $200 · 20×→10×</div>
+      <div class="links">
+        <a href="./chatgpt-pro200-halved/PUBLISH.md">文案 A/B/C</a>
+        <a href="./chatgpt-pro200-halved/cover_A.jpg">封面 A</a>
+        <a href="./chatgpt-pro200-halved/cover_B.jpg">封面 B</a>
+      </div>
+    </div>
+  </article>
+</main>
+</body>
+</html>
