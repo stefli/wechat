@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MiniMax Space Bunny / M3.1 Flash · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>MiniMax Space Bunny / M3.1 Flash</h1>
+  <p>2026-10-19 · 200T+ · 428B/23B 权重公开 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">匿名刷了 200T+ token 的 Space Bunny，官宣身份：MiniMax M3.1 Flash 的早期版。
+
+2026-10-19 官博揭面：在线推理接近 3 倍速、用量成本约降 70%；日常 200+ TPS，定价约 $0.15 / $0.60 / $0.015（每 1M，输入 / 输出 / 缓存输入）。四天后权重公开——总参 428B、每 token 激活约 23B，Hugging Face 与 ModelScope 可下。官方自报基准覆盖 BankerToolBench、DeepSWE、OSWorld、ALE、CyberGym 等，数字一律按官方自报读。
+
+这是比「胡萝卜起飞」梗更完整的揭面成片：匿名用量神话 → 正式产品名 → 权重开源。
+
+你会先试 API，还是直接拉 428B/23B 权重自己跑？
+
+#MiniMax #SpaceBunny #M31Flash #开源权重 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">Space Bunny = MiniMax M3.1 Flash 早期版：200T+ token、约 3× 更快、约 70% 更便宜；$0.15/$0.60/$0.015 每 1M；200+ TPS。10-23 权重公开 428B/23B，HF + ModelScope。基准均为官方自报。
+
+#MiniMax #M31Flash #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 MiniMax Space Bunny / M3.1 Flash 官宣揭面
+
+▪️ 身份：Space Bunny = M3.1 Flash early（官博 2026-10-19）
+▪️ 用量：匿名阶段处理 &gt;200T tokens
+▪️ 体验：在线推理近 3× 更快 · 成本约降 70% · 日常 200+ TPS
+▪️ 定价（每 1M）：$0.15 输入 · $0.60 输出 · $0.015 缓存输入
+▪️ 权重：2026-10-23 公开 · 428B 总参 / 23B 激活 · HF + ModelScope
+▪️ 基准：BankerToolBench / DeepSWE / OSWorld / ALE / CyberGym 等 → 官方自报
+
+匿名兔子揭面了；权重也已可下——第三方榜别和官方 200T 混成一张表。
+
+#SpaceBunny #MiniMax #开源模型 #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>

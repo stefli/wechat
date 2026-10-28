@@ -181,6 +181,56 @@
       "cover_b": "video2robot-oss/cover_B.jpg",
       "publish": "video2robot-oss/PUBLISH.md",
       "copy_page": "video2robot-oss/"
+    },
+    {
+      "slug": "guoban-ai-employment",
+      "title": "国办 AI×就业意见",
+      "date": "2026-10-23",
+      "note": "国办发〔2026〕29号 · 6×18",
+      "cover_a": "guoban-ai-employment/cover_A.jpg",
+      "cover_b": "guoban-ai-employment/cover_B.jpg",
+      "publish": "guoban-ai-employment/PUBLISH.md",
+      "copy_page": "guoban-ai-employment/"
+    },
+    {
+      "slug": "anthropic-ab-usage",
+      "title": "Anthropic 订阅用量 A/B",
+      "date": "2026-10-23",
+      "note": "月额度约−20% · 5小时窗约+20%",
+      "cover_a": "anthropic-ab-usage/cover_A.jpg",
+      "cover_b": "anthropic-ab-usage/cover_B.jpg",
+      "publish": "anthropic-ab-usage/PUBLISH.md",
+      "copy_page": "anthropic-ab-usage/"
+    },
+    {
+      "slug": "opus-peer-review",
+      "title": "Opus 4.8 同行审稿对照",
+      "date": "2026-10-23",
+      "note": "124 篇哈佛社科 · Mollick 转述",
+      "cover_a": "opus-peer-review/cover_A.jpg",
+      "cover_b": "opus-peer-review/cover_B.jpg",
+      "publish": "opus-peer-review/PUBLISH.md",
+      "copy_page": "opus-peer-review/"
+    },
+    {
+      "slug": "minimax-space-bunny",
+      "title": "MiniMax Space Bunny / M3.1 Flash",
+      "date": "2026-10-19",
+      "note": "200T+ · 428B/23B 权重公开",
+      "cover_a": "minimax-space-bunny/cover_A.jpg",
+      "cover_b": "minimax-space-bunny/cover_B.jpg",
+      "publish": "minimax-space-bunny/PUBLISH.md",
+      "copy_page": "minimax-space-bunny/"
+    },
+    {
+      "slug": "roadster-takeoff",
+      "title": "Tesla Roadster 冷气起飞",
+      "date": "2026-10-15",
+      "note": "演示≠上路 · 目标约2028",
+      "cover_a": "roadster-takeoff/cover_A.jpg",
+      "cover_b": "roadster-takeoff/cover_B.jpg",
+      "publish": "roadster-takeoff/PUBLISH.md",
+      "copy_page": "roadster-takeoff/"
     }
   ]
 }
