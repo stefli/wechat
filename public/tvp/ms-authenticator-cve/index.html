@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Microsoft Authenticator CVE · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+.card .covers { margin:0; padding:0; max-width:none; gap:2px; }
+.card .covers a { border-radius:0; border:0; }
+.body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.body h2 { margin:0; font-size:16px; line-height:1.35; }
+.meta { color:var(--muted); font-size:12px; }
+.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+.links a { color:var(--accent); font-size:13px; text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+.top { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+.top h1 { margin:0 0 6px; font-size:22px; }
+.top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Microsoft Authenticator CVE</h1>
+  <p>2026-10-27 · CVE-2026-80097 · CVSS 8.6 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">零权限 App，也能冒充 Teams 偷工作号 Token？微软 Authenticator 安卓版经纪层曝出已修复漏洞 CVE-2026-80097，CVSS 8.6。
+
+研究员 Ofek Levin（Enclave）公开：恶意 App 可启动可导出的 AccountChooserActivity，自填包名和签名字段，让经纪层当成 Teams，进而拿到邮件、文件、日历等 Graph 令牌。微软已在 6.2606.4246 及以上修好。
+
+口径要分清：微软顾问写还要用户走完一次认证流；Enclave 实测称设备上已登录经纪时几乎无需额外界面。截至 10 月底暂无已知在野利用——请立刻更新，不要当谣言。
+
+你会先去应用商店升版本，还是让 IT 用 MDM 卡最低版？
+
+#MicrosoftAuthenticator #CVE202680097 #Android安全 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">Authenticator 安卓经纪漏洞已修：零权限 App 可冒充 Teams 拿工作号 Token。CVE-2026-80097 · CVSS 8.6 · 升到 6.2606.4246+。微软与 Enclave 对是否还需额外认证界面说法不一，暂无在野利用——先更新。
+
+#CVE202680097 #Authenticator #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 Authenticator 安卓 CVE-2026-80097：已修复，请更新
+
+▪️ 影响：零权限恶意 App 可冒充微软一方 App（如 Teams）骗经纪层发 Token  
+▪️ 后果：工作号邮件 / 文件 / 日历等 Graph 访问（测试所见）  
+▪️ 编号与评分：CVE-2026-80097 · CVSS 8.6 Important · 微软 2026-09-08  
+▪️ 修复：Authenticator Android **6.2606.4246+**（商店或 MDM）  
+▪️ 口径：微软强调需完成认证流；Enclave PoC 称已登录经纪下几乎无额外 UI——勿混成一句  
+▪️ 现状：截至 2026-10 下旬暂无已知在野利用  
+
+已打补丁的官方 CVE，不是谣言——先升版本再说。
+
+#MicrosoftAuthenticator #CVE202680097 #移动安全 #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>

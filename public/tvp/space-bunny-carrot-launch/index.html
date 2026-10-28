@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Space Bunny 胡萝卜起飞 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+.card .covers { margin:0; padding:0; max-width:none; gap:2px; }
+.card .covers a { border-radius:0; border:0; }
+.body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.body h2 { margin:0; font-size:16px; line-height:1.35; }
+.meta { color:var(--muted); font-size:12px; }
+.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+.links a { color:var(--accent); font-size:13px; text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+.top { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+.top h1 { margin:0 0 6px; font-size:22px; }
+.top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Space Bunny 胡萝卜起飞</h1>
+  <p>2026-10-24 · MiniMax-M3.1-Flash 早期版 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">胡萝卜火箭点火升空：MiniMax用动画官宣Space Bunny身份了🥕🚀
+官博一手帖揭晓：Space Bunny = MiniMax-M3.1-Flash早期版，匿名期干了超过200T tokens
+在线推理近3倍加速，智能体成本约降七成；定价输入$0.15 / 输出$0.60 / 缓存$0.015（每百万tokens）
+官方自报基准：编程约73.7%、网络安全约82%，口径均为官方自报
+10月23日权重公开：约428B参数 / 23B激活，已上API、M Plan、MiniMax Code
+一枚胡萝卜火箭，把“神秘排行榜选手”变成可落地的低成本Flash
+你还在用哪家智能体模型？👇
+#SpaceBunny #MiniMax #Flash #大模型 #开源 #科技新闻 #科技快播</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">胡萝卜火箭一飞——Space Bunny正式认领：就是M3.1 Flash早期版。
+200T+匿名负载、近3倍加速、成本约降七成，权重已开。
+神秘排行榜选手，终于有了真名和价格。
+#SpaceBunny #MiniMax #AI #科技快播</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">Space Bunny胡萝卜起飞🥕 官博动画认领Flash
+▪️ 身份：Space Bunny = MiniMax-M3.1-Flash早期版
+▪️ 负载：匿名期&gt;200T tokens，刷屏智能体排行榜
+▪️ 性价比：近3×加速 / 成本约−70%；$0.15/$0.60/$0.015每百万tokens
+▪️ 基准（官方自报）：DeepSWE约73.7%、CyberGym约82%
+▪️ 落地：API / M Plan / MiniMax Code；权重约428B/23B激活已公开
+从“神秘选手”到“可买可跑的Flash”，前沿智能体正在压价上桌
+#智能体 #大模型 #MiniMax #开源 #科技快播</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>

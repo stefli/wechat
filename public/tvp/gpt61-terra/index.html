@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GPT-6.1 Terra · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+.card .covers { margin:0; padding:0; max-width:none; gap:2px; }
+.card .covers a { border-radius:0; border:0; }
+.body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.body h2 { margin:0; font-size:16px; line-height:1.35; }
+.meta { color:var(--muted); font-size:12px; }
+.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+.links a { color:var(--accent); font-size:13px; text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+.top { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+.top h1 { margin:0 0 6px; font-size:22px; }
+.top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>GPT-6.1 Terra</h1>
+  <p>2026-10-27 · 更快更省 · 视觉 + 控电脑 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">OpenAI 正式发布 GPT-6.1 Terra——更快、更省，还能精细看图和控电脑🚀
+官方 Agents&#x27; Last Exam 中档：比 GPT-5.6 Terra 高 15 个百分点，成本约三分之一；任务速度比 GPT-6 Astra / GPT-6.1 Sol 快 3 倍以上
+工作日场景：起草、读图纸、填表、剪视频——从视觉理解到动手操作
+事实性：内部易错题低力度错误率 53.6%→16.7%，最高力度到 4.3%；Terminal-Bench 4.0 最高档 50.3%（5.6 Terra 为 21.5%），复杂编码仍优先 Sol / Astra
+API 标准价百万输入 $1、输出 $5，大约比 5.6 Terra / 6.1 Sol 便宜一半；今天起 Plus / Pro / 企业 / 教育可在 ChatGPT Work 和 Codex 用，API 名 `gpt-6.1-terra`
+你更关心速度、价格，还是控电脑能力？关注老李，下一条继续拆👇
+#GPT61Terra #OpenAI #GPT6 #科技快播 #科技新闻 #AI</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">OpenAI 官宣 GPT-6.1 Terra：ALE 中档 +15pp、成本约 1/3，速度 &gt;3× Astra/Sol；API $1/$5 每百万 token，今天起 Work / Codex / API 可用。
+#GPT61Terra #OpenAI #科技快播</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">OpenAI × GPT-6.1 Terra 📊 官方发布
+▪️ 定位：更快更省的视觉推理 + 精确 computer use + 更自然写作；相对 GPT-5.6 Terra 明显升级
+▪️ ALE 中档：+15pp vs 5.6 Terra @ ~1/3 成本；对标 Astra @ ~1/10 $/token；任务速度 &gt;3× Astra/Sol
+▪️ 事实性：易错题 53.6%→16.7%（低力度），最高力度 4.3%
+▪️ 编码：Terminal-Bench 4.0 max 50.3% vs 5.6 Terra 21.5%；复杂任务仍看 Sol/Astra
+▪️ 价格：标准 API $1 / $5 每百万 in/out；cached in $0.05；约便宜 50%
+▪️ 上线：Plus/Pro/Enterprise/Edu · ChatGPT Work + Codex + API（`gpt-6.1-terra`）
+收束：官方已上线——比的是速度、成本和能不能真干活
+#GPT61Terra #OpenAI #科技快播</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>

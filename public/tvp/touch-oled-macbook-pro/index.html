@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OLED 触控 MacBook Pro · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+.card .covers { margin:0; padding:0; max-width:none; gap:2px; }
+.card .covers a { border-radius:0; border:0; }
+.body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.body h2 { margin:0; font-size:16px; line-height:1.35; }
+.meta { color:var(--muted); font-size:12px; }
+.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+.links a { color:var(--accent); font-size:13px; text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+.top { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+.top h1 { margin:0 0 6px; font-size:22px; }
+.top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>OLED 触控 MacBook Pro</h1>
+  <p>2026-10-27 · Gurman 传闻 · 未官宣 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">二十年几乎不碰触屏的苹果，据彭博 Mark Gurman Power On 预告：触屏 OLED MacBook Pro 或在周三揭晓📱
+报道要点——14&quot;/16&quot; 触控 OLED、Dynamic Island 替刘海、机身更轻；芯片仍是现款 M5 Pro/Max，升级重点在显示与交互
+系统传闻：macOS Golden Gate「动态界面」会按触屏/触控板切换控件；内部折中是触控可选、非主交互
+同周还有 M6 基线本、新 iMac 等报道；OLED 触屏款定价或更高（媒体推算，非官宣）
+周三看官宣。在此之前全是 scoop，别当说明书👇
+#触屏Mac #MacBookPro #OLED #Gurman #Bloomberg #科技快播 #苹果传闻 #未官宣</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">据 Gurman / Bloomberg 预告：触屏 OLED 版 MacBook Pro 周三或揭晓；仍属传闻，未官宣。芯片据报仍是现款 M5 Pro/Max。
+#触屏Mac #MacBookPro #科技快播 #未官宣</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">触屏 OLED MacBook Pro 📊 Gurman / Bloomberg Power On 传闻
+▪️ 状态：预告 / 未官宣（非 Apple 正式发布）
+▪️ 时间：一手帖 2026-10-25 22:12（Asia/Shanghai）；或揭晓日 2026-10-28（周三）
+▪️ 硬点：14&quot;/16&quot; 触控 OLED · Dynamic Island · 更轻
+▪️ 芯片：现款 M5 Pro / M5 Max（显示/交互升级，非新一代硅片）
+▪️ 系统：macOS Golden Gate 动态界面（按触屏/触控板切换）——传闻
+▪️ 内部：Cook/Ternus vs 工业设计；折中=触控可选非主交互
+▪️ 涟漪：同周 M6 基线 MBP / 新 iMac 等报道；定价或更高（媒体推算）
+▪️ 边界：OLED iPad mini 已官宣，勿与触屏 MBP 混谈
+收束：周三看官宣；scoop ≠ 说明书
+#触屏Mac #MacBookPro #OLED #Gurman #科技快播 #未官宣</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>

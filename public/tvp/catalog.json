@@ -3,6 +3,36 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "chatgpt-pro200-halved",
+      "title": "ChatGPT Pro 200 额度减半",
+      "date": "2026-10-30",
+      "note": "仍 $200 · 20×→10×",
+      "cover_a": "chatgpt-pro200-halved/cover_A.jpg",
+      "cover_b": "chatgpt-pro200-halved/cover_B.jpg",
+      "publish": "chatgpt-pro200-halved/PUBLISH.md",
+      "copy_page": "chatgpt-pro200-halved/"
+    },
+    {
+      "slug": "anthropic-coding-interview",
+      "title": "Anthropic 停考编程题",
+      "date": "2026-10-28",
+      "note": "经理本队实践 · 非全员规定",
+      "cover_a": "anthropic-coding-interview/cover_A.jpg",
+      "cover_b": "anthropic-coding-interview/cover_B.jpg",
+      "publish": "anthropic-coding-interview/PUBLISH.md",
+      "copy_page": "anthropic-coding-interview/"
+    },
+    {
+      "slug": "grokbot-whats-new",
+      "title": "Grok Bot 新功能（马斯克转发）",
+      "date": "2026-10-27",
+      "note": "Pages · 保险箱 · 出片 · Spaces",
+      "cover_a": "grokbot-whats-new/cover_A.jpg",
+      "cover_b": "grokbot-whats-new/cover_B.jpg",
+      "publish": "grokbot-whats-new/PUBLISH.md",
+      "copy_page": "grokbot-whats-new/"
+    },
+    {
       "slug": "teamviewer-oct27-security",
       "title": "TeamViewer 安全通告",
       "date": "2026-10-27",
@@ -23,14 +53,134 @@
       "copy_page": "lfm3-liquid-ai/"
     },
     {
-      "slug": "chatgpt-pro200-halved",
-      "title": "ChatGPT Pro 200 额度减半",
-      "date": "2026-10-30",
-      "note": "仍 $200 · 20×→10×",
-      "cover_a": "chatgpt-pro200-halved/cover_A.jpg",
-      "cover_b": "chatgpt-pro200-halved/cover_B.jpg",
-      "publish": "chatgpt-pro200-halved/PUBLISH.md",
-      "copy_page": "chatgpt-pro200-halved/"
+      "slug": "genie4-world-model",
+      "title": "DeepMind Genie 4",
+      "date": "2026-10-27",
+      "note": "实时可交互世界模型 · 研究预览",
+      "cover_a": "genie4-world-model/cover_A.jpg",
+      "cover_b": "genie4-world-model/cover_B.jpg",
+      "publish": "genie4-world-model/PUBLISH.md",
+      "copy_page": "genie4-world-model/"
+    },
+    {
+      "slug": "ms-authenticator-cve",
+      "title": "Microsoft Authenticator CVE",
+      "date": "2026-10-27",
+      "note": "CVE-2026-80097 · CVSS 8.6",
+      "cover_a": "ms-authenticator-cve/cover_A.jpg",
+      "cover_b": "ms-authenticator-cve/cover_B.jpg",
+      "publish": "ms-authenticator-cve/PUBLISH.md",
+      "copy_page": "ms-authenticator-cve/"
+    },
+    {
+      "slug": "ios-27-2",
+      "title": "iOS 27.2",
+      "date": "2026-10-27",
+      "note": "Siri AI 新开 5 语 · 正式推送",
+      "cover_a": "ios-27-2/cover_A.jpg",
+      "cover_b": "ios-27-2/cover_B.jpg",
+      "publish": "ios-27-2/PUBLISH.md",
+      "copy_page": "ios-27-2/"
+    },
+    {
+      "slug": "gpt61-terra",
+      "title": "GPT-6.1 Terra",
+      "date": "2026-10-27",
+      "note": "更快更省 · 视觉 + 控电脑",
+      "cover_a": "gpt61-terra/cover_A.jpg",
+      "cover_b": "gpt61-terra/cover_B.jpg",
+      "publish": "gpt61-terra/PUBLISH.md",
+      "copy_page": "gpt61-terra/"
+    },
+    {
+      "slug": "touch-oled-macbook-pro",
+      "title": "OLED 触控 MacBook Pro",
+      "date": "2026-10-27",
+      "note": "Gurman 传闻 · 未官宣",
+      "cover_a": "touch-oled-macbook-pro/cover_A.jpg",
+      "cover_b": "touch-oled-macbook-pro/cover_B.jpg",
+      "publish": "touch-oled-macbook-pro/PUBLISH.md",
+      "copy_page": "touch-oled-macbook-pro/"
+    },
+    {
+      "slug": "starship-flight15-static-fire",
+      "title": "Starship Flight 15 静态点火",
+      "date": "2026-10-26",
+      "note": "33 发动机全时长静火",
+      "cover_a": "starship-flight15-static-fire/cover_A.jpg",
+      "cover_b": "starship-flight15-static-fire/cover_B.jpg",
+      "publish": "starship-flight15-static-fire/PUBLISH.md",
+      "copy_page": "starship-flight15-static-fire/"
+    },
+    {
+      "slug": "opus-video-demos",
+      "title": "Opus 视频演示",
+      "date": "2026-10-26",
+      "note": "社区样例 · 作者自述模型",
+      "cover_a": "opus-video-demos/cover_A.jpg",
+      "cover_b": "opus-video-demos/cover_B.jpg",
+      "publish": "opus-video-demos/PUBLISH.md",
+      "copy_page": "opus-video-demos/"
+    },
+    {
+      "slug": "anthropic-s1-nasdaq",
+      "title": "Anthropic S1 / 纳斯达克",
+      "date": "2026-10-26",
+      "note": "拟挂牌 ANT · 公司披露",
+      "cover_a": "anthropic-s1-nasdaq/cover_A.jpg",
+      "cover_b": "anthropic-s1-nasdaq/cover_B.jpg",
+      "publish": "anthropic-s1-nasdaq/PUBLISH.md",
+      "copy_page": "anthropic-s1-nasdaq/"
+    },
+    {
+      "slug": "elvis-anthropic-lawsuit",
+      "title": "Elvis × Anthropic 诉讼",
+      "date": "2026-10-25",
+      "note": "诉称 274 首 · 尚未判决",
+      "cover_a": "elvis-anthropic-lawsuit/cover_A.jpg",
+      "cover_b": "elvis-anthropic-lawsuit/cover_B.jpg",
+      "publish": "elvis-anthropic-lawsuit/PUBLISH.md",
+      "copy_page": "elvis-anthropic-lawsuit/"
+    },
+    {
+      "slug": "artemis-back-to-moon",
+      "title": "Artemis 重返月球",
+      "date": "2026-10-25",
+      "note": "三号彩排 · 四号才登月",
+      "cover_a": "artemis-back-to-moon/cover_A.jpg",
+      "cover_b": "artemis-back-to-moon/cover_B.jpg",
+      "publish": "artemis-back-to-moon/PUBLISH.md",
+      "copy_page": "artemis-back-to-moon/"
+    },
+    {
+      "slug": "space-bunny-carrot-launch",
+      "title": "Space Bunny 胡萝卜起飞",
+      "date": "2026-10-24",
+      "note": "MiniMax-M3.1-Flash 早期版",
+      "cover_a": "space-bunny-carrot-launch/cover_A.jpg",
+      "cover_b": "space-bunny-carrot-launch/cover_B.jpg",
+      "publish": "space-bunny-carrot-launch/PUBLISH.md",
+      "copy_page": "space-bunny-carrot-launch/"
+    },
+    {
+      "slug": "claude-desktop-ui",
+      "title": "Claude Desktop UI 改版",
+      "date": "2026-10-24",
+      "note": "设计师一手前后对照",
+      "cover_a": "claude-desktop-ui/cover_A.jpg",
+      "cover_b": "claude-desktop-ui/cover_B.jpg",
+      "publish": "claude-desktop-ui/PUBLISH.md",
+      "copy_page": "claude-desktop-ui/"
+    },
+    {
+      "slug": "video2robot-oss",
+      "title": "video2robot 开源",
+      "date": "2026-10-24",
+      "note": "文字/视频 → 机器人关节指令",
+      "cover_a": "video2robot-oss/cover_A.jpg",
+      "cover_b": "video2robot-oss/cover_B.jpg",
+      "publish": "video2robot-oss/PUBLISH.md",
+      "copy_page": "video2robot-oss/"
     }
   ]
 }
