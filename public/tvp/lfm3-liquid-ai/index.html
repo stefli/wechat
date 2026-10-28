@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liquid AI LFM3 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+.card .covers { margin:0; padding:0; max-width:none; gap:2px; }
+.card .covers a { border-radius:0; border:0; }
+.body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.body h2 { margin:0; font-size:16px; line-height:1.35; }
+.meta { color:var(--muted); font-size:12px; }
+.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+.links a { color:var(--accent); font-size:13px; text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+.top { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+.top h1 { margin:0 0 6px; font-size:22px; }
+.top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Liquid AI LFM3</h1>
+  <p>2026-10-27 · ~2B 端侧多模态家族 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  
+<section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">Liquid AI 刚官宣 LFM3：不是再堆一个云端大模型，是一套大约 2B 档的端侧小模型家族——文本、视觉、音频、全能，再加上决策模型，共用同一底座。
+
+新架构让 1.7B 文本模型，硬是比上一代更大的 2.6B 还更强，参数少大约 35%。四比特大约占 1G，上下文开到 25 万 6 千；开源权重已上 Hugging Face，单卡就能微调。决策模型一趟前向就能给校准概率，适合工单、发票这类判断。
+
+要端侧专才，不必先上大模型——可从 LFM3 起手。你更关心体积，还是决策毫秒级？
+
+#LFM3 #LiquidAI #端侧AI #开源模型 #科技快播 #老李的AI江湖 #AI新闻</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">Liquid AI 发布 LFM3：约 2B 多模态家族，1.7B 文本反超上代 2.6B，四比特约 1G、256K 上下文，开源上 Hugging Face，单卡可微调。决策模型毫秒级校准概率——端侧专才不必先上大模型。
+
+#LFM3 #LiquidAI #端侧AI #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 LFM3 · Liquid AI 官方发布（2026-10-27）
+
+▪️ 定位：新一代小模型家族，专为端侧 / 特化智能
+▪️ 规模：约 2B 档；六模型（文本 / VL / 音频 / Omni / d1 / d1-Omni）共用 LFM3-1.7B-Base
+▪️ 架构：三混合；LFM3-1.7B 以约少 35% 参数超过 LFM2.5-2.6B
+▪️ 端侧：文本四比特约 1 GB；上下文 256K；单卡可微调
+▪️ 入口：Hugging Face 开源权重 · Playground · Liquid API
+▪️ 决策：d1 系列一趟前向、毫秒级校准概率（工单 / 发票等）
+
+一句话：端侧要专才，可以从 LFM3 起手，不必先上大模型。
+
+#LFM3 #LiquidAI #HuggingFace #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>

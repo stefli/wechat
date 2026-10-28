@@ -5,41 +5,56 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TVP · 科技快播选题库</title>
 <style>
-  :root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
-  header { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
-  header h1 { margin:0 0 6px; font-size:22px; letter-spacing:.02em; }
-  header p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
-  .grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
-  .covers { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:#000; }
-  .covers a { display:block; aspect-ratio:3/4; overflow:hidden; }
-  .covers img { width:100%; height:100%; object-fit:cover; display:block; }
-  .body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
-  .body h2 { margin:0; font-size:16px; line-height:1.35; }
-  .meta { color:var(--muted); font-size:12px; }
-  .links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
-  .links a { color:var(--accent); font-size:13px; text-decoration:none; }
-  .links a:hover { text-decoration:underline; }
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.grid { max-width:1100px; margin:0 auto; padding:16px 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+.card .covers { margin:0; padding:0; max-width:none; gap:2px; }
+.card .covers a { border-radius:0; border:0; }
+.body { padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.body h2 { margin:0; font-size:16px; line-height:1.35; }
+.meta { color:var(--muted); font-size:12px; }
+.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:6px; }
+.links a { color:var(--accent); font-size:13px; text-decoration:none; }
+.links a:hover { text-decoration:underline; }
+.top { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+.top h1 { margin:0 0 6px; font-size:22px; }
+.top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
 </style>
 </head>
 <body>
-<header>
+<header class="top">
   <h1>TVP · 科技快播选题库</h1>
-  <p>每条主题保留封面 A/B + PUBLISH 文案，方便对照发布。不含成片大文件（手机下载包另开临时目录）。</p>
+  <p>每条主题保留封面 A/B + 可一点复制的文案 A/B/C。不含成片大文件（手机下载包另开临时目录）。</p>
 </header>
 <main class="grid">
+
   <article class="card">
     <div class="covers">
-      <a href="./teamviewer-oct27-security/cover_A.jpg" target="_blank" rel="noopener"><img src="./teamviewer-oct27-security/cover_A.jpg" alt="TeamViewer 封面 A"></a>
-      <a href="./teamviewer-oct27-security/cover_B.jpg" target="_blank" rel="noopener"><img src="./teamviewer-oct27-security/cover_B.jpg" alt="TeamViewer 封面 B"></a>
+      <a href="./teamviewer-oct27-security/cover_A.jpg" target="_blank" rel="noopener"><img src="./teamviewer-oct27-security/cover_A.jpg" alt="TeamViewer 安全通告 封面 A"></a>
+      <a href="./teamviewer-oct27-security/cover_B.jpg" target="_blank" rel="noopener"><img src="./teamviewer-oct27-security/cover_B.jpg" alt="TeamViewer 安全通告 封面 B"></a>
     </div>
     <div class="body">
       <h2>TeamViewer 安全通告</h2>
       <div class="meta">2026-10-27 · 升到 15.83 · CVSS ≤ 8.8</div>
       <div class="links">
-        <a href="./teamviewer-oct27-security/PUBLISH.md">文案 A/B/C</a>
+        <a href="./teamviewer-oct27-security/">复制文案 A/B/C</a>
         <a href="./teamviewer-oct27-security/cover_A.jpg">封面 A</a>
         <a href="./teamviewer-oct27-security/cover_B.jpg">封面 B</a>
       </div>
@@ -47,14 +62,14 @@
   </article>
   <article class="card">
     <div class="covers">
-      <a href="./lfm3-liquid-ai/cover_A.jpg" target="_blank" rel="noopener"><img src="./lfm3-liquid-ai/cover_A.jpg" alt="LFM3 封面 A"></a>
-      <a href="./lfm3-liquid-ai/cover_B.jpg" target="_blank" rel="noopener"><img src="./lfm3-liquid-ai/cover_B.jpg" alt="LFM3 封面 B"></a>
+      <a href="./lfm3-liquid-ai/cover_A.jpg" target="_blank" rel="noopener"><img src="./lfm3-liquid-ai/cover_A.jpg" alt="Liquid AI LFM3 封面 A"></a>
+      <a href="./lfm3-liquid-ai/cover_B.jpg" target="_blank" rel="noopener"><img src="./lfm3-liquid-ai/cover_B.jpg" alt="Liquid AI LFM3 封面 B"></a>
     </div>
     <div class="body">
       <h2>Liquid AI LFM3</h2>
       <div class="meta">2026-10-27 · ~2B 端侧多模态家族</div>
       <div class="links">
-        <a href="./lfm3-liquid-ai/PUBLISH.md">文案 A/B/C</a>
+        <a href="./lfm3-liquid-ai/">复制文案 A/B/C</a>
         <a href="./lfm3-liquid-ai/cover_A.jpg">封面 A</a>
         <a href="./lfm3-liquid-ai/cover_B.jpg">封面 B</a>
       </div>
@@ -62,14 +77,14 @@
   </article>
   <article class="card">
     <div class="covers">
-      <a href="./chatgpt-pro200-halved/cover_A.jpg" target="_blank" rel="noopener"><img src="./chatgpt-pro200-halved/cover_A.jpg" alt="Pro 200 封面 A"></a>
-      <a href="./chatgpt-pro200-halved/cover_B.jpg" target="_blank" rel="noopener"><img src="./chatgpt-pro200-halved/cover_B.jpg" alt="Pro 200 封面 B"></a>
+      <a href="./chatgpt-pro200-halved/cover_A.jpg" target="_blank" rel="noopener"><img src="./chatgpt-pro200-halved/cover_A.jpg" alt="ChatGPT Pro 200 额度减半 封面 A"></a>
+      <a href="./chatgpt-pro200-halved/cover_B.jpg" target="_blank" rel="noopener"><img src="./chatgpt-pro200-halved/cover_B.jpg" alt="ChatGPT Pro 200 额度减半 封面 B"></a>
     </div>
     <div class="body">
       <h2>ChatGPT Pro 200 额度减半</h2>
-      <div class="meta">2026-10-30 生效 · 仍 $200 · 20×→10×</div>
+      <div class="meta">2026-10-30 · 仍 $200 · 20×→10×</div>
       <div class="links">
-        <a href="./chatgpt-pro200-halved/PUBLISH.md">文案 A/B/C</a>
+        <a href="./chatgpt-pro200-halved/">复制文案 A/B/C</a>
         <a href="./chatgpt-pro200-halved/cover_A.jpg">封面 A</a>
         <a href="./chatgpt-pro200-halved/cover_B.jpg">封面 B</a>
       </div>
