@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "anthropic-enterprise-tools",
+      "title": "Anthropic 企业版统一 Claude",
+      "date": "2026-10-29",
+      "note": "Chat+Cowork · 11/16 自动开",
+      "cover_a": "anthropic-enterprise-tools/cover_A.jpg",
+      "cover_b": "anthropic-enterprise-tools/cover_B.jpg",
+      "publish": "anthropic-enterprise-tools/PUBLISH.md",
+      "copy_page": "anthropic-enterprise-tools/"
+    },
+    {
       "slug": "alphabet-earnings",
       "title": "Alphabet Q3：营收 1276 亿美元",
       "date": "2026-10-28",
