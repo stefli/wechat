@@ -3,6 +3,36 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "google-xreal",
+      "title": "Google × XREAL AURA 开售",
+      "date": "2026-10-28",
+      "note": "首款 Android XR 有线眼镜 · $1099",
+      "cover_a": "google-xreal/cover_A.jpg",
+      "cover_b": "google-xreal/cover_B.jpg",
+      "publish": "google-xreal/PUBLISH.md",
+      "copy_page": "google-xreal/"
+    },
+    {
+      "slug": "sony-network-leak",
+      "title": "索尼网通 So-net 遭入侵",
+      "date": "2026-10-27",
+      "note": "~2.58M · So-net / plala",
+      "cover_a": "sony-network-leak/cover_A.jpg",
+      "cover_b": "sony-network-leak/cover_B.jpg",
+      "publish": "sony-network-leak/PUBLISH.md",
+      "copy_page": "sony-network-leak/"
+    },
+    {
+      "slug": "dropbox-layoffs",
+      "title": "Dropbox 再砍约9%",
+      "date": "2026-10-28",
+      "note": "~200人 · CTO 11/18 离任",
+      "cover_a": "dropbox-layoffs/cover_A.jpg",
+      "cover_b": "dropbox-layoffs/cover_B.jpg",
+      "publish": "dropbox-layoffs/PUBLISH.md",
+      "copy_page": "dropbox-layoffs/"
+    },
+    {
       "slug": "chatgpt-pro200-halved",
       "title": "ChatGPT Pro 200 额度减半",
       "date": "2026-10-30",

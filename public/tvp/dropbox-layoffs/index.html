@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dropbox 再砍约9% · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Dropbox 再砍约9%</h1>
+  <p>2026-10-28 · ~200 人 · CTO 11/18 离任 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">Dropbox 10 月 28 日官方发文：全球再砍约 9%，大约 200 个岗位，覆盖工程、产品、设计与行政支持；多数受影响员工宣布当天就是最后工作日。
+
+公司称业务仍在盈利，但要集中资源做增长优先级。预估现金成本 2700 万到 3300 万美元，多计入 2026 年四季度。CTO Ali Dasdan 将于 11 月 18 日离任——公司称他决定另寻发展，不是被开。美区过渡方案含 16 周基本薪，并按服务年资再加一周。
+
+云存储巨头这一刀，打的是组织重心，不是“快破产”叙事。
+
+你怎么看这一轮 Dropbox 的取舍？
+
+#Dropbox #裁员 #CTO #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">Dropbox 再砍约 9%（约 200 岗）：工程/产品/设计/行政受影响，多数当天走人；仍称盈利，现金成本约 2700–3300 万美元；CTO Ali Dasdan 11 月 18 日离任。
+
+#Dropbox #裁员 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 Dropbox 2026-10-28：全球裁员约 9%
+
+▪️ 规模：约 9% / 约 200 个岗位  
+▪️ 范围：工程、产品、设计、G&amp;A（行政支持）  
+▪️ 节奏：多数受影响员工宣布日 = 最后工作日  
+▪️ 公司表述：仍盈利；集中资源投入增长优先级  
+▪️ 现金成本：约 2700–3300 万美元，多计入 2026Q4  
+▪️ 领导层：CTO Ali Dasdan 11 月 18 日离任（决定另寻发展）  
+▪️ 美区过渡：16 周基本薪 + 按年资再加一周（披露要点，轻描）
+
+一句话：组织瘦身，不是“不赚钱才砍”。
+
+#Dropbox #AliDasdan #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  const old = btn.textContent;
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent = old; btn.classList.remove('copied'); }, 1600);
+}
+</script>
+</body>
+</html>
