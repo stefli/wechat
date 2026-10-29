@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M5 Max/Ultra Mac Studio 已开卖 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#7dd3fc; --line:#262626; --ok:#4ade80; --btn:#1e293b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>M5 Max/Ultra Mac Studio 已开卖</h1>
+  <p>2026-10-29 · 9/22 开卖 · 512GB 到货窗口 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">M5 Max / Ultra 版 Mac Studio 不是本周才首发：苹果 8 月 25 日发布，9 月 22 日起已经到货开卖。
+
+美区官方起售：Max 约 2499 美元，Ultra 约 5499 美元。Ultra 最高可配 512GB 统一内存，官方称适合本地跑超大模型；机身首次带来 Wi-Fi 7，并标配雷雳 5。眼下 512GB 高配正进入官方说的 10 月下旬到货窗口。
+
+渠道近期有折扣，那是零售商促销，不等于苹果官方降价。
+
+你会为 512GB 本地跑模型下单，还是先等渠道价？
+
+#MacStudio #M5Max #M5Ultra #苹果 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">Mac Studio M5 Max/Ultra：8/25 发布、9/22 已开卖；Max $2499 起、Ultra $5499 起；512GB 高配进入 10 月下旬到货窗口；渠道折扣 ≠ 官方 MSRP 下调。
+
+#MacStudio #M5Ultra #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 M5 Max/Ultra Mac Studio：已开卖 · 512GB 配置窗口
+
+▪️ 发布：2026-08-25（Apple Newsroom）  
+▪️ 开卖：2026-09-22 起正式到货（非本周首发）  
+▪️ 美区起售：Max $2499 · Ultra $5499  
+▪️ 峰值：Ultra 最高 512GB 统一内存 / 1.2TB/s（官方口径）  
+▪️ 首次：Mac Studio 上 Wi-Fi 7 + 雷雳 5  
+▪️ 窗口：512GB 高配官方指向 late October  
+▪️ 边界：零售商折扣 ≠ Apple MSRP 下调
+
+一句话：不是今天才亮相，而是开卖后进入 512GB 到货窗口。
+
+#MacStudio #M5Max #M5Ultra #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn){
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText.replace(/\n+$/,'');
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.left='-9999px';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  }
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(()=>{ btn.textContent='复制'; btn.classList.remove('copied'); }, 1200);
+}
+</script>
+</body>
+</html>

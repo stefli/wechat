@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "mac-studio-m5",
+      "title": "M5 Max/Ultra Mac Studio 已开卖",
+      "date": "2026-10-29",
+      "note": "9/22开卖 · 512GB到货窗口",
+      "cover_a": "mac-studio-m5/cover_A.jpg",
+      "cover_b": "mac-studio-m5/cover_B.jpg",
+      "publish": "mac-studio-m5/PUBLISH.md",
+      "copy_page": "mac-studio-m5/"
+    },
+    {
       "slug": "sony-network-leak",
       "title": "索尼网通 So-net 遭入侵",
       "date": "2026-10-27",
