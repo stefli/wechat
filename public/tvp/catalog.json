@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "github-ai-push-protection",
+      "title": "GitHub 密钥防护升级：AI 识别无固定格式密钥并拦截推送",
+      "date": "2026-10-28",
+      "note": "Beyond Regex · 公开预览 GHSP/GHAS",
+      "cover_a": "github-ai-push-protection/cover_A.jpg",
+      "cover_b": "github-ai-push-protection/cover_B.jpg",
+      "publish": "github-ai-push-protection/PUBLISH.md",
+      "copy_page": "github-ai-push-protection/"
+    },
+    {
       "slug": "anthropic-enterprise-tools",
       "title": "Anthropic 企业版统一 Claude",
       "date": "2026-10-29",
