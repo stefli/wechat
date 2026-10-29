@@ -13,6 +13,26 @@
       "copy_page": "chatgpt-pro200-halved/"
     },
     {
+      "slug": "gemini4-carbon",
+      "title": "Gemini 4 Carbon",
+      "date": "2026-10-28",
+      "note": "Index 59 · Fairwind 先行",
+      "cover_a": "gemini4-carbon/cover_A.jpg",
+      "cover_b": "gemini4-carbon/cover_B.jpg",
+      "publish": "gemini4-carbon/PUBLISH.md",
+      "copy_page": "gemini4-carbon/"
+    },
+    {
+      "slug": "apple-touchscreen-dev-video",
+      "title": "苹果首款触控 MacBook Pro",
+      "date": "2026-10-28",
+      "note": "PROLED · 开发者视频 · Sidecar 可测",
+      "cover_a": "apple-touchscreen-dev-video/cover_A.jpg",
+      "cover_b": "apple-touchscreen-dev-video/cover_B.jpg",
+      "publish": "apple-touchscreen-dev-video/PUBLISH.md",
+      "copy_page": "apple-touchscreen-dev-video/"
+    },
+    {
       "slug": "anthropic-coding-interview",
       "title": "Anthropic 停考编程题",
       "date": "2026-10-28",
