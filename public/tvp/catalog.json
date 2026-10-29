@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "google-immersive-teach",
+      "title": "Gemini 沉浸式讲题上线：学生中心分层探索知识",
+      "date": "2026-10-29",
+      "note": "Immersive explorations · 简体中文已开 · soon≠shipped",
+      "cover_a": "google-immersive-teach/cover_A.jpg",
+      "cover_b": "google-immersive-teach/cover_B.jpg",
+      "publish": "google-immersive-teach/PUBLISH.md",
+      "copy_page": "google-immersive-teach/"
+    },
+    {
       "slug": "github-ai-push-protection",
       "title": "GitHub 密钥防护升级：AI 识别无固定格式密钥并拦截推送",
       "date": "2026-10-28",
