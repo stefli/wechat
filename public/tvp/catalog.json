@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "amazon-engineer-epilepsy",
+      "title": "家属诉 OpenAI：ChatGPT 教停药",
+      "date": "2026-10-27",
+      "note": "诉称未判决 · GPT-4o taper claims",
+      "cover_a": "amazon-engineer-epilepsy/cover_A.jpg",
+      "cover_b": "amazon-engineer-epilepsy/cover_B.jpg",
+      "publish": "amazon-engineer-epilepsy/PUBLISH.md",
+      "copy_page": "amazon-engineer-epilepsy/"
+    },
+    {
       "slug": "mac-studio-m5",
       "title": "M5 Max/Ultra Mac Studio 已开卖",
       "date": "2026-10-29",
