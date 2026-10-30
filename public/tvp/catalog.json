@@ -1,7 +1,17 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "buddy-one",
+      "title": "腾讯 Buddy One：一次提问跨应用协同",
+      "date": "2026-10-30",
+      "note": "老李x科技 No.008 · WorkBuddy 底座 · 官网截图",
+      "cover_a": "buddy-one/cover_A.jpg",
+      "cover_b": "buddy-one/cover_B.jpg",
+      "publish": "buddy-one/PUBLISH.md",
+      "copy_page": "buddy-one/"
+    },
     {
       "slug": "google-immersive-teach",
       "title": "Gemini 沉浸式讲题上线：学生中心分层探索知识",
