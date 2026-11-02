@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "apple-qwen-china",
+      "title": "Apple Intelligence 登陆中国 × 阿里千问",
+      "date": "2026-10-31",
+      "note": "11月4测试 · 12月 iOS 27.3 · 部分体验接入千问 · 不含下一代 Siri AI",
+      "cover_a": "apple-qwen-china/cover_A.jpg",
+      "cover_b": "apple-qwen-china/cover_B.jpg",
+      "publish": "apple-qwen-china/PUBLISH.md",
+      "copy_page": "apple-qwen-china/"
+    },
+    {
       "slug": "subvocal-glasses",
       "title": "Subvocal Glasses：闭嘴默念，每分钟两百词",
       "date": "2026-11-02",
