@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "subvocal-glasses",
+      "title": "Subvocal Glasses：默念眼镜预购亮相",
+      "date": "2026-11-02",
+      "note": "YC F26 · RF无摄像头 · 官方称200+WPM · $199订金/$499早鸟 · 预购非铺货",
+      "cover_a": "subvocal-glasses/cover_A.jpg",
+      "cover_b": "subvocal-glasses/cover_B.jpg",
+      "publish": "subvocal-glasses/PUBLISH.md",
+      "copy_page": "subvocal-glasses/"
+    },
+    {
       "slug": "potato-vs-tibo",
       "title": "土豆女神 vs Tibo：Grok Bot 做出的可玩拳皇小游戏",
       "date": "2026-11-02",
