@@ -1,7 +1,17 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "potato-vs-tibo",
+      "title": "土豆女神 vs Tibo：Grok Bot 做出的可玩拳皇小游戏",
+      "date": "2026-11-02",
+      "note": "Kin 一口气上线 · 浏览器可玩 · 不是幻灯片",
+      "cover_a": "potato-vs-tibo/cover_A.jpg",
+      "cover_b": "potato-vs-tibo/cover_B.jpg",
+      "publish": "potato-vs-tibo/PUBLISH.md",
+      "copy_page": "potato-vs-tibo/"
+    },
     {
       "slug": "deepseek-super-agent",
       "title": "DeepSeek Super-agent：设计探索 + 开源研究原型",
