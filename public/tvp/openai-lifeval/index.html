@@ -29,14 +29,14 @@ main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; fle
 <header>
   <a class="back" href="../">← 选题库</a>
   <h1>OpenAI LifeVal：测会不会过日子</h1>
-  <p>2026-11-02 · 日常办事评测 · 3,995 问卷 · 找房 100% · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
+  <p>2026-11-02 · 视觉多样性 remake · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
 </header>
 <div class="covers">
-  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
-  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B 主推"></a>
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A 备选"></a>
 </div>
 <main>
-  <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
+  <p class="hint">聊天气泡与抖音优先附 B 的 1080×1440 JPG（工程 posters/douyin_upload）；勿转发微信再传。下图左 B 右 A。</p>
   <section class="block">
   <div class="block-h">
     <h2>A · 主推版</h2>
@@ -87,17 +87,17 @@ main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; fle
 </main>
 <script>
 async function copyText(btn) {
-  const id = btn.getAttribute('data-target');
-  const text = document.getElementById(id).innerText;
+  const el = document.getElementById(btn.getAttribute('data-target'));
+  const text = el.innerText;
   try {
     await navigator.clipboard.writeText(text);
-    btn.classList.add('copied'); btn.textContent = '已复制';
-    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1600);
   } catch (e) {
-    const r = document.createRange(); r.selectNodeContents(document.getElementById(id));
-    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    alert('请长按选区复制');
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
   }
+  btn.textContent = '已复制';
+  btn.classList.add('copied');
+  setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 1500);
 }
 </script>
 </body>

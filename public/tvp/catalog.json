@@ -16,11 +16,12 @@
       "slug": "openai-lifeval",
       "title": "OpenAI LifeVal：测会不会过日子",
       "date": "2026-11-02",
-      "note": "日常办事评测 · 3995问卷 · 找房100% · 幼儿园93.1% · 非刷题榜",
+      "note": "视觉多样性 remake · 官页截图+官片切片 · B主推",
       "cover_a": "openai-lifeval/cover_A.jpg",
       "cover_b": "openai-lifeval/cover_B.jpg",
       "publish": "openai-lifeval/PUBLISH.md",
-      "copy_page": "openai-lifeval/"
+      "copy_page": "openai-lifeval/",
+      "updated": "2026-11-03"
     },
     {
       "slug": "apple-qwen-china",
