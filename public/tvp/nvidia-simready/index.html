@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVIDIA SimReady Central：不是空壳模型 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#a3e635; --line:#262626; --ok:#4ade80; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#0b1220; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>NVIDIA SimReady Central：不是空壳模型</h1>
+  <p>2026-10-21 · 2000+ 仿真就绪资产 · 免费免登录 · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">不是空壳模型——带碰撞和质量，就能直接仿真。英伟达上线了 SimReady Central。
+
+2026年10月21日，NVIDIA 在 Hugging Face 官宣开源库 **SimReady Central**：面向物理 AI 训练环境和 AI 工厂数字孪生的仿真就绪 OpenUSD 资产，起步 **2000+** 套，**免费、免登录（ungated）**。
+
+库里有机械臂和夹爪、仓配设备、机架、冷却设施等。关键点：SimReady 不等于好看网格。CAD 只是起点，还要补碰撞几何、质量、摩擦、关节结构与限位、语义标签，以及仿真需要的材料/传感器属性。规格靠 SimReady Foundation 画像和校验工具卡住。
+
+发现方式：NVIDIA USD Search 自然语言检索；HF 侧也接了带仿真元数据的索引搜索。示范场景包括 Isaac Sim / PhysX 里的机械臂抓取，以及机柜+散热布局比对与净空检查。OEM 贡献路径已开：Vertiv、多家机器人厂商、家电与道具等可走提交通道。
+
+社区有人点过目录规模大约两千五百多顶层、总容量约四百多 GB——那是二次文件统计，口播仍以官方「2000+」为准。很多包标 CC-BY-4.0，但许可证可能因贡献方而异，用前务必逐包看 LICENSE。
+
+你会先下载一套机械臂练抓取，还是先拖机柜搭数字孪生？
+
+#SimReady #NVIDIA #OpenUSD #IsaacSim #科技快播 #老李的AI江湖 #物理AI #数字孪生
+</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">英伟达开源 SimReady Central：2000+ 仿真就绪资产，免费免登录；不是空壳模型，带碰撞/质量/关节就能仿真；可自然语言搜，抓取与机柜布局都有示范。用前逐包看 LICENSE。
+
+#SimReady #NVIDIA #OpenUSD #科技快播 #老李的AI江湖
+</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 NVIDIA SimReady Central：仿真就绪开源资产库
+
+▪️ 官宣：2026-10-21 Hugging Face 博客（NVIDIA）  
+▪️ 定位：物理 AI 训练环境 + AI 工厂数字孪生起步库  
+▪️ 规模：官方 2000+ 套 · 免费 · ungated  
+▪️ 格式：SimReady OpenUSD（非仅漂亮网格）  
+▪️ 物理：碰撞 / 质量 / 摩擦 / 关节限位 / 语义标签  
+▪️ 发现：USD Search 自然语言 + HF 索引元数据  
+▪️ 示范：Isaac 抓取 · 机柜散热布局比对  
+▪️ 边界：许可证逐包核对；社区文件数/体积为二次统计  
+
+别从空壳网格重头补物理——先领现成零件开练。
+
+#SimReady #NVIDIA #OpenUSD #IsaacSim #科技快播 #老李的AI江湖
+</pre>
+</section>
+</main>
+<script>
+async function copyText(btn) {
+  const id = btn.getAttribute('data-target');
+  const el = document.getElementById(id);
+  const text = el.innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(el);
+    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    document.execCommand('copy'); s.removeAllRanges();
+  }
+  btn.classList.add('copied'); btn.textContent = '已复制';
+  setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1600);
+}
+</script>
+</body>
+</html>

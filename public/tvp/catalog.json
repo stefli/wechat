@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "nvidia-simready",
+      "title": "NVIDIA SimReady Central：不是空壳模型",
+      "date": "2026-10-21",
+      "note": "2000+ 仿真就绪 OpenUSD · 免费免登录 · 碰撞/质量/关节 · 许可证逐包看",
+      "cover_a": "nvidia-simready/cover_A.jpg",
+      "cover_b": "nvidia-simready/cover_B.jpg",
+      "publish": "nvidia-simready/PUBLISH.md",
+      "copy_page": "nvidia-simready/"
+    },
+    {
       "slug": "openai-lifeval",
       "title": "OpenAI LifeVal：测会不会过日子",
       "date": "2026-11-02",
