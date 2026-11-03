@@ -1,7 +1,17 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "openai-lifeval",
+      "title": "OpenAI LifeVal：测会不会过日子",
+      "date": "2026-11-02",
+      "note": "日常办事评测 · 3995问卷 · 找房100% · 幼儿园93.1% · 非刷题榜",
+      "cover_a": "openai-lifeval/cover_A.jpg",
+      "cover_b": "openai-lifeval/cover_B.jpg",
+      "publish": "openai-lifeval/PUBLISH.md",
+      "copy_page": "openai-lifeval/"
+    },
     {
       "slug": "apple-qwen-china",
       "title": "Apple Intelligence 登陆中国 × 阿里千问",
