@@ -3,6 +3,17 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "claude-fable-rumor",
+      "title": "Claude Fable 5.5 纯代码动画：传闻还在发酵",
+      "date": "2026-11-03",
+      "note": "窗内自称纯代码出片 · ~66s狐狸追纸鸟 · Opus暗路由传闻 · 官方未发·目录闪现又删 · 嵌MP4争议 · B主推",
+      "cover_a": "claude-fable-rumor/cover_A.jpg",
+      "cover_b": "claude-fable-rumor/cover_B.jpg",
+      "publish": "claude-fable-rumor/PUBLISH.md",
+      "copy_page": "claude-fable-rumor/",
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "hume-audio-decision-api",
       "title": "Hume 音频决策接口：对着录音提问",
       "date": "2026-11-02",

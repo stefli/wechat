@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Fable 5.5 纯代码动画传闻 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#cc785c; --line:#262626; --ok:#4ade80; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#fff; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Claude Fable 5.5 纯代码动画：传闻还在发酵</h1>
+  <p>2026-11-03 · newsdesk#55 · 未正式发布 · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。文案口径：传闻/还在发酵，禁止写成官宣或已实测。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">窗内刷屏：有人自称 Fable 5.5，用纯代码做出动画短片——先说清楚，这是传闻，还在发酵。
+
+流传 demo 大约 66 秒，狐狸追纸鸟、动画风，分辨率约 1920×804；创作者（如 @chetaslua 线）自称单文件 HTML 交付、没用图像生成模型、也没用图库素材：先用 Python / C++ 画完，再打包进网页分享。
+
+另一条线更玄：有人说界面还写着 Opus 5.5，实际却悄悄走到 Fable；卡帕西相关探测帖也在传。对照官方：Anthropic 没有正式发布 Fable 5.5；公开讨论里 Fable 仍多指向 5.1，Opus/Sonnet 5.5 是另线产品。第三方目录（如 LiteLLM Azure）曾短暂出现 `claude-fable-5-5` 字样，随后又删。
+
+争议也要说：有人怀疑所谓「单文件纯代码动画」其实是把成片 MP4 嵌进 HTML——归属与是否真·纯浏览器实时渲染，都未验证。
+
+看 demo 热闹可以，别当成已经上架的产品去下单跟进。你怎么看：是代码能力跃迁，还是包装过头的短片播放器？
+
+#Claude #Fable #Anthropic #纯代码动画 #传闻 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">窗内自称 Fable 5.5 纯代码出动画短片（约 66 秒狐狸追纸鸟）；创作者称 Python/C++→HTML、零图模零素材；另有 Opus 界面暗路由传闻；Anthropic 未正式发布，目录曾闪现又删；有人质疑 HTML 实为嵌 MP4——看热闹可以，别当下单产品。
+
+#Claude #Fable #传闻 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 Claude Fable 5.5 纯代码动画：传闻还在发酵
+
+▪️ 钩子：窗内刷屏 · 自称 Fable 5.5 · 纯代码动画短片  
+▪️ Demo 形态：约 66s · 狐狸/纸鸟动画风 · 约 1920×804 · 单 HTML 自称  
+▪️ 机制自称：Python/C++ 绘制 → 网页打包分享 · 零图模 · 零图库素材  
+▪️ 路由传闻：Opus 5.5 UI → 暗走 Fable；探测帖在传  
+▪️ 官方对照：Anthropic 未正式发布；公开 Fable 仍多谈 5.1；Opus/Sonnet 5.5 另线  
+▪️ 目录闪现：LiteLLM Azure 曾短暂出现 `claude-fable-5-5` 又删  
+▪️ 争议：单文件 HTML 或为嵌 MP4；归属未验证  
+▪️ 结论：看 demo 热闹可以，别当已发布产品下单
+
+#Claude #Fable #Anthropic #传闻 #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn) {
+  const id = btn.getAttribute('data-target');
+  const text = document.getElementById(id).innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.classList.add('copied'); btn.textContent = '已复制';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1600);
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById(id));
+    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    alert('请长按选区复制');
+  }
+}
+</script>
+</body>
+</html>
