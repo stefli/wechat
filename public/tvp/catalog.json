@@ -3,6 +3,16 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "goldman-ai-coding-ban",
+      "title": "高盛收紧 AI 编程工具：能写代码的留下",
+      "date": "2026-11-02",
+      "note": "Bloomberg · Claude Code/GitHub · 工程师保留·策略岗豁免 · ~12k仍可用 · 职场合规反差",
+      "cover_a": "goldman-ai-coding-ban/cover_A.jpg",
+      "cover_b": "goldman-ai-coding-ban/cover_B.jpg",
+      "publish": "goldman-ai-coding-ban/PUBLISH.md",
+      "copy_page": "goldman-ai-coding-ban/"
+    },
+    {
       "slug": "nvidia-simready",
       "title": "NVIDIA SimReady Central：不是空壳模型",
       "date": "2026-10-21",
