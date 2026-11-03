@@ -3,6 +3,17 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "lovable-supabase-rls-leak",
+      "title": "Lovable 应用暴露数据：零门槛不等于零风险",
+      "date": "2026-11-02",
+      "note": "Crissy Field×Handelsblatt · 159k扫/24.6k未登录/7403邮箱 · RLS关或过宽 · AI编程安全反例 · B主推",
+      "cover_a": "lovable-supabase-rls-leak/cover_A.jpg",
+      "cover_b": "lovable-supabase-rls-leak/cover_B.jpg",
+      "publish": "lovable-supabase-rls-leak/PUBLISH.md",
+      "copy_page": "lovable-supabase-rls-leak/",
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "claude-fable-rumor",
       "title": "Claude Fable 5.5 纯代码动画：传闻还在发酵",
       "date": "2026-11-03",

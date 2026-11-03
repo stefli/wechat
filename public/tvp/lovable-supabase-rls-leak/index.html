@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lovable 应用暴露数据 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#ef4444; --line:#262626; --ok:#4ade80; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#fff; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Lovable 应用暴露数据：零门槛不等于零风险</h1>
+  <p>2026-11-02 · Crissy Field × Handelsblatt · AI 编程平台安全反例 · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">零门槛建站，不等于零风险。
+
+德国安全公司 Crissy Field 扫了约 15.9 万个 Lovable 项目：约 2.5 万个站点一打开就把数据库记录送出来；其中约 7400 个还能再读到邮箱一类字段。Handelsblatt 2026年11月2日同题报道。严重样本里出现一千多条护照类字段、约 8 万用户资料、约 20 万条聊天——成片不展示任何真实隐私内容。
+
+根因多半不是「被黑」，而是权限没关严：行级安全关掉，或规则写得过宽。平台好做应用，但条款仍把数据和安全责任留给开发者自己。
+
+你会怎么看：AI 编程平台该默认把权限锁死，还是继续把安全交给客户自查？
+
+#Lovable #Supabase #RLS #数据泄露 #AI编程 #科技快播 #老李的AI江湖 #信息安全</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">德国 Crissy Field 扫 Lovable：约 15.9 万项目里约 2.5 万站未登录可读库，约 7400 站可读邮箱；权限过宽/行级安全没关严；上线真数据前先审谁能读哪些行。
+
+#Lovable #Supabase #RLS #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 Lovable 应用暴露 Supabase 数据：权限翻车反例
+
+▪️ 信源：Crissy Field 研究报告 · Handelsblatt 2026-11-02 同题  
+▪️ 扫描：159,041 个 Lovable 项目（Common Crawl 样本）  
+▪️ 暴露：24,664 站未登录即送出库记录；7,403 站可读邮箱字段  
+▪️ 严重样本：1,000+ 护照/证件字段 · ~80k 资料 · ~200k 聊天  
+▪️ 机制：常见为 RLS 关闭或策略过宽（访问控制失误）  
+▪️ 边界：报告声明样本非全量、30% 邮箱率≠确认泄露率  
+▪️ 行动：真数据上线前审谁能读哪些行；自动扫描≠专业评估  
+
+AI 编程好用，安全责任还在开发者身上。
+
+#Lovable #Supabase #RLS #数据安全 #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn) {
+  const id = btn.getAttribute('data-target');
+  const text = document.getElementById(id).innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.classList.add('copied'); btn.textContent = '已复制';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1600);
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById(id));
+    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    alert('请长按选区复制');
+  }
+}
+</script>
+</body>
+</html>
