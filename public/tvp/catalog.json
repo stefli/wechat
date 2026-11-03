@@ -3,6 +3,17 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "hume-audio-decision-api",
+      "title": "Hume 音频决策接口：对着录音提问",
+      "date": "2026-11-02",
+      "note": "原始音频+NL提问→概率 · yes/no/choice/scale/span · 10M+标注 · 候补申请/playground · B主推",
+      "cover_a": "hume-audio-decision-api/cover_A.jpg",
+      "cover_b": "hume-audio-decision-api/cover_B.jpg",
+      "publish": "hume-audio-decision-api/PUBLISH.md",
+      "copy_page": "hume-audio-decision-api/",
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "goldman-ai-coding-ban",
       "title": "高盛收紧 AI 编程工具：能写代码的留下",
       "date": "2026-11-02",
