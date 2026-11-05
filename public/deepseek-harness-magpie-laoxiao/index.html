@@ -56,12 +56,15 @@
   .btn-blue { background: var(--blue); }
   .btn-sm { padding: 3px 8px; font-size: 11px; border-radius: 6px; background: var(--blue); flex-shrink: 0; }
   .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-  .style-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+  .style-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+  .style-chips#hChips {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px;
+  }
   .style-chips button {
     border: 1px solid var(--line); background: #FFFFFF; color: var(--ink);
-    border-radius: 10px; padding: 8px 10px; cursor: pointer;
-    display: flex; flex-direction: column; align-items: stretch; gap: 6px;
-    min-width: 108px; max-width: 148px; text-align: left;
+    border-radius: 8px; padding: 4px 5px; cursor: pointer;
+    display: flex; flex-direction: column; align-items: stretch; gap: 3px;
+    min-width: 0; max-width: none; width: 100%; text-align: left;
     box-shadow: 0 1px 2px rgba(15,23,42,.04);
   }
   .style-chips button:hover { border-color: #99F6E4; }
@@ -70,16 +73,35 @@
     box-shadow: 0 0 0 1px var(--teal);
   }
   .style-chips .pv {
-    display: block; width: 100%; min-height: 34px;
-    background: #F8FAFC; border-radius: 6px; padding: 6px 8px;
+    display: block; width: 100%; min-height: 24px;
+    background: #F8FAFC; border-radius: 5px; padding: 4px;
     pointer-events: none; overflow: hidden;
   }
   .style-chips .pv-name {
-    font-size: 11px; font-weight: 600; color: var(--muted); line-height: 1.2;
+    font-size: 9px; font-weight: 600; color: var(--muted); line-height: 1.25;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; word-break: break-word;
   }
   .style-chips button.active .pv-name { color: var(--teal); }
-  .style-chips#hrChips button { min-width: 96px; max-width: 120px; }
-  .style-chips#hrChips .pv { min-height: 22px; display:flex; align-items:center; justify-content:center; }
+  .style-chips#hrChips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .style-chips#hrChips button {
+    min-width: 88px; max-width: 112px; width: auto; padding: 4px 6px;
+  }
+  .style-chips#hrChips .pv { min-height: 18px; display:flex; align-items:center; justify-content:center; padding: 3px; }
+  .style-chips#hColorChips {
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px;
+  }
+  .style-chips#hColorChips button {
+    flex-direction: row; align-items: center; gap: 5px;
+    padding: 5px 6px; min-width: 0; width: 100%;
+  }
+  .style-chips#hColorChips .swatch {
+    width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0;
+    border: 1px solid rgba(15,23,42,.12);
+  }
+  .style-chips#hColorChips .pv-name {
+    font-size: 9px; -webkit-line-clamp: 1; line-height: 1.2;
+  }
   .rec-title {
     margin: 0; font-size: 15px; font-weight: 700; line-height: 1.4;
     user-select: text; -webkit-user-select: text;
@@ -245,87 +267,122 @@
         <p class="hint">切换后右侧正文小标题即时改写；「复制正文」带上当前样式。</p>
         <div class="style-chips" id="hChips">
           <button type="button" data-style="vline" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:block;padding-left:8px;border-left:3px solid #0F766E;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv"><span style="display:block;padding-left:5px;border-left:3px solid #0F766E;font-size:9px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
             <span class="pv-name">左侧竖线</span>
           </button>
           <button type="button" data-style="underline" onclick="setHStyle(this)">
-            <span class="pv" style="text-align:center"><span style="display:inline-block;padding-bottom:3px;border-bottom:2px solid #CBD5E1;font-size:12px;font-weight:700;color:#0F172A">小标题</span></span>
+            <span class="pv" style="text-align:center"><span style="display:inline-block;padding-bottom:2px;border-bottom:2px solid #CBD5E1;font-size:9px;font-weight:700;color:#0F172A">小标题</span></span>
             <span class="pv-name">居中底线</span>
           </button>
           <button type="button" data-style="numbar" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#0F766E;font-weight:800;margin-right:4px">01｜</span>小标题</span></span>
+            <span class="pv"><span style="font-size:9px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#0F766E;font-weight:800;margin-right:2px">01｜</span>小标题</span></span>
             <span class="pv-name">编号条</span>
           </button>
           <button type="button" data-style="accent" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:inline-block;padding-bottom:3px;border-bottom:2px solid #14B8A6;font-size:12px;font-weight:700;color:#0F172A">小标题</span></span>
+            <span class="pv"><span style="display:inline-block;padding-bottom:2px;border-bottom:2px solid #14B8A6;font-size:9px;font-weight:700;color:#0F172A">小标题</span></span>
             <span class="pv-name">短底线</span>
           </button>
           <button type="button" data-style="rule" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:block;padding-top:6px;border-top:1px solid #E2E8F0;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv"><span style="display:block;padding-top:3px;border-top:1px solid #E2E8F0;font-size:9px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
             <span class="pv-name">上隔线</span>
           </button>
           <button type="button" data-style="solid" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:13px;font-weight:800;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv"><span style="font-size:10px;font-weight:800;color:#0F172A;line-height:1.3">小标题</span></span>
             <span class="pv-name">纯加粗</span>
           </button>
           <button type="button" class="active" data-style="bracket" onclick="setHStyle(this)">
-            <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#94A3B8;font-weight:400;margin-right:6px">—</span>小标题<span style="color:#94A3B8;font-weight:400;margin-left:6px">—</span></span></span>
+            <span class="pv" style="text-align:center"><span style="font-size:9px;font-weight:700;color:#0F172A"><span style="color:#94A3B8;font-weight:400;margin-right:3px">—</span>小标题<span style="color:#94A3B8;font-weight:400;margin-left:3px">—</span></span></span>
             <span class="pv-name">两侧细线</span>
           </button>
           <button type="button" data-style="label" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:block;font-size:9px;font-weight:600;letter-spacing:0.1em;color:#94A3B8;margin-bottom:2px">SECTION 01</span><span style="font-size:12px;font-weight:700;color:#0F172A">小标题</span></span>
+            <span class="pv"><span style="display:block;font-size:9px;font-weight:600;letter-spacing:0.1em;color:#94A3B8;margin-bottom:2px">SECTION 01</span><span style="font-size:9px;font-weight:700;color:#0F172A">小标题</span></span>
             <span class="pv-name">栏目双行</span>
           </button>
           <button type="button" data-style="num" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="display:inline-block;margin-right:6px;font-size:16px;font-weight:800;color:#64748B;vertical-align:-1px">01</span>小标题</span></span>
+            <span class="pv"><span style="font-size:9px;font-weight:700;color:#0F172A;line-height:1.3"><span style="display:inline-block;margin-right:3px;font-size:12px;font-weight:800;color:#64748B;vertical-align:-1px">01</span>小标题</span></span>
             <span class="pv-name">序号大字</span>
           </button>
           <button type="button" data-style="dots" onclick="setHStyle(this)">
-            <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#94A3B8;margin-right:5px;font-weight:400">·</span>小标题<span style="color:#94A3B8;margin-left:5px;font-weight:400">·</span></span></span>
+            <span class="pv" style="text-align:center"><span style="font-size:9px;font-weight:700;color:#0F172A"><span style="color:#94A3B8;margin-right:3px;font-weight:400">·</span>小标题<span style="color:#94A3B8;margin-left:3px;font-weight:400">·</span></span></span>
             <span class="pv-name">三点点缀</span>
           </button>
           <button type="button" data-style="arrow" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#0284C7;margin-right:4px;font-weight:700">▶</span>小标题</span></span>
+            <span class="pv"><span style="font-size:9px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#0284C7;margin-right:2px;font-weight:700">▶</span>小标题</span></span>
             <span class="pv-name">箭头前缀</span>
           </button>
           <button type="button" data-style="diamond" onclick="setHStyle(this)">
-            <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#D97706;margin-right:5px;font-weight:400">◆</span>小标题<span style="color:#D97706;margin-left:5px;font-weight:400">◆</span></span></span>
+            <span class="pv" style="text-align:center"><span style="font-size:9px;font-weight:700;color:#0F172A"><span style="color:#D97706;margin-right:3px;font-weight:400">◆</span>小标题<span style="color:#D97706;margin-left:3px;font-weight:400">◆</span></span></span>
             <span class="pv-name">菱形点缀</span>
           </button>
           <button type="button" data-style="vline-indigo" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:block;padding-left:8px;border-left:3px solid #4F46E5;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv"><span style="display:block;padding-left:5px;border-left:3px solid #4F46E5;font-size:9px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
             <span class="pv-name">靛蓝竖线</span>
           </button>
           <button type="button" data-style="vline-rose" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:block;padding-left:8px;border-left:3px solid #E11D48;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv"><span style="display:block;padding-left:5px;border-left:3px solid #E11D48;font-size:9px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
             <span class="pv-name">玫红竖线</span>
           </button>
           <button type="button" data-style="underline-amber" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:inline-block;padding-bottom:3px;border-bottom:2px solid #F59E0B;font-size:12px;font-weight:700;color:#0F172A">小标题</span></span>
+            <span class="pv"><span style="display:inline-block;padding-bottom:2px;border-bottom:2px solid #F59E0B;font-size:9px;font-weight:700;color:#0F172A">小标题</span></span>
             <span class="pv-name">琥珀底线</span>
           </button>
           <button type="button" data-style="bracket-sky" onclick="setHStyle(this)">
-            <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#0EA5E9;font-weight:400;margin-right:6px">—</span>小标题<span style="color:#0EA5E9;font-weight:400;margin-left:6px">—</span></span></span>
+            <span class="pv" style="text-align:center"><span style="font-size:9px;font-weight:700;color:#0F172A"><span style="color:#0EA5E9;font-weight:400;margin-right:3px">—</span>小标题<span style="color:#0EA5E9;font-weight:400;margin-left:3px">—</span></span></span>
             <span class="pv-name">天蓝两侧</span>
           </button>
           <button type="button" data-style="slash" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#6366F1;font-weight:800;margin-right:4px">01 /</span>小标题</span></span>
+            <span class="pv"><span style="font-size:9px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#6366F1;font-weight:800;margin-right:2px">01 /</span>小标题</span></span>
             <span class="pv-name">斜杠编号</span>
           </button>
           <button type="button" data-style="tri" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#7C3AED;margin-right:4px;font-weight:700">▸</span>小标题</span></span>
+            <span class="pv"><span style="font-size:9px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#7C3AED;margin-right:2px;font-weight:700">▸</span>小标题</span></span>
             <span class="pv-name">三角前缀</span>
           </button>
           <button type="button" data-style="rail" onclick="setHStyle(this)">
-            <span class="pv"><span style="display:block;padding-bottom:3px;border-bottom:1px solid #1E40AF;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv"><span style="display:block;padding-bottom:2px;border-bottom:1px solid #1E40AF;font-size:9px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
             <span class="pv-name">底通线</span>
           </button>
           <button type="button" data-style="hash" onclick="setHStyle(this)">
-            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#4D6BFE;font-weight:800;margin-right:4px">#01</span>小标题</span></span>
+            <span class="pv"><span style="font-size:9px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#4D6BFE;font-weight:800;margin-right:2px">#01</span>小标题</span></span>
             <span class="pv-name">井号编号</span>
           </button>
         </div>
         <p class="hint" style="margin:0 0 12px">当前小标题：<strong id="hStyleName">两侧细线</strong></p>
+        <h3 style="margin-top:4px"><span class="dot"></span>标题颜色</h3>
+        <p class="hint">切换后右侧全部小标题文字改色；「复制正文」带上当前颜色。仍无外框。</p>
+        <div class="style-chips" id="hColorChips">
+          <button type="button" class="active" data-color="ink" onclick="setHColor(this)">
+            <span class="swatch" style="background:#0F172A"></span><span class="pv-name">深墨</span>
+          </button>
+          <button type="button" data-color="slate" onclick="setHColor(this)">
+            <span class="swatch" style="background:#334155"></span><span class="pv-name">石板灰</span>
+          </button>
+          <button type="button" data-color="teal" onclick="setHColor(this)">
+            <span class="swatch" style="background:#0F766E"></span><span class="pv-name">青绿</span>
+          </button>
+          <button type="button" data-color="blue" onclick="setHColor(this)">
+            <span class="swatch" style="background:#1D4ED8"></span><span class="pv-name">深蓝</span>
+          </button>
+          <button type="button" data-color="indigo" onclick="setHColor(this)">
+            <span class="swatch" style="background:#4338CA"></span><span class="pv-name">靛蓝</span>
+          </button>
+          <button type="button" data-color="rose" onclick="setHColor(this)">
+            <span class="swatch" style="background:#BE123C"></span><span class="pv-name">玫红</span>
+          </button>
+          <button type="button" data-color="amber" onclick="setHColor(this)">
+            <span class="swatch" style="background:#B45309"></span><span class="pv-name">琥珀</span>
+          </button>
+          <button type="button" data-color="sky" onclick="setHColor(this)">
+            <span class="swatch" style="background:#0369A1"></span><span class="pv-name">天蓝</span>
+          </button>
+          <button type="button" data-color="violet" onclick="setHColor(this)">
+            <span class="swatch" style="background:#6D28D9"></span><span class="pv-name">紫罗兰</span>
+          </button>
+          <button type="button" data-color="forest" onclick="setHColor(this)">
+            <span class="swatch" style="background:#166534"></span><span class="pv-name">墨绿</span>
+          </button>
+        </div>
+        <p class="hint" style="margin:0 0 12px">当前标题颜色：<strong id="hColorName">深墨</strong></p>
         <h3 style="margin-top:4px"><span class="dot"></span>分割线</h3>
         <p class="hint">插在大段之间；切换后改写正文分割线。</p>
         <div class="style-chips" id="hrChips">
@@ -442,6 +499,16 @@ var H_NAMES = {
   "underline-amber": "琥珀底线", "bracket-sky": "天蓝两侧", slash: "斜杠编号",
   tri: "三角前缀", rail: "底通线", hash: "井号编号"
 };
+var H_COLOR = "ink";
+var H_COLOR_MAP = {
+  ink: "#0F172A", slate: "#334155", teal: "#0F766E", blue: "#1D4ED8", indigo: "#4338CA",
+  rose: "#BE123C", amber: "#B45309", sky: "#0369A1", violet: "#6D28D9", forest: "#166534"
+};
+var H_COLOR_NAMES = {
+  ink: "深墨", slate: "石板灰", teal: "青绿", blue: "深蓝", indigo: "靛蓝",
+  rose: "玫红", amber: "琥珀", sky: "天蓝", violet: "紫罗兰", forest: "墨绿"
+};
+function hColor(){ return H_COLOR_MAP[H_COLOR] || "#0F172A"; }
 var HR_STYLE = "dash";
 var HR_NAMES = {
   mid: "中点细线", thin: "细灰线", dash: "虚线", double: "双细线", none: "无分割"
@@ -453,76 +520,76 @@ function renderH(text, style, idx){
   var t = esc(text);
   var n = String(idx + 1).padStart(2, "0");
   if(style === "underline"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:center">'
       +'<span style="display:inline-block;padding-bottom:8px;border-bottom:2px solid #CBD5E1">'+t+'</span></h2>';
   }
   if(style === "vline"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-left:3px solid #0F766E">'+t+'</h2>';
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left;border-left:3px solid #0F766E">'+t+'</h2>';
   }
   if(style === "numbar"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="color:#0F766E;font-weight:800;margin-right:8px;letter-spacing:0.02em">'+n+'｜</span>'+t+'</h2>';
   }
   if(style === "accent"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="display:inline-block;padding-bottom:6px;border-bottom:2px solid #14B8A6">'+t+'</span></h2>';
   }
   if(style === "rule"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:16px 0 0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-top:1px solid #E2E8F0">'+t+'</h2>';
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:16px 0 0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left;border-top:1px solid #E2E8F0">'+t+'</h2>';
   }
   if(style === "solid"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:18px;line-height:1.4;font-weight:800;color:#0F172A;text-align:left">'+t+'</h2>';
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:18px;line-height:1.4;font-weight:800;color:'+hColor()+';text-align:left">'+t+'</h2>';
   }
   if(style === "bracket"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:center">'
       +'<span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>'+t+'<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2>';
   }
   if(style === "label"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="display:block;font-size:11px;font-weight:600;letter-spacing:0.12em;color:#94A3B8;margin-bottom:6px">SECTION '+n+'</span>'+t+'</h2>';
   }
   if(style === "num"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="display:inline-block;margin-right:10px;font-size:22px;font-weight:800;color:#64748B;vertical-align:-1px">'+n+'</span>'+t+'</h2>';
   }
   if(style === "arrow"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="color:#0284C7;font-weight:700;margin-right:8px">▶</span>'+t+'</h2>';
   }
   if(style === "diamond"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:center">'
       +'<span style="color:#D97706;font-weight:400;margin-right:10px">◆</span>'+t+'<span style="color:#D97706;font-weight:400;margin-left:10px">◆</span></h2>';
   }
   if(style === "vline-indigo"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-left:3px solid #4F46E5">'+t+'</h2>';
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left;border-left:3px solid #4F46E5">'+t+'</h2>';
   }
   if(style === "vline-rose"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-left:3px solid #E11D48">'+t+'</h2>';
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left;border-left:3px solid #E11D48">'+t+'</h2>';
   }
   if(style === "underline-amber"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="display:inline-block;padding-bottom:6px;border-bottom:2px solid #F59E0B">'+t+'</span></h2>';
   }
   if(style === "bracket-sky"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:center">'
       +'<span style="color:#0EA5E9;font-weight:400;margin-right:10px">—</span>'+t+'<span style="color:#0EA5E9;font-weight:400;margin-left:10px">—</span></h2>';
   }
   if(style === "slash"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="color:#6366F1;font-weight:800;margin-right:8px;letter-spacing:0.02em">'+n+' /</span>'+t+'</h2>';
   }
   if(style === "tri"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="color:#7C3AED;font-weight:700;margin-right:8px">▸</span>'+t+'</h2>';
   }
   if(style === "rail"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 10px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-bottom:1px solid #1E40AF">'+t+'</h2>';
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 10px;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left;border-bottom:1px solid #1E40AF">'+t+'</h2>';
   }
   if(style === "hash"){
-    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:left">'
       +'<span style="color:#4D6BFE;font-weight:800;margin-right:8px;letter-spacing:0.02em">#'+n+'</span>'+t+'</h2>';
   }
-  return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+  return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:'+hColor()+';text-align:center">'
     +'<span style="color:#94A3B8;margin-right:8px;font-weight:400">·</span>'+t+'<span style="color:#94A3B8;margin-left:8px;font-weight:400">·</span></h2>';
 }
 function applyHStyle(){
@@ -534,10 +601,19 @@ function applyHStyle(){
     h.replaceWith(wrap.firstChild);
   });
   document.getElementById("hStyleName").innerText = H_NAMES[H_STYLE] || H_STYLE;
+  var cn = document.getElementById("hColorName");
+  if(cn) cn.innerText = H_COLOR_NAMES[H_COLOR] || H_COLOR;
 }
 function setHStyle(btn){
   H_STYLE = btn.getAttribute("data-style");
   document.querySelectorAll("#hChips button").forEach(function(b){ b.classList.toggle("active", b === btn); });
+  applyHStyle();
+}
+function setHColor(btn){
+  H_COLOR = btn.getAttribute("data-color");
+  document.querySelectorAll("#hColorChips button").forEach(function(b){ b.classList.toggle("active", b === btn); });
+  var el = document.getElementById("hColorName");
+  if(el) el.innerText = H_COLOR_NAMES[H_COLOR] || H_COLOR;
   applyHStyle();
 }
 function renderHr(style){
