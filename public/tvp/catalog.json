@@ -3,6 +3,19 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "gpt-live-outbound-api",
+      "title": "GPT-Live外呼API：正式GA，智能体能拨号",
+      "date": "2026-11-05",
+      "note": "Uberti GA · Brockman转发 · SIP中继/HD/DTMF · Live≠Realtime create · $0.05/min · 真2K · B主推",
+      "cover_a": "gpt-live-outbound-api/cover_A.jpg",
+      "cover_b": "gpt-live-outbound-api/cover_B.jpg",
+      "publish": "gpt-live-outbound-api/PUBLISH.md",
+      "copy_page": "gpt-live-outbound-api/",
+      "updated": "2026-11-05",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gpt-live-outbound-api/gpt_live_outbound_api_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gpt-live-outbound-api"
+    },
+    {
       "slug": "coze-enterprise-exit",
       "title": "扣子Coze：企业版要退了",
       "date": "2026-10-29",
