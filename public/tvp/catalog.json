@@ -6,27 +6,29 @@
       "slug": "gpt-image-2-6",
       "title": "GPT Image 2.6：快一半还能画圈改",
       "date": "2026-11-05",
-      "note": "OpenAI Images 2.6 · Flare/Sunburst · ~50%更快 · GIF/SVG/markup · 真2K · B主推",
+      "note": "§3c 视口重嵌官方 Community/docs GIF·样例 · 真2K",
       "cover_a": "gpt-image-2-6/cover_A.jpg",
       "cover_b": "gpt-image-2-6/cover_B.jpg",
       "publish": "gpt-image-2-6/PUBLISH.md",
       "copy_page": "gpt-image-2-6/",
       "updated": "2026-11-05",
       "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gpt-image-2-6/gpt_image_2_6_2k.mp4",
-      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gpt-image-2-6"
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gpt-image-2-6",
+      "viewport": "official-demo-gif"
     },
     {
       "slug": "rea-video",
       "title": "rea-video：别急着重做，先拆回生产线",
       "date": "2026-11-05",
-      "note": "viewport rembed: official demo/compare dynamics",
+      "note": "§3c 七拍全官方 mp4/gif 直嵌 pagecam · 真2K",
       "cover_a": "rea-video/cover_A.jpg",
       "cover_b": "rea-video/cover_B.jpg",
       "publish": "rea-video/PUBLISH.md",
       "copy_page": "rea-video/",
       "updated": "2026-11-05",
       "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-rea-video/rea_video_2k.mp4",
-      "release": "https://github.com/stefli/wechat/releases/tag/tvp-rea-video"
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-rea-video",
+      "viewport": "official-demo-mp4"
     },
     {
       "slug": "gpt-live-outbound-api",
