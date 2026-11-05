@@ -3,6 +3,19 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "coze-enterprise-exit",
+      "title": "扣子Coze：企业版要退了",
+      "date": "2026-10-29",
+      "note": "官方企业版分阶段停售/下线 · 11/30暂停新购 · 火山旧套餐12/31 · 新企业最晚2027/12/31 · 非整站一夜关停 · 真2K · B主推",
+      "cover_a": "coze-enterprise-exit/cover_A.jpg",
+      "cover_b": "coze-enterprise-exit/cover_B.jpg",
+      "publish": "coze-enterprise-exit/PUBLISH.md",
+      "copy_page": "coze-enterprise-exit/",
+      "updated": "2026-11-05",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-coze-enterprise-exit/coze_enterprise_exit_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-coze-enterprise-exit"
+    },
+    {
       "slug": "tencent-hunyuan-hy4",
       "title": "腾讯混元Hy4：第一次能看图、还能点电脑",
       "date": "2026-11-04",
