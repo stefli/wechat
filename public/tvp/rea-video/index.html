@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>rea-video · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#a855f7; --line:#262626; --ok:#4ade80; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#fff; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+.watch { max-width:720px; margin:16px auto 0; padding:0 18px; }
+.watch .block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.watch .block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.watch .block-h h2 { margin:0; font-size:16px; }
+.watch .actions { display:flex; flex-wrap:wrap; gap:8px; }
+.watch .btn-link { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#fff; text-decoration:none; }
+.watch .btn-link.ghost { background:transparent; border:1px solid var(--accent); color:var(--accent); }
+.watch .body { padding:12px 14px 14px; }
+.watch video { width:100%; max-height:70vh; border-radius:10px; background:#000; display:block; }
+.watch .meta { color:var(--muted); font-size:12px; margin:10px 0 0; line-height:1.45; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>rea-video：别急着重做，先拆回生产线</h1>
+  <p>2026-11-05 · GitHub JuneYaooo/rea-video · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+
+<section class="watch" id="watch" aria-label="看片下载">
+  <div class="block">
+    <div class="block-h">
+      <h2>看片 / 下载 · 真 2K（1440×2560）</h2>
+      <div class="actions">
+        <a class="btn-link" href="https://ghfast.top/https://github.com/stefli/wechat/releases/download/tvp-rea-video/rea_video_2k.mp4">加速下载</a>
+        <a class="btn-link ghost" href="https://ghproxy.net/https://github.com/stefli/wechat/releases/download/tvp-rea-video/rea_video_2k.mp4">备用加速</a>
+        <a class="btn-link ghost" href="https://github.com/stefli/wechat/releases/download/tvp-rea-video/rea_video_2k.mp4">原链</a>
+        <a class="btn-link ghost" href="https://github.com/stefli/wechat/releases/tag/tvp-rea-video" target="_blank" rel="noopener">Release</a>
+      </div>
+    </div>
+    <div class="body">
+      <video controls playsinline preload="metadata" poster="./cover_B.jpg"
+        src="https://ghfast.top/https://github.com/stefli/wechat/releases/download/tvp-rea-video/rea_video_2k.mp4">
+        你的浏览器不支持 HTML5 视频，请改用下载链接。
+      </video>
+      <p class="meta">约 48s · 旁白 + BGM · ~14MB · GitHub Release 托管（git 树不提交 mp4）。默认只挂 2K，不出 4K。国内可用「加速下载 / 备用加速」（第三方代理，可能失效）；「原链」为官方 GitHub。</p>
+    </div>
+  </div>
+</section>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">rea-video：别急着重做，先把爆款拆回生产线。
+
+开源工具 rea-video（JuneYaooo，上海时间 2026-10-30 仓库创建）最近冲上热度：给它一条短视频，就能逐镜判断是实拍、生成画面、3D、代码动效还是录屏，再给出拍摄、提示词或 Remotion 路线。面向 Claude Code / Codex 这类能跑命令的助手，离线工具模式免费；可选接 Gemini、豆包看图。
+
+原片上自测准确率约百分之九十八；平台压缩片会掉到八成多，要配看图或助手复核。注意：它自己不渲成片，生成镜头可交给配套工具，会先免费试跑再花钱。复刻请用自己有权的素材。
+
+你会先拆一条自己的成片，还是先拆竞品结构学拍法？
+
+#rea-video #视频逆向 #Agent #开源 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">rea-video：逐镜拆回怎么做的——不是一键生同款；10/30 开源给编程助手；原片离线约 98%，压缩片要看图；自己不渲，配套生成先试跑。
+
+#rea-video #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 rea-video：别急着重做，先拆回生产线
+
+▪️ 信源：GitHub JuneYaooo/rea-video README + eval/RESULTS · 核对 2026-11-05  
+▪️ 是什么：视频逆向拆解 / 复刻方案（非一键生成）  
+▪️ 开源：Asia/Shanghai 2026-10-30 00:15 仓库创建；Apache-2.0；本轮约 1.8k star  
+▪️ 能力：逐镜判实拍/AI/3D/代码/录屏/混剪 + report.html + 复刻计划  
+▪️ 入口：Claude Code / Codex 等 agent；ffmpeg + Python≥3.10；可选 Gemini/豆包  
+▪️ 准确率（自测）：原片离线约 98.3%；微信转码约 88.6%，+看图/复核可回 99%+  
+▪️ 边界：不渲成片；生成走配套工具且先 dry-run；勿搬运他人素材
+
+一句话：先看懂生产线，再决定拍、生成还是写代码。
+
+#rea-video #视频逆向 #Agent #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn) {
+  const id = btn.getAttribute('data-target');
+  const text = document.getElementById(id).innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.classList.add('copied'); btn.textContent = '已复制';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1600);
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById(id));
+    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    alert('请长按文案手动复制');
+  }
+}
+</script>
+</body>
+</html>
