@@ -284,6 +284,46 @@
             <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#94A3B8;margin-right:5px;font-weight:400">·</span>小标题<span style="color:#94A3B8;margin-left:5px;font-weight:400">·</span></span></span>
             <span class="pv-name">三点点缀</span>
           </button>
+          <button type="button" data-style="arrow" onclick="setHStyle(this)">
+            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#0284C7;margin-right:4px;font-weight:700">▶</span>小标题</span></span>
+            <span class="pv-name">箭头前缀</span>
+          </button>
+          <button type="button" data-style="diamond" onclick="setHStyle(this)">
+            <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#D97706;margin-right:5px;font-weight:400">◆</span>小标题<span style="color:#D97706;margin-left:5px;font-weight:400">◆</span></span></span>
+            <span class="pv-name">菱形点缀</span>
+          </button>
+          <button type="button" data-style="vline-indigo" onclick="setHStyle(this)">
+            <span class="pv"><span style="display:block;padding-left:8px;border-left:3px solid #4F46E5;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv-name">靛蓝竖线</span>
+          </button>
+          <button type="button" data-style="vline-rose" onclick="setHStyle(this)">
+            <span class="pv"><span style="display:block;padding-left:8px;border-left:3px solid #E11D48;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv-name">玫红竖线</span>
+          </button>
+          <button type="button" data-style="underline-amber" onclick="setHStyle(this)">
+            <span class="pv"><span style="display:inline-block;padding-bottom:3px;border-bottom:2px solid #F59E0B;font-size:12px;font-weight:700;color:#0F172A">小标题</span></span>
+            <span class="pv-name">琥珀底线</span>
+          </button>
+          <button type="button" data-style="bracket-sky" onclick="setHStyle(this)">
+            <span class="pv" style="text-align:center"><span style="font-size:12px;font-weight:700;color:#0F172A"><span style="color:#0EA5E9;font-weight:400;margin-right:6px">—</span>小标题<span style="color:#0EA5E9;font-weight:400;margin-left:6px">—</span></span></span>
+            <span class="pv-name">天蓝两侧</span>
+          </button>
+          <button type="button" data-style="slash" onclick="setHStyle(this)">
+            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#6366F1;font-weight:800;margin-right:4px">01 /</span>小标题</span></span>
+            <span class="pv-name">斜杠编号</span>
+          </button>
+          <button type="button" data-style="tri" onclick="setHStyle(this)">
+            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#7C3AED;margin-right:4px;font-weight:700">▸</span>小标题</span></span>
+            <span class="pv-name">三角前缀</span>
+          </button>
+          <button type="button" data-style="rail" onclick="setHStyle(this)">
+            <span class="pv"><span style="display:block;padding-bottom:3px;border-bottom:1px solid #1E40AF;font-size:12px;font-weight:700;color:#0F172A;line-height:1.3">小标题</span></span>
+            <span class="pv-name">底通线</span>
+          </button>
+          <button type="button" data-style="hash" onclick="setHStyle(this)">
+            <span class="pv"><span style="font-size:12px;font-weight:700;color:#0F172A;line-height:1.3"><span style="color:#4D6BFE;font-weight:800;margin-right:4px">#01</span>小标题</span></span>
+            <span class="pv-name">井号编号</span>
+          </button>
         </div>
         <p class="hint" style="margin:0 0 12px">当前小标题：<strong id="hStyleName">两侧细线</strong></p>
         <h3 style="margin-top:4px"><span class="dot"></span>分割线</h3>
@@ -335,7 +375,10 @@ var H_STYLE = "bracket";
 var H_NAMES = {
   vline: "左侧竖线", underline: "居中底线", numbar: "编号条", accent: "短底线",
   rule: "上隔线", solid: "纯加粗", bracket: "两侧细线", label: "栏目双行",
-  num: "序号大字", dots: "三点点缀"
+  num: "序号大字", dots: "三点点缀",
+  arrow: "箭头前缀", diamond: "菱形点缀", "vline-indigo": "靛蓝竖线", "vline-rose": "玫红竖线",
+  "underline-amber": "琥珀底线", "bracket-sky": "天蓝两侧", slash: "斜杠编号",
+  tri: "三角前缀", rail: "底通线", hash: "井号编号"
 };
 var HR_STYLE = "dash";
 var HR_NAMES = {
@@ -379,6 +422,43 @@ function renderH(text, style, idx){
   if(style === "num"){
     return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
       +'<span style="display:inline-block;margin-right:10px;font-size:22px;font-weight:800;color:#64748B;vertical-align:-1px">'+n+'</span>'+t+'</h2>';
+  }
+  if(style === "arrow"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+      +'<span style="color:#0284C7;font-weight:700;margin-right:8px">▶</span>'+t+'</h2>';
+  }
+  if(style === "diamond"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+      +'<span style="color:#D97706;font-weight:400;margin-right:10px">◆</span>'+t+'<span style="color:#D97706;font-weight:400;margin-left:10px">◆</span></h2>';
+  }
+  if(style === "vline-indigo"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-left:3px solid #4F46E5">'+t+'</h2>';
+  }
+  if(style === "vline-rose"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 0 14px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-left:3px solid #E11D48">'+t+'</h2>';
+  }
+  if(style === "underline-amber"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+      +'<span style="display:inline-block;padding-bottom:6px;border-bottom:2px solid #F59E0B">'+t+'</span></h2>';
+  }
+  if(style === "bracket-sky"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
+      +'<span style="color:#0EA5E9;font-weight:400;margin-right:10px">—</span>'+t+'<span style="color:#0EA5E9;font-weight:400;margin-left:10px">—</span></h2>';
+  }
+  if(style === "slash"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+      +'<span style="color:#6366F1;font-weight:800;margin-right:8px;letter-spacing:0.02em">'+n+' /</span>'+t+'</h2>';
+  }
+  if(style === "tri"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+      +'<span style="color:#7C3AED;font-weight:700;margin-right:8px">▸</span>'+t+'</h2>';
+  }
+  if(style === "rail"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0 0 10px;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left;border-bottom:1px solid #1E40AF">'+t+'</h2>';
+  }
+  if(style === "hash"){
+    return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:left">'
+      +'<span style="color:#4D6BFE;font-weight:800;margin-right:8px;letter-spacing:0.02em">#'+n+'</span>'+t+'</h2>';
   }
   return '<h2 data-mp-h="1" data-mp-h-text="'+t+'" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center">'
     +'<span style="color:#94A3B8;margin-right:8px;font-weight:400">·</span>'+t+'<span style="color:#94A3B8;margin-left:8px;font-weight:400">·</span></h2>';
