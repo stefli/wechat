@@ -23,6 +23,17 @@ main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; fle
 .btn.copied { background:var(--ok); color:#052e16; }
 .pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
 .hint { color:var(--muted); font-size:12px; padding:0 2px; }
+
+.watch { max-width:720px; margin:16px auto 0; padding:0 18px; }
+.watch .block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.watch .block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+.watch .block-h h2 { margin:0; font-size:16px; }
+.watch .actions { display:flex; flex-wrap:wrap; gap:8px; }
+.watch .btn-link { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#fff; text-decoration:none; }
+.watch .btn-link.ghost { background:transparent; border:1px solid var(--accent); color:var(--accent); }
+.watch .body { padding:12px 14px 14px; }
+.watch video { width:100%; max-height:70vh; border-radius:10px; background:#000; display:block; }
+.watch .meta { color:var(--muted); font-size:12px; margin:10px 0 0; line-height:1.45; }
 </style>
 </head>
 <body>
@@ -35,6 +46,25 @@ main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; fle
   <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
   <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
 </div>
+
+<section class="watch" id="watch" aria-label="看片下载">
+  <div class="block">
+    <div class="block-h">
+      <h2>看片 / 下载 · 真 2K（1440×2560）</h2>
+      <div class="actions">
+        <a class="btn-link" href="https://github.com/stefli/wechat/releases/download/tvp-tencent-hunyuan-hy4/tencent_hunyuan_hy4_2k.mp4">下载 2K MP4</a>
+        <a class="btn-link ghost" href="https://github.com/stefli/wechat/releases/tag/tvp-tencent-hunyuan-hy4" target="_blank" rel="noopener">Release</a>
+      </div>
+    </div>
+    <div class="body">
+      <video controls playsinline preload="metadata" poster="./cover_B.jpg"
+        src="https://github.com/stefli/wechat/releases/download/tvp-tencent-hunyuan-hy4/tencent_hunyuan_hy4_2k.mp4">
+        你的浏览器不支持 HTML5 视频，请改用下载链接。
+      </video>
+      <p class="meta">约 48s · 旁白 + BGM · ~7.3MB · GitHub Release 托管（git 树不提交 mp4）。默认只挂 2K，不出 4K。</p>
+    </div>
+  </div>
+</section>
 <main>
   <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
   <section class="block">

@@ -6,12 +6,14 @@
       "slug": "tencent-hunyuan-hy4",
       "title": "腾讯混元 Hy4：第一次能看图、还能点电脑",
       "date": "2026-11-04",
-      "note": "官微正式版 · 首次视觉+Computer Use · ~770B · TokenHub/元宝 · 同preview价 · 开源前列但逊闭源 · B主推",
+      "note": "官微正式版 · 首次视觉+Computer Use · ~770B · 真2K成片可看/下 · B主推",
       "cover_a": "tencent-hunyuan-hy4/cover_A.jpg",
       "cover_b": "tencent-hunyuan-hy4/cover_B.jpg",
       "publish": "tencent-hunyuan-hy4/PUBLISH.md",
       "copy_page": "tencent-hunyuan-hy4/",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-tencent-hunyuan-hy4/tencent_hunyuan_hy4_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-tencent-hunyuan-hy4"
     },
     {
       "slug": "lovable-supabase-rls-leak",
