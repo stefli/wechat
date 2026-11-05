@@ -1,7 +1,18 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-05",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "tencent-hunyuan-hy4",
+      "title": "腾讯混元 Hy4：第一次能看图、还能点电脑",
+      "date": "2026-11-04",
+      "note": "官微正式版 · 首次视觉+Computer Use · ~770B · TokenHub/元宝 · 同preview价 · 开源前列但逊闭源 · B主推",
+      "cover_a": "tencent-hunyuan-hy4/cover_A.jpg",
+      "cover_b": "tencent-hunyuan-hy4/cover_B.jpg",
+      "publish": "tencent-hunyuan-hy4/PUBLISH.md",
+      "copy_page": "tencent-hunyuan-hy4/",
+      "updated": "2026-11-05"
+    },
     {
       "slug": "lovable-supabase-rls-leak",
       "title": "Lovable 应用暴露数据：零门槛不等于零风险",

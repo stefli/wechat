@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>腾讯混元 Hy4 · 文案</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#0052d9; --line:#262626; --ok:#4ade80; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:24px 18px 8px; max-width:720px; margin:0 auto; }
+header a.back { color:var(--accent); font-size:13px; text-decoration:none; }
+header h1 { margin:10px 0 6px; font-size:22px; line-height:1.3; }
+header p { margin:0; color:var(--muted); font-size:13px; }
+.covers { max-width:720px; margin:14px auto 0; padding:0 18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.covers a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); aspect-ratio:3/4; background:#000; }
+.covers img { width:100%; height:100%; object-fit:cover; display:block; }
+main { max-width:720px; margin:0 auto; padding:16px 18px 48px; display:flex; flex-direction:column; gap:14px; }
+.block { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.block-h { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--line); }
+.block-h h2 { margin:0; font-size:15px; }
+.btn { appearance:none; border:0; border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; background:var(--accent); color:#fff; cursor:pointer; white-space:nowrap; }
+.btn.copied { background:var(--ok); color:#052e16; }
+.pre { margin:0; padding:14px; white-space:pre-wrap; word-break:break-word; font-size:14px; line-height:1.65; font-family: inherit; color:var(--ink); }
+.hint { color:var(--muted); font-size:12px; padding:0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>腾讯混元 Hy4：第一次能看图、还能点电脑</h1>
+  <p>2026-11-04 · 官微/TechNode/CLS · B=Hypebeast 主推 · 点「复制」直接粘贴发帖</p>
+</header>
+<div class="covers">
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A"></a>
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B"></a>
+</div>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制；手机也可用。抖音上传请用工程 posters/douyin_upload 的 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
+  <section class="block">
+  <div class="block-h">
+    <h2>A · 主推版</h2>
+    <button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-A">第一次能看图，还能点电脑——腾讯混元 Hy4 正式版来了。
+
+2026年11月4日，混元发布 Hy4 正式版：旗舰线第一次接入视觉理解，也第一次支持电脑操作，命令行和图形界面都能用，还针对 Blender、CAD 等专业软件做过专项训练。参数规模大约七千七百亿，上一代 Hy3 系列还不到三千亿，下一代 Hy5 还要继续扩。
+
+已经上腾讯云 TokenHub，WorkBuddy、CodeBuddy、元宝、ima 可体验，API 也进了 OpenRouter 等；官方说性能明显超过预览版，接口刊例价不变。团队自称跻身最强开源之列，也坦承和顶尖闭源仍有明显差距。权重与系统卡片计划近期开源，更轻更快的 Hy4 flash 也在路上。
+
+你会先去办公助手试一票长任务，还是先丢一张图让它「看」？
+
+#混元 #Hy4 #ComputerUse #视觉理解 #腾讯AI #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>B · 一句话短版</h2>
+    <button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-B">混元 Hy4 正式版：第一次能看图、还能点电脑；约 770B，Hy3 不到 300B；TokenHub / 办公助手 / 元宝可体验，价同预览版；团队称开源前列，也承认仍逊顶尖闭源；权重与 flash 在途。
+
+#混元 #Hy4 #科技快播 #老李的AI江湖</pre>
+</section>
+<section class="block">
+  <div class="block-h">
+    <h2>C · 结构化要点版</h2>
+    <button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button>
+  </div>
+  <pre class="pre" id="cap-C">📊 腾讯混元 Hy4：第一次能看图、还能点电脑
+
+▪️ 信源：混元官微 + TechNode + 科创板日报 · 2026-11-04  
+▪️ 新能力：首次视觉理解 + 首次 Computer Use（CLI+GUI；Blender/CAD 专项）  
+▪️ 规模：约 770B；Hy3 系列 &amp;lt;300B；Hy5 再扩（团队口径）  
+▪️ 入口：腾讯云 TokenHub、WorkBuddy/CodeBuddy、元宝、ima；OpenRouter 等  
+▪️ 价格：与 preview 相同刊例（输入 6 / 输出 18 元/百万 tokens）；TokenHub 限时 5 折至 12/31  
+▪️ 边界：团队自称跻身最强开源之列，同时承认 vs 顶尖闭源仍有明显差距  
+▪️ 后续：权重 + 系统卡片近期；Hy4 flash 近期
+
+一句话：别吹成全面碾压闭源，先当真实生产力升级去试用。
+
+#混元 #Hy4 #ComputerUse #科技快播 #老李的AI江湖</pre>
+</section>
+</main>
+<script>
+async function copyText(btn) {
+  const id = btn.getAttribute('data-target');
+  const text = document.getElementById(id).innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.classList.add('copied'); btn.textContent = '已复制';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '复制'; }, 1600);
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById(id));
+    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    alert('请长按文案手动复制');
+  }
+}
+</script>
+</body>
+</html>
