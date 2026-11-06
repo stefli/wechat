@@ -1,7 +1,20 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "macbook-pro-proled",
+      "title": "苹果MacBook Pro：首款触控+PROLED今日开卖",
+      "date": "2026-11-06",
+      "note": "PROLED XDR OLED · Touch · Dynamic Island · M5 Max/128GB/~24h · $2899起 · 真2K · B主推",
+      "cover_a": "macbook-pro-proled/cover_A.jpg",
+      "cover_b": "macbook-pro-proled/cover_B.jpg",
+      "publish": "macbook-pro-proled/PUBLISH.md",
+      "copy_page": "macbook-pro-proled/",
+      "updated": "2026-11-06",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-macbook-pro-proled/macbook_pro_proled_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-macbook-pro-proled"
+    },
     {
       "slug": "gpt-image-2-6",
       "title": "GPT Image 2.6：快一半还能画圈改",
