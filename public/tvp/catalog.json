@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "gpt-6-2-astra",
+      "title": "GPT-6.2 Astra：还没官宣就进 Codex 用量了",
+      "date": "2026-11-06",
+      "note": "灰测/传闻 · 未官宣 · Codex 用量标签 · 社区鹈鹕/RPG · 真2K · B主推",
+      "cover_a": "gpt-6-2-astra/cover_A.jpg",
+      "cover_b": "gpt-6-2-astra/cover_B.jpg",
+      "publish": "gpt-6-2-astra/PUBLISH.md",
+      "copy_page": "gpt-6-2-astra/",
+      "updated": "2026-11-06",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gpt-6-2-astra/gpt_6_2_astra_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gpt-6-2-astra",
+      "viewport": "community-demo-mp4+usage-stills"
+    },
+    {
       "slug": "ppt-master",
       "title": "PPT Master：方案PPT终于能继续改",
       "date": "2026-11-06",
