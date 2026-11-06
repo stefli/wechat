@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "ppt-master",
+      "title": "PPT Master：方案PPT终于能继续改",
+      "date": "2026-11-06",
+      "note": "§3c 官方 hero GIF+examples 预览运镜 · MIT ~74k★ · 咨询交付向 · 真2K · B主推",
+      "cover_a": "ppt-master/cover_A.jpg",
+      "cover_b": "ppt-master/cover_B.jpg",
+      "publish": "ppt-master/PUBLISH.md",
+      "copy_page": "ppt-master/",
+      "updated": "2026-11-06",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-ppt-master/ppt_master_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-ppt-master",
+      "viewport": "official-gif+stills"
+    },
+    {
       "slug": "gemini-omni-1-2-flash",
       "title": "谷歌Gemini Omni1.2 Flash：视频模型正式商用",
       "date": "2026-11-06",
