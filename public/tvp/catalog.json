@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "gemini-omni-1-2-flash",
+      "title": "谷歌Gemini Omni1.2 Flash：视频模型正式商用",
+      "date": "2026-11-06",
+      "note": "15s · $0.07/s · 多轮改 · §3c 7/7 官方 mp4 · 真2K · B主推",
+      "cover_a": "gemini-omni-1-2-flash/cover_A.jpg",
+      "cover_b": "gemini-omni-1-2-flash/cover_B.jpg",
+      "publish": "gemini-omni-1-2-flash/PUBLISH.md",
+      "copy_page": "gemini-omni-1-2-flash/",
+      "updated": "2026-11-06",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gemini-omni-1-2-flash/gemini_omni_1_2_flash_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gemini-omni-1-2-flash",
+      "viewport": "official-demo-mp4"
+    },
+    {
       "slug": "macbook-pro-proled",
       "title": "苹果MacBook Pro：首款触控+PROLED今日开卖",
       "date": "2026-11-06",
