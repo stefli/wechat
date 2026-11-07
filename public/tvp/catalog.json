@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
       "slug": "gpt-6-2-astra",
-      "title": "GPT-6.2 Astra：还没官宣就进 Codex 用量了",
+      "title": "GPT-6.2 Astra：三维 RPG 前端先炸了，还没官宣",
       "date": "2026-11-06",
-      "note": "灰测/传闻 · 未官宣 · Codex 用量标签 · 社区鹈鹕/RPG · 真2K · B主推",
+      "note": "灰测/传闻 · Beat01=RPG 开场 remake · 真2K · 未官宣",
       "cover_a": "gpt-6-2-astra/cover_A.jpg",
       "cover_b": "gpt-6-2-astra/cover_B.jpg",
       "publish": "gpt-6-2-astra/PUBLISH.md",
