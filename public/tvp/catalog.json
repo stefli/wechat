@@ -5,16 +5,16 @@
     {
       "slug": "gpt-6-2-astra",
       "title": "GPT-6.2 Astra：三维 RPG 前端先炸了，还没官宣",
-      "date": "2026-11-06",
+      "date": "2026-11-07",
       "note": "灰测/传闻 · Beat01=RPG 开场 remake · 真2K · 未官宣",
       "cover_a": "gpt-6-2-astra/cover_A.jpg",
       "cover_b": "gpt-6-2-astra/cover_B.jpg",
       "publish": "gpt-6-2-astra/PUBLISH.md",
       "copy_page": "gpt-6-2-astra/",
-      "updated": "2026-11-06",
+      "updated": "2026-11-07",
       "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gpt-6-2-astra/gpt_6_2_astra_2k.mp4",
       "release": "https://github.com/stefli/wechat/releases/tag/tvp-gpt-6-2-astra",
-      "viewport": "community-demo-mp4+usage-stills"
+      "viewport": "beat01-rpg-mp4+usage-stills+pelican"
     },
     {
       "slug": "ppt-master",
