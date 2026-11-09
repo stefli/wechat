@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "claude-animated-shorts",
+      "title": "claude-animated-shorts：本地约 60 秒动画，不烧云端视频额度？",
+      "date": "2026-11-10",
+      "note": "mromidev 开源 · MIT · 约八天 2596★ · Beat01=桥塌成歌成品动画 · 真2K · B主推大号中文",
+      "cover_a": "claude-animated-shorts/cover_A.jpg",
+      "cover_b": "claude-animated-shorts/cover_B.jpg",
+      "publish": "claude-animated-shorts/PUBLISH.md",
+      "copy_page": "claude-animated-shorts/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-claude-animated-shorts/claude_animated_shorts_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-claude-animated-shorts",
+      "viewport": "beat01-bridge-short-finished-animation+gh-repo-card"
+    },
+    {
       "slug": "meta-muse-ember",
       "title": "Meta Muse Ember：接近 Spark 智力，大约便宜十七倍？",
       "date": "2026-11-10",
