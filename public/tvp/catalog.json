@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "tesla-robotaxi-san-antonio",
+      "title": "特斯拉Robotaxi / 圣安东尼奥：第八城开城，围栏现网最大",
+      "date": "2026-11-09",
+      "note": "@robotaxi 一手 · 无人监管 · ~275 mi² · Beat01=官方夜景公路 · 真2K · B主推大号中文",
+      "cover_a": "tesla-robotaxi-san-antonio/cover_A.jpg",
+      "cover_b": "tesla-robotaxi-san-antonio/cover_B.jpg",
+      "publish": "tesla-robotaxi-san-antonio/PUBLISH.md",
+      "copy_page": "tesla-robotaxi-san-antonio/",
+      "updated": "2026-11-09",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-tesla-robotaxi-san-antonio/tesla_robotaxi_san_antonio_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-tesla-robotaxi-san-antonio",
+      "viewport": "beat01-robotaxi-night-demo+sa-map+engaged-pov"
+    },
+    {
       "slug": "cybertruck-cybercab-winddown",
       "title": "特斯拉Cybertruck / Cybercab：订单远超产能还要停产让位？",
       "date": "2026-11-09",
