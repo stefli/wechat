@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "huang-board-probe",
+      "title": "黄仁勋 · NVIDIA：承认不忠，董事会开查？",
+      "date": "2026-11-10",
+      "note": "Bloomberg/CNBC · Beat01=盘中股价新闻画面 · 已证实/未证实分界 · 真2K · B主推大号中文",
+      "cover_a": "huang-board-probe/cover_A.jpg",
+      "cover_b": "huang-board-probe/cover_B.jpg",
+      "publish": "huang-board-probe/PUBLISH.md",
+      "copy_page": "huang-board-probe/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-huang-board-probe/huang_board_probe_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-huang-board-probe",
+      "viewport": "beat01-cnbc-nvda-intraday-chart+news-admit-boundary"
+    },
+    {
       "slug": "john-tse-umbrella",
       "title": "John Tse 自驾雨伞：雨伞自己跟人走？",
       "date": "2026-11-10",
