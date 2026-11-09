@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "openai-modretro-chromatic",
+      "title": "ModRetro Chromatic / OpenAI：明天不是新模型，是联名掌机？",
+      "date": "2026-11-09",
+      "note": "OpenAIDevs Tomorrow · Beat01=官方掌机实拍 · Sol仅用户自报未官宣 · 真2K · B主推大号中文",
+      "cover_a": "openai-modretro-chromatic/cover_A.jpg",
+      "cover_b": "openai-modretro-chromatic/cover_B.jpg",
+      "publish": "openai-modretro-chromatic/PUBLISH.md",
+      "copy_page": "openai-modretro-chromatic/",
+      "updated": "2026-11-09",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-openai-modretro-chromatic/openai_modretro_chromatic_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-openai-modretro-chromatic",
+      "viewport": "beat01-chromatic-official-demo+tomorrow-teaser+sol-user-report"
+    },
+    {
       "slug": "tesla-robotaxi-san-antonio",
       "title": "特斯拉Robotaxi / 圣安东尼奥：第八城开城，围栏现网最大",
       "date": "2026-11-09",
