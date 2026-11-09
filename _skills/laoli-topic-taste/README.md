@@ -1,7 +1,8 @@
 # laoli-topic-taste
 
 > Laoli skills series · `laoli-topic-taste`  
-> Repo: https://github.com/stefli/laoli-topic-taste
+> Repo (intended): https://github.com/stefli/laoli-topic-taste
+Temporary mirror: https://github.com/stefli/wechat/tree/main/_skills/laoli-topic-taste
 
 **老李选题偏好与自动开做** — 按 Justin 在新闻捕手的**真实点名证据**筛题，并支持未来培训 / 早间自动开做。
 
@@ -38,11 +39,3 @@ Part of **[laoli-skills](https://github.com/stefli/laoli-skills)** — shared sk
 
 ## License
 Private workflow for the owner unless noted otherwise. Do not publish secrets; paths use placeholders where needed.
-
-## GitHub location (temporary mirror)
-
-Dedicated repo `stefli/laoli-topic-taste` could not be created (token lacks `createRepository`). Until then this tree is mirrored at:
-
-https://github.com/stefli/wechat/tree/main/_skills/laoli-topic-taste
-
-`_skills/` is **not** part of GitHub Pages (`public/`).
