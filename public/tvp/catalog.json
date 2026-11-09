@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "meta-muse-ember",
+      "title": "Meta Muse Ember：接近 Spark 智力，大约便宜十七倍？",
+      "date": "2026-11-10",
+      "note": "@finkd 一手 · $0.10/$0.50 · 1M 多模态 · Beat01=Arena WebDev 实拍 · 真2K · B主推大号中文",
+      "cover_a": "meta-muse-ember/cover_A.jpg",
+      "cover_b": "meta-muse-ember/cover_B.jpg",
+      "publish": "meta-muse-ember/PUBLISH.md",
+      "copy_page": "meta-muse-ember/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-meta-muse-ember/meta_muse_ember_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-meta-muse-ember",
+      "viewport": "beat01-arena-ember-webdev-demo+zuck+wang-chart"
+    },
+    {
       "slug": "claude-fable-5-2",
       "title": "Claude Fable 5.2：几乎全面强过日常主力？",
       "date": "2026-11-10",
