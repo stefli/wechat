@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "openai-dots-multimachine",
+      "title": "OpenAI dots：副机编测，笔记本继续写码",
+      "date": "2026-11-10",
+      "note": "@OpenAIDevs 一手 · 多机按任务指定 · Beat01=官方多机 demo · 一线程一台机 · 真2K · B主推大号中文",
+      "cover_a": "openai-dots-multimachine/cover_A.jpg",
+      "cover_b": "openai-dots-multimachine/cover_B.jpg",
+      "publish": "openai-dots-multimachine/PUBLISH.md",
+      "copy_page": "openai-dots-multimachine/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-openai-dots-multimachine/openai_dots_multimachine_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-openai-dots-multimachine",
+      "viewport": "beat01-openaidevs-official-multimachine-demo"
+    },
     {
       "slug": "openai-modretro-chromatic",
       "title": "ModRetro Chromatic / OpenAI：明天不是新模型，是联名掌机？",
