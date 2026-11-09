@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "claude-fable-5-2",
+      "title": "Claude Fable 5.2：几乎全面强过日常主力？",
+      "date": "2026-11-10",
+      "note": "@claudeai 一手 · 最多快约30% · $8/$40 · Cursor已上max60% · Beat01=mattshumer体素 · 真2K · B主推大号中文",
+      "cover_a": "claude-fable-5-2/cover_A.jpg",
+      "cover_b": "claude-fable-5-2/cover_B.jpg",
+      "publish": "claude-fable-5-2/PUBLISH.md",
+      "copy_page": "claude-fable-5-2/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-claude-fable-5-2/claude_fable_5_2_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-claude-fable-5-2",
+      "viewport": "beat01-mattshumer-mirror-earth-voxel+claudeai-official+cursorbench"
+    },
+    {
       "slug": "openai-dots-multimachine",
       "title": "OpenAI dots：副机编测，笔记本继续写码",
       "date": "2026-11-10",
