@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "cybertruck-cybercab-winddown",
+      "title": "特斯拉Cybertruck / Cybercab：订单远超产能还要停产让位？",
+      "date": "2026-11-09",
+      "note": "马斯克一手 · ~8个月关线 · Beat01=Baja行驶 · 真2K · B主推大号中文",
+      "cover_a": "cybertruck-cybercab-winddown/cover_A.jpg",
+      "cover_b": "cybertruck-cybercab-winddown/cover_B.jpg",
+      "publish": "cybertruck-cybercab-winddown/PUBLISH.md",
+      "copy_page": "cybertruck-cybercab-winddown/",
+      "updated": "2026-11-09",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-cybertruck-cybercab-winddown/cybertruck_cybercab_winddown_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-cybertruck-cybercab-winddown",
+      "viewport": "beat01-baja-official+cybercab-road+unboxed"
+    },
     {
       "slug": "gpt-6-2-astra",
       "title": "GPT-6.2 Astra：三维 RPG 前端先炸了，还没官宣",
