@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "john-tse-umbrella",
+      "title": "John Tse 自驾雨伞：雨伞自己跟人走？",
+      "date": "2026-11-10",
+      "note": "加拿大 DIY · I Build Stuff · Beat01=跟拍实拍 · 原型非产品 · 真2K · B主推大号中文",
+      "cover_a": "john-tse-umbrella/cover_A.jpg",
+      "cover_b": "john-tse-umbrella/cover_B.jpg",
+      "publish": "john-tse-umbrella/PUBLISH.md",
+      "copy_page": "john-tse-umbrella/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-john-tse-umbrella/john_tse_umbrella_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-john-tse-umbrella",
+      "viewport": "beat01-rainmaker-follow-cam+yt-autonomous-build"
+    },
+    {
       "slug": "claude-animated-shorts",
       "title": "claude-animated-shorts：本地约 60 秒动画，不烧云端视频额度？",
       "date": "2026-11-10",
