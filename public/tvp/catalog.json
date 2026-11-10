@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "ai-portals-endless-worlds",
+      "title": "Fable 5.2 × 传送门世界：2.5万智能体搓出无尽三维？",
+      "date": "2026-11-10",
+      "note": "@emollick 一手 · 25k agent × 450+ 纯代码世界 · Beat01=Drawer Cliffs demo · CosyVoice2原声 · 真2K · B主推大号中文",
+      "cover_a": "ai-portals-endless-worlds/cover_A.jpg",
+      "cover_b": "ai-portals-endless-worlds/cover_B.jpg",
+      "publish": "ai-portals-endless-worlds/PUBLISH.md",
+      "copy_page": "ai-portals-endless-worlds/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-ai-portals-endless-worlds/ai_portals_endless_worlds_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-ai-portals-endless-worlds",
+      "viewport": "beat01-emollick-drawer-cliffs-demo"
+    },
+    {
       "slug": "openai-control-room-stop",
       "title": "OpenAI Control Room：研究侧任务，三十五秒内可掐断",
       "date": "2026-11-10",
