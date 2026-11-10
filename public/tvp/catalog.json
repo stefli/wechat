@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-10T09:12:00+08:00",
+  "updated": "2026-11-11T00:46:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "ring-drone-rover-cam",
+      "title": "Ring Drone Cam / Rover Cam：室内安防机自己飞了，认证没过先别买",
+      "date": "2026-11-11",
+      "note": "newsdesk#249 · 官方产品片开场 · 发货日与FCC未批写清 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "ring-drone-rover-cam/cover_A.jpg",
+      "cover_b": "ring-drone-rover-cam/cover_B.jpg",
+      "publish": "ring-drone-rover-cam/PUBLISH.md",
+      "copy_page": "ring-drone-rover-cam/",
+      "updated": "2026-11-11",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-ring-drone-rover-cam/ring_drone_rover_cam_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-ring-drone-rover-cam",
+      "viewport": "beat01-official-drone-cam-room-to-room-flight"
+    },
     {
       "slug": "ai-portals-endless-worlds",
       "title": "Fable 5.2 × 传送门世界：2.5万智能体搓出无尽三维？",
