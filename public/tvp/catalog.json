@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-10T09:12:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
@@ -34,7 +34,7 @@
       "slug": "fable-davinci-notebook",
       "title": "Claude Fable × 达芬奇：手稿做成能转的发明？",
       "date": "2026-11-10",
-      "note": "@alexalbert__ · PDF→可交互发明 · Beat01=官方向3D demo · CosyVoice2原声 · 真2K · B主推大号中文",
+      "note": "@alexalbert__ · PDF→可交互发明 · Beat01=官方向3D demo · CosyVoice2播音腔原声 · ~58s真2K · B主推大号中文",
       "cover_a": "fable-davinci-notebook/cover_A.jpg",
       "cover_b": "fable-davinci-notebook/cover_B.jpg",
       "publish": "fable-davinci-notebook/PUBLISH.md",
