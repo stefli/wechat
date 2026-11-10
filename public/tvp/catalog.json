@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-11T00:46:00+08:00",
+  "updated": "2026-11-11T01:02:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "adobe-firefly-design-assistant",
+      "title": "Adobe Firefly Design：同一块画布，五种活一起干",
+      "date": "2026-11-11",
+      "note": "Adobe MAX 2026 · Design/Assistant 测试版 · 本地MCP 2027年初私测 · Beat01=官方Design画布demo · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "adobe-firefly-design-assistant/cover_A.jpg",
+      "cover_b": "adobe-firefly-design-assistant/cover_B.jpg",
+      "publish": "adobe-firefly-design-assistant/PUBLISH.md",
+      "copy_page": "adobe-firefly-design-assistant/",
+      "updated": "2026-11-11",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-adobe-firefly-design-assistant/adobe_firefly_design_assistant_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-adobe-firefly-design-assistant",
+      "viewport": "beat01-official-firefly-design-canvas-demo"
+    },
     {
       "slug": "ring-drone-rover-cam",
       "title": "Ring Drone Cam / Rover Cam：室内安防机自己飞了，认证没过先别买",
