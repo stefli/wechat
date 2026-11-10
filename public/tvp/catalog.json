@@ -3,6 +3,20 @@
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
     {
+      "slug": "openai-control-room-stop",
+      "title": "OpenAI Control Room：研究侧任务，三十五秒内可掐断",
+      "date": "2026-11-10",
+      "note": "@OpenAI 一手 · 机制解说非丑闻 · Beat01=急停解说片 · CosyVoice2原声 · 真2K · B主推",
+      "cover_a": "openai-control-room-stop/cover_A.jpg",
+      "cover_b": "openai-control-room-stop/cover_B.jpg",
+      "publish": "openai-control-room-stop/PUBLISH.md",
+      "copy_page": "openai-control-room-stop/",
+      "updated": "2026-11-10",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-openai-control-room-stop/openai_control_room_stop_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-openai-control-room-stop",
+      "viewport": "beat01-stop-explainer-wallstengine"
+    },
+    {
       "slug": "fable-davinci-notebook",
       "title": "Claude Fable × 达芬奇：手稿做成能转的发明？",
       "date": "2026-11-10",
