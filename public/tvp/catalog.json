@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-11T08:40:00+08:00",
+  "updated": "2026-11-11T08:47:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "pichai-pelican-campus",
+      "title": "Gemini 4 Carbon / 鹈鹕校园：皮查伊晒出可玩三维演示",
+      "date": "2026-11-11",
+      "note": "newsdesk#253 · 官方鹈鹕校园 demo 开场 · 可提可玩页，未写成我们跑通 swarm/Ultra/Antigravity · Beat01=官片约37.8s 霸王龙草坪骑行 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "pichai-pelican-campus/cover_A.jpg",
+      "cover_b": "pichai-pelican-campus/cover_B.jpg",
+      "publish": "pichai-pelican-campus/PUBLISH.md",
+      "copy_page": "pichai-pelican-campus/",
+      "updated": "2026-11-11",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-pichai-pelican-campus/pichai_pelican_campus_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-pichai-pelican-campus",
+      "viewport": "beat01-official-pelican-campus-trex-ride-37s8"
+    },
     {
       "slug": "nvidia-alpamayo-2-edge",
       "title": "NVIDIA Alpamayo 2 Edge：车端会让行行人，今天权重可构建",
