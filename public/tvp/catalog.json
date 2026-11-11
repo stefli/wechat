@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-11T08:47:00+08:00",
+  "updated": "2026-11-11T09:00:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "hassabis-theme-park",
+      "title": "Gemini 4 Carbon / 主题公园：哈萨比斯重做 1994 原作",
+      "date": "2026-11-11",
+      "note": "newsdesk#255 · 官方 Theme Park demo 开场 · 一次性移植到网页，但未见公开试玩入口 · Beat01=官片约0.0s 标题菜单 CARBON REMIX · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "hassabis-theme-park/cover_A.jpg",
+      "cover_b": "hassabis-theme-park/cover_B.jpg",
+      "publish": "hassabis-theme-park/PUBLISH.md",
+      "copy_page": "hassabis-theme-park/",
+      "updated": "2026-11-11",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-hassabis-theme-park/hassabis_theme_park_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-hassabis-theme-park",
+      "viewport": "beat01-official-theme-park-carbon-remix-title-0s"
+    },
     {
       "slug": "pichai-pelican-campus",
       "title": "Gemini 4 Carbon / 鹈鹕校园：皮查伊晒出可玩三维演示",
