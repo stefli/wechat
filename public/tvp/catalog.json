@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-11T01:02:00+08:00",
+  "updated": "2026-11-11T08:40:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "nvidia-alpamayo-2-edge",
+      "title": "NVIDIA Alpamayo 2 Edge：车端会让行行人，今天权重可构建",
+      "date": "2026-11-11",
+      "note": "官方路测让行行人开场 · 今日权重可构建，不是发布会首发，也不是上车实测 · Beat01=官片约29.8s · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "nvidia-alpamayo-2-edge/cover_A.jpg",
+      "cover_b": "nvidia-alpamayo-2-edge/cover_B.jpg",
+      "publish": "nvidia-alpamayo-2-edge/PUBLISH.md",
+      "copy_page": "nvidia-alpamayo-2-edge/",
+      "updated": "2026-11-11",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-nvidia-alpamayo-2-edge/nvidia_alpamayo_2_edge_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-nvidia-alpamayo-2-edge",
+      "viewport": "beat01-official-yield-pedestrian-road-test ~29.8s"
+    },
     {
       "slug": "adobe-firefly-design-assistant",
       "title": "Adobe Firefly Design：同一块画布，五种活一起干",
