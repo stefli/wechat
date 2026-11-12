@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-12T08:31:00+08:00",
+  "updated": "2026-11-12T09:00:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "google-labs-tabletop",
+      "title": "Google Labs Tabletop：一提问就出行程和投票",
+      "date": "2026-11-12",
+      "note": "官方演示开场 · 旁观片，美国 18+ 候补滚动开放 · Beat01=官片约 26.94s 队服投票动效 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "google-labs-tabletop/cover_A.jpg",
+      "cover_b": "google-labs-tabletop/cover_B.jpg",
+      "publish": "google-labs-tabletop/PUBLISH.md",
+      "copy_page": "google-labs-tabletop/",
+      "updated": "2026-11-12",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-google-labs-tabletop/google_labs_tabletop_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-google-labs-tabletop",
+      "viewport": "beat01-official-tabletop-shirt-vote-26.94s"
+    },
     {
       "slug": "gemini-apple-carplay",
       "title": "Gemini 上线苹果 CarPlay：开车也能免提对话",
