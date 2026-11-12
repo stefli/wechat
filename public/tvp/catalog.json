@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-12T09:00:00+08:00",
+  "updated": "2026-11-12T09:17:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "shumer-crosstown",
+      "title": "CROSSTOWN / 舒默：网页里开车还能飞的曼哈顿预览",
+      "date": "2026-11-12",
+      "note": "官方可玩页 nyc.somethingbig.ai 早期预览 · 旁观片，未完整试玩 · Beat01=舒默笔记本本机试玩片 入点6.50s 百老汇23街红车 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "shumer-crosstown/cover_A.jpg",
+      "cover_b": "shumer-crosstown/cover_B.jpg",
+      "publish": "shumer-crosstown/PUBLISH.md",
+      "copy_page": "shumer-crosstown/",
+      "updated": "2026-11-12",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-shumer-crosstown/shumer_crosstown_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-shumer-crosstown",
+      "viewport": "beat01-shumer-macbook-drive-6.50s"
+    },
     {
       "slug": "google-labs-tabletop",
       "title": "Google Labs Tabletop：一提问就出行程和投票",
