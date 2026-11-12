@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-11T09:00:00+08:00",
+  "updated": "2026-11-12T08:31:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "gemini-apple-carplay",
+      "title": "Gemini 上线苹果 CarPlay：开车也能免提对话",
+      "date": "2026-11-12",
+      "note": "官博 2026-11-11 · 官方 Hero 演示开场 · 旁观报道，未上车实测 · 每日简报等个性化在欧洲经济区/尼日利亚/<18不可用 · Beat01=官片约0.0s 侧栏图标拉到新对话 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "gemini-apple-carplay/cover_A.jpg",
+      "cover_b": "gemini-apple-carplay/cover_B.jpg",
+      "publish": "gemini-apple-carplay/PUBLISH.md",
+      "copy_page": "gemini-apple-carplay/",
+      "updated": "2026-11-12",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gemini-apple-carplay/gemini_apple_carplay_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gemini-apple-carplay",
+      "viewport": "beat01-official-hero-carplay-rail-0s"
+    },
     {
       "slug": "hassabis-theme-park",
       "title": "Gemini 4 Carbon / 主题公园：哈萨比斯重做 1994 原作",
