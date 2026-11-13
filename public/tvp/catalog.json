@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-12T09:17:00+08:00",
+  "updated": "2026-11-13T09:15:46+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "google-intelligent-eyewear",
+      "title": "谷歌智能眼镜 / Intelligent Eyewear：已经开放预购",
+      "date": "2026-11-13",
+      "note": "旁观预购 · 官方 LookAsk 演示开场 · 12 月 10 日到店 · 目前仅美韩、18+ · Beat01=LookAsk 入点 0.00s 燕麦奶加进购物清单 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "google-intelligent-eyewear/cover_A.jpg",
+      "cover_b": "google-intelligent-eyewear/cover_B.jpg",
+      "publish": "google-intelligent-eyewear/PUBLISH.md",
+      "copy_page": "google-intelligent-eyewear/",
+      "updated": "2026-11-13",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-google-intelligent-eyewear/google_intelligent_eyewear_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-google-intelligent-eyewear",
+      "viewport": "beat01-official-lookask-0.00s"
+    },
     {
       "slug": "shumer-crosstown",
       "title": "CROSSTOWN / 舒默：网页里开车还能飞的曼哈顿预览",
