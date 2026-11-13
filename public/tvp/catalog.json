@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-13T09:15:46+08:00",
+  "updated": "2026-11-13T10:08:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "gemini-4-hydrogen",
+      "title": "谷歌 Gemini 4 Hydrogen：混元素今天上线",
+      "date": "2026-11-13",
+      "note": "旁观片 · 与碳元素不是同一档 · 官方 Geminisland 演示开场 · Cursor 已接入 · 自动调度要专业或旗舰订阅 · Beat01=Geminisland 入点 35.0s · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "gemini-4-hydrogen/cover_A.jpg",
+      "cover_b": "gemini-4-hydrogen/cover_B.jpg",
+      "publish": "gemini-4-hydrogen/PUBLISH.md",
+      "copy_page": "gemini-4-hydrogen/",
+      "updated": "2026-11-13",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gemini-4-hydrogen/gemini_4_hydrogen_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gemini-4-hydrogen",
+      "viewport": "beat01-official-geminisland-35.00s"
+    },
     {
       "slug": "google-intelligent-eyewear",
       "title": "谷歌智能眼镜 / Intelligent Eyewear：已经开放预购",
