@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-13T10:08:00+08:00",
+  "updated": "2026-11-13T10:48:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "claude-meetings",
+      "title": "Claude Meetings 测试版：能进会还能当场干活",
+      "date": "2026-11-13",
+      "note": "旁观片 · 官方 63 秒演示开场 · 先支持谷歌会议 · 团队版/企业版灰度 · 测试期纪要转写免费 · 文档白板免费用到 2027-02-10 · Beat01=官方演示入点 6.00s Claude 可见成员入会 · CosyVoice2干净播音腔 speed=1.08 · 真2K · B主推",
+      "cover_a": "claude-meetings/cover_A.jpg",
+      "cover_b": "claude-meetings/cover_B.jpg",
+      "publish": "claude-meetings/PUBLISH.md",
+      "copy_page": "claude-meetings/",
+      "updated": "2026-11-13",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-claude-meetings/claude_meetings_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-claude-meetings",
+      "viewport": "beat01-official-demo-6.00s-claude-joins-meet"
+    },
     {
       "slug": "gemini-4-hydrogen",
       "title": "谷歌 Gemini 4 Hydrogen：混元素今天上线",
