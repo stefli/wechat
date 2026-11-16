@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-16T10:14:16+08:00",
+  "updated": "2026-11-16T11:04:06+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "ula-vulcan-amazon-leo",
+      "title": "ULA Vulcan / Amazon Leo：四十颗星没能入轨",
+      "date": "2026-11-16",
+      "note": "ULA 官方升空视频开场 · 飞行约十分钟后异常 · 原因尚未公布 · 旁观片 · CosyVoice2 干净播音腔 · 真2K · B主推",
+      "cover_a": "ula-vulcan-amazon-leo/cover_A.jpg",
+      "cover_b": "ula-vulcan-amazon-leo/cover_B.jpg",
+      "publish": "ula-vulcan-amazon-leo/PUBLISH.md",
+      "copy_page": "ula-vulcan-amazon-leo/",
+      "updated": "2026-11-16",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-ula-vulcan-amazon-leo/ula_vulcan_amazon_leo_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-ula-vulcan-amazon-leo",
+      "viewport": "beat01-ula-official-liftoff-3.20s"
+    },
     {
       "slug": "starship-the-game-2",
       "title": "SpaceX 星舰小游戏 2.0：官方解锁新关卡",
