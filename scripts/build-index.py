@@ -3,7 +3,9 @@
 
 Writes the same page to public/index.html and pages/index.html (they are
 mirrors). Styles live in public/index.css and are copied to pages/index.css
-so the mirror stays styled. publish.sh calls this after syncing a slug.
+so the mirror stays styled. library.js / library.css / library-status.json
+are copied the same way. The TVP folder is not listed as an article;
+it has its own index at public/tvp/. publish.sh calls this after syncing a slug.
 
 Date: a publication date in the article (meta, <time>, <title>, or a byline
 such as 发布于 / 写于 / 日期：). Dates that only appear inside the body
@@ -29,6 +31,7 @@ PUBLIC = ROOT / "public"
 PAGES_INDEX = ROOT / "pages" / "index.html"
 PUBLIC_CSS = PUBLIC / "index.css"
 PAGES_CSS = ROOT / "pages" / "index.css"
+LIBRARY_FILES = ("library.js", "library.css", "library-status.json")
 SHANGHAI = ZoneInfo("Asia/Shanghai")
 
 CHROME_HEADINGS = {
@@ -237,12 +240,15 @@ def git_added_at(slug: str) -> datetime | None:
 
 def collect() -> list[dict]:
     rows = []
+    skip = {"tvp"}
     for entry in sorted(PUBLIC.iterdir()):
         article = entry / "index.html"
         if not entry.is_dir() or not article.is_file():
             continue
-        raw = article.read_text(encoding="utf-8", errors="replace")
         slug = entry.name
+        if slug in skip:
+            continue
+        raw = article.read_text(encoding="utf-8", errors="replace")
         title = extract_title(raw, slug)
         html_date = date_from_html(raw)
         if html_date:
@@ -278,12 +284,13 @@ def render(rows: list[dict]) -> str:
         items.append(
             "\n".join(
                 [
-                    "    <li>",
+                    f'    <li data-slug="{esc(row["slug"])}">',
                     f'      <a class="row" href="./{esc(row["slug"])}/">',
                     f'        <time datetime="{esc(row["date"])}">{esc(row["date"])}</time>',
                     f'        <span class="title">{esc(row["title"])}</span>',
                     f'        <span class="slug">{esc(row["slug"])}</span>',
                     "      </a>",
+                    f'      <div class="pub-status" data-slug="{esc(row["slug"])}"></div>',
                     "    </li>",
                 ]
             )
@@ -291,26 +298,32 @@ def render(rows: list[dict]) -> str:
     body = "\n".join(items)
     count = len(rows)
     return f"""<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lib="article">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="robots" content="noindex,nofollow"/>
   <meta name="color-scheme" content="light dark"/>
-  <title>文稿索引 · WeChat COPY</title>
+  <title>图文稿件库 · 老李的AI江湖</title>
   <link rel="stylesheet" href="./index.css"/>
+  <link rel="stylesheet" href="./library.css"/>
 </head>
 <body>
   <div class="wrap">
     <header class="mast">
-      <p class="kicker">WeChat COPY</p>
-      <h1>文稿索引</h1>
-      <p class="lead">共 {count} 篇，按日期排列，新的在前。点进去可在手机上复制标题和正文。</p>
+      <nav class="lib-nav" aria-label="稿件库分区">
+        <a class="is-current" href="./">图文</a>
+        <a href="./tvp/">科技快播</a>
+      </nav>
+      <p class="kicker">老李的AI江湖 · 稿件库</p>
+      <h1>图文</h1>
+      <p class="lead">共 {count} 篇，按日期排列，新的在前。点标题可复制正文。点平台标签可改发布状态：未发、已发、不发。改动能先记在这台设备上；换手机请先点「导出状态」。</p>
     </header>
     <ul class="articles">
 {body}
     </ul>
   </div>
+  <script src="./library.js" defer></script>
 </body>
 </html>
 """
@@ -322,6 +335,13 @@ def mirror_css() -> None:
         raise SystemExit(1)
     PAGES_CSS.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(PUBLIC_CSS, PAGES_CSS)
+    pages_dir = ROOT / "pages"
+    for name in LIBRARY_FILES:
+        src = PUBLIC / name
+        if not src.is_file():
+            print(f"missing {src.relative_to(ROOT)}", file=sys.stderr)
+            raise SystemExit(1)
+        shutil.copyfile(src, pages_dir / name)
 
 
 def main() -> int:
@@ -339,7 +359,7 @@ def main() -> int:
         print(f"{row['date']}\t{row['source']}\t{row['slug']}\t{row['title']}")
     print(
         f"wrote {out.relative_to(ROOT)} and {PAGES_INDEX.relative_to(ROOT)}; "
-        f"copied {PUBLIC_CSS.relative_to(ROOT)} to {PAGES_CSS.relative_to(ROOT)}"
+        f"copied {PUBLIC_CSS.relative_to(ROOT)} and library files to pages/"
     )
     return 0
 

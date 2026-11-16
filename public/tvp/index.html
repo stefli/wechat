@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lib="tvp">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,9 +25,15 @@ body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsof
 .top h1 { margin:0 0 6px; font-size:22px; }
 .top p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
 </style>
+  <link rel="stylesheet" href="../library.css"/>
 </head>
 <body>
 <header class="top">
+    <nav class="lib-nav" aria-label="稿件库分区">
+      <a href="../">图文</a>
+      <a class="is-current" href="./">科技快播</a>
+    </nav>
+
   <h1>TVP · 科技快播选题库</h1>
   <p>每条主题保留封面 A/B + 可一点复制的文案 A/B/C。成片默认真 2K（1440×2560）挂在 GitHub Release，选题页给看片/下载；git 树不提交 mp4。</p>
 </header>
@@ -1307,5 +1313,6 @@ body { margin:0; font-family: system-ui, -apple-system, "PingFang SC", "Microsof
     </div>
   </article>
 </main>
+  <script src="../library.js" defer></script>
 </body>
 </html>
