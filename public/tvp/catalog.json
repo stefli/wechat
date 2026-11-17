@@ -1,7 +1,22 @@
 {
-  "updated": "2026-11-16T11:04:06+08:00",
+  "updated": "2026-11-17T08:02:00+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "chatgpt-for-healthcare",
+      "title": "ChatGPT for Healthcare：已有产品能力更新",
+      "date": "2026-11-17",
+      "note": "官方演示开场 · 不是新应用首发 · 美国持证临床人员免费通道 · 合成数据旁观片 · 云阳旁白（edge-tts 云阳）· 真2K · B主推",
+      "cover_a": "chatgpt-for-healthcare/cover_A.jpg",
+      "cover_b": "chatgpt-for-healthcare/cover_B.jpg",
+      "publish": "chatgpt-for-healthcare/PUBLISH.md",
+      "copy_page": "chatgpt-for-healthcare/",
+      "updated": "2026-11-17",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-chatgpt-for-healthcare/chatgpt_for_healthcare_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-chatgpt-for-healthcare",
+      "viewport": "beat01-openai-official-demo-19.15s",
+      "voice": "云阳旁白（edge-tts 云阳）"
+    },
     {
       "slug": "ula-vulcan-amazon-leo",
       "title": "ULA Vulcan / Amazon Leo：四十颗星没能入轨",
