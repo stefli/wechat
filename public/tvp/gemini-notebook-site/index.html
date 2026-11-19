@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gemini Notebook：对话里一句话就能做网站 · TVP</title>
+<style>
+:root { --bg:#0b0b0b; --card:#141414; --ink:#eee; --muted:#9ca3af; --accent:#10a37f; --line:#262626; --ok:#4ade80; }
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:24px 18px 8px;max-width:720px;margin:0 auto}
+header a.back{color:var(--accent);font-size:13px;text-decoration:none}
+header h1{margin:10px 0 6px;font-size:22px;line-height:1.3}
+header p{margin:0;color:var(--muted);font-size:13px}
+.covers{max-width:720px;margin:14px auto 0;padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.covers a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/4;background:#000}
+.covers img{width:100%;height:100%;object-fit:cover;display:block}
+main{max-width:720px;margin:0 auto;padding:16px 18px 48px;display:flex;flex-direction:column;gap:14px}
+.block{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.block-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.block-h h2{margin:0;font-size:15px}
+.btn{appearance:none;border:0;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;background:var(--accent);color:#06281f;cursor:pointer;white-space:nowrap}
+.btn.copied{background:var(--ok);color:#052e16}
+.pre{margin:0;padding:14px;white-space:pre-wrap;word-break:break-word;font-size:14px;line-height:1.65;font-family:inherit;color:var(--ink)}
+.hint{color:var(--muted);font-size:12px;padding:0 2px}
+.watch{max-width:720px;margin:16px auto 0;padding:0 18px}
+.watch .block{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.watch .block-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.watch .block-h h2{margin:0;font-size:16px}
+.watch .actions{display:flex;flex-wrap:wrap;gap:8px}
+.watch .btn-link{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;background:var(--accent);color:#06281f;text-decoration:none}
+.watch .btn-link.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.watch .body{padding:12px 14px 14px}
+.watch video{width:100%;max-height:70vh;border-radius:10px;background:#000;display:block}
+.watch .meta{color:var(--muted);font-size:12px;margin:10px 0 0;line-height:1.45}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← 选题库</a>
+  <h1>Gemini Notebook：对话里一句话就能做网站</h1>
+  <p>官方动态演示开场 · 11月16日公告：网页端18+全球滚动，含Workspace · 手机端计划归属该公告 · 仅旁观 · 云阳旁白（edge-tts 云阳） · 真2K · B主推/A备选 · 去相对时效用语定版</p>
+</header>
+<div class="covers">
+  <a href="./cover_B.jpg" target="_blank" rel="noopener"><img src="./cover_B.jpg" alt="封面 B 主推"></a>
+  <a href="./cover_A.jpg" target="_blank" rel="noopener"><img src="./cover_A.jpg" alt="封面 A 备选"></a>
+</div>
+<section class="watch" id="watch" aria-label="看片下载">
+  <div class="block">
+    <div class="block-h">
+      <h2>看片 / 下载 · 真 2K（1440×2560）</h2>
+      <div class="actions">
+        <a class="btn-link" href="https://ghfast.top/https://github.com/stefli/wechat/releases/download/tvp-gemini-notebook-site/gemini_notebook_site_timeless_yunyang_2k.mp4">加速下载</a>
+        <a class="btn-link ghost" href="https://ghproxy.net/https://github.com/stefli/wechat/releases/download/tvp-gemini-notebook-site/gemini_notebook_site_timeless_yunyang_2k.mp4">备用加速</a>
+        <a class="btn-link ghost" href="https://github.com/stefli/wechat/releases/download/tvp-gemini-notebook-site/gemini_notebook_site_timeless_yunyang_2k.mp4">原链</a>
+        <a class="btn-link ghost" href="https://github.com/stefli/wechat/releases/tag/tvp-gemini-notebook-site" target="_blank" rel="noopener">Release</a>
+      </div>
+    </div>
+    <div class="body">
+      <video onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src='https://github.com/stefli/wechat/releases/download/tvp-gemini-notebook-site/gemini_notebook_site_timeless_yunyang_2k.mp4';this.load();}" controls playsinline preload="metadata" poster="./cover_B.jpg" src="https://ghfast.top/https://github.com/stefli/wechat/releases/download/tvp-gemini-notebook-site/gemini_notebook_site_timeless_yunyang_2k.mp4">你的浏览器不支持 HTML5 视频，请改用下载链接。</video>
+      <p class="meta">云阳旁白（edge-tts 云阳） + BGM · 1440×2560 · 46.700000秒 · 11月16日公告称网页端向18岁以上用户全球滚动推送，含Workspace；该公告称手机端将跟进，未列上线日期。本片只旁观官方演示，未核账号是否已开通。 国内加速服务为第三方；永久保留官方原链。</p>
+    </div>
+  </div>
+</section>
+<main>
+  <p class="hint">A / B / C 三版各点一次复制。抖音请用 1080×1440 JPG，勿转发微信再传。聊天气泡优先附 B JPG。</p>
+  <section class="block"><div class="block-h"><h2>A · 主推版</h2><button class="btn" type="button" data-target="cap-A" onclick="copyText(this)">复制</button></div><pre class="pre" id="cap-A">Gemini Notebook：在对话里说一句话，就能直接做出一个互动网站。
+
+谷歌实验室官博写明，只要在记事本的聊天框里输入 make me a site，再写上你想做成什么样，就可以把笔记、研究和资料做成网站，用来快速理清复杂信息。官方举例包括可视化讲解，比如互动周期表或历史时间线；也可以做成数据看板，或者项目进度表，用来看任务和截止日期。做完以后，可以在新标签页打开来用，也可以直接分享给别人。
+
+这项能力按 11 月 16 日公告，在网页端向 18 岁以上的 Gemini Notebook 用户全球推送，Workspace 用户也包括在内。11 月 16 日公告称手机端将跟进，未列上线日期。
+
+这条只旁观官方演示，开场用的是官博大约 48 秒的演示视频，不是博客周期表静图。没有核对本机账号是否已经开通。
+
+#GeminiNotebook #Gemini #Google #makeMeASite #科技快播 #科技新闻</pre></section>
+  <section class="block"><div class="block-h"><h2>B · 短版</h2><button class="btn" type="button" data-target="cap-B" onclick="copyText(this)">复制</button></div><pre class="pre" id="cap-B">Gemini Notebook：在对话里输入 make me a site，就能做出可视化讲解、数据看板或项目进度表。做完可在新标签页打开，也可以分享。网页端向 18 岁以上用户全球推送，含 Workspace；11 月 16 日公告称手机端将跟进，未列上线日期。本条只旁观官方演示，未核账号是否已经开通。
+
+#GeminiNotebook #Gemini #科技快播</pre></section>
+  <section class="block"><div class="block-h"><h2>C · 要点版</h2><button class="btn" type="button" data-target="cap-C" onclick="copyText(this)">复制</button></div><pre class="pre" id="cap-C">📊 Gemini Notebook：对话里一句话就能做网站（2026-11-16 官博，11 月 16 日公告：网页端滚动）
+
+▪️ 在 Gemini Notebook 聊天框输入 make me a site，再加上你想做成什么样
+▪️ 可做可视化讲解（如互动周期表、历史时间线）、数据看板、项目进度表
+▪️ 做完后可「在新标签页打开」互动，也可以分享给别人
+▪️ 按 11 月 16 日公告，在网页端向 18 岁以上用户全球推送，Workspace 用户也包括在内
+▪️ 11 月 16 日公告称手机端将跟进，未列上线日期
+▪️ 本条只旁观官方演示，未核账号是否已经开通；开场为官博演示视频，不是静图
+
+#GeminiNotebook #Gemini #Google #科技快播</pre></section>
+</main>
+<script>
+function copyText(btn){
+  const id=btn.getAttribute('data-target');
+  const el=document.getElementById(id);
+  navigator.clipboard.writeText(el.textContent).then(()=>{
+    const old=btn.textContent; btn.textContent='已复制'; btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent=old; btn.classList.remove('copied');},1600);
+  });
+}
+</script>
+</body>
+</html>
