@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-21T22:33:09+08:00",
+  "updated": "2026-11-21T22:34:53+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "superhuman-go",
+      "title": "Superhuman Go：文档里直接派活，邮箱先备草稿",
+      "date": "2026-11-21",
+      "cover_a": "superhuman-go/cover_A.jpg",
+      "cover_b": "superhuman-go/cover_B.jpg",
+      "publish": "superhuman-go/PUBLISH.md",
+      "copy_page": "superhuman-go/",
+      "note": "11月19日扩展公告 · 官方文档智能体动态演示开场 · 仅旁观 · 云阳旁白（edge-tts 云阳） · 分批推出非全量 · 真2K · B主推",
+      "updated": "2026-11-21",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-superhuman-go/superhuman_go_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-superhuman-go",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 7945541,
+      "video_sha256": "98f566800eabd57ceb77704e46d5ceeb1fe1a9e3d9df10e618c2a0b2254eef5f",
+      "video_duration": 34.6,
+      "video_version": "new-yunyang-timeless"
+    },
     {
       "slug": "gemini-mac-computer-use",
       "title": "Gemini Mac：你忙你的，它点它的",
