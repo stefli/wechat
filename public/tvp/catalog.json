@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-22T00:27:20+08:00",
+  "updated": "2026-11-22T01:19:40+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "kyutai-aura",
+      "title": "Kyutai AURA：语音驱动，一块一块生成说话画面",
+      "date": "2026-11-22",
+      "cover_a": "kyutai-aura/cover_A.jpg",
+      "cover_b": "kyutai-aura/cover_B.jpg",
+      "publish": "kyutai-aura/PUBLISH.md",
+      "copy_page": "kyutai-aura/",
+      "note": "2026年11月20日公开论文、代码和权重 · 官方演示开场 · 权重非商用 · 仅旁观 · 云阳旁白（edge-tts 云阳） · 真2K · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-kyutai-aura/kyutai_aura_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-kyutai-aura",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 18950843,
+      "video_sha256": "1b448800187c9e07c754854abde8b23754476560d71591bc952b3d133f5ab271",
+      "video_duration": 45.04,
+      "video_version": "original-yunyang"
+    },
     {
       "slug": "gestalt-stealth-design",
       "title": "匿名模型 Gestalt：登上 Contra 公开设计榜第一",
