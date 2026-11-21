@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-20T00:01:05+08:00",
+  "updated": "2026-11-21T22:33:09+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "gemini-mac-computer-use",
+      "title": "Gemini Mac：你忙你的，它点它的",
+      "date": "2026-11-21",
+      "cover_a": "gemini-mac-computer-use/cover_A.jpg",
+      "cover_b": "gemini-mac-computer-use/cover_B.jpg",
+      "publish": "gemini-mac-computer-use/PUBLISH.md",
+      "copy_page": "gemini-mac-computer-use/",
+      "note": "谷歌11月19日公告 · 官方动态3D演示开场 · 美国英语分批开放 · 非实测 · 云阳旁白（edge-tts 云阳） · 原创柔和配乐 · 真2K · B主推",
+      "updated": "2026-11-21",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gemini-mac-computer-use/gemini_mac_computer_use_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gemini-mac-computer-use",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 11816506,
+      "video_sha256": "48ad2eee16da9e89bfd137b10da83ab0aefb7c6f4e840c6cf0a4363cf9cd515a",
+      "video_duration": 46.1,
+      "video_version": "original-yunyang"
+    },
     {
       "slug": "gemini-notebook-site",
       "title": "Gemini Notebook：对话里一句话就能做网站",
