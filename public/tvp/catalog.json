@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-21T22:47:35+08:00",
+  "updated": "2026-11-22T00:27:20+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "gestalt-stealth-design",
+      "title": "匿名模型 Gestalt：登上 Contra 公开设计榜第一",
+      "date": "2026-11-21",
+      "cover_a": "gestalt-stealth-design/cover_A.jpg",
+      "cover_b": "gestalt-stealth-design/cover_B.jpg",
+      "publish": "gestalt-stealth-design/PUBLISH.md",
+      "copy_page": "gestalt-stealth-design/",
+      "note": "Contra 公开设计榜第一 · 官方榜单录屏开场 · 模型未公开不可试用 · 仅核验官方展示 · 云阳旁白（edge-tts 云阳） · 真2K · B主推",
+      "updated": "2026-11-21",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-gestalt-stealth-design/gestalt_stealth_design_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-gestalt-stealth-design",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 17808866,
+      "video_sha256": "14458db3e2db36a4466f25886ff4f6ecf970bd3757204685e3dda58ebbc4d5ce",
+      "video_duration": 46.4,
+      "video_version": "original-yunyang"
+    },
     {
       "slug": "genie4-api",
       "title": "Project Genie：开放入口，不是再首发",
