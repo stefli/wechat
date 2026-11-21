@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-22T01:19:40+08:00",
+  "updated": "2026-11-22T01:29:21+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "obsbot-tail-air-2",
+      "title": "OBSBOT Tail Air 2：能跟踪，还能原生竖拍4K",
+      "date": "2026-11-22",
+      "cover_a": "obsbot-tail-air-2/cover_A.jpg",
+      "cover_b": "obsbot-tail-air-2/cover_B.jpg",
+      "publish": "obsbot-tail-air-2/PUBLISH.md",
+      "copy_page": "obsbot-tail-air-2/",
+      "note": "2026年11月19日发布 · 官方演示开场 · 美国官网NDI版预购价899美元 · 仅旁观非开箱 · 云阳旁白（edge-tts 云阳） · 真2K · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-obsbot-tail-air-2/obsbot_tail_air_2_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-obsbot-tail-air-2",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 38563867,
+      "video_sha256": "f047b7b7f760af6d81910939be47d93fc7c29b00e1667448d3d2bf9bcebe7609",
+      "video_duration": 44.014,
+      "video_version": "original-yunyang"
+    },
     {
       "slug": "kyutai-aura",
       "title": "Kyutai AURA：语音驱动，一块一块生成说话画面",
