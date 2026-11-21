@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-22T01:29:21+08:00",
+  "updated": "2026-11-22T01:43:47+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "pika-enact",
+      "title": "Pika Enact：边生成边导戏，目前是研究预览",
+      "date": "2026-11-22",
+      "cover_a": "pika-enact/cover_A.jpg",
+      "cover_b": "pika-enact/cover_B.jpg",
+      "publish": "pika-enact/PUBLISH.md",
+      "copy_page": "pika-enact/",
+      "note": "2026年11月18日发布 · 官方演示开场 · 研究预览消费者不可用 · 仅旁观 · 云阳旁白（edge-tts 云阳） · 真2K · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-pika-enact/pika_enact_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-pika-enact",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 23254736,
+      "video_sha256": "1c45a94965ab3ac2b87344a6165a41b5a44ae0317e3619ed52831bbe23375938",
+      "video_duration": 45.682,
+      "video_version": "corrected-yunyang-指令"
+    },
     {
       "slug": "obsbot-tail-air-2",
       "title": "OBSBOT Tail Air 2：能跟踪，还能原生竖拍4K",
