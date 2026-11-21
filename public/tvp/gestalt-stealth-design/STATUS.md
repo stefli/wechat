@@ -3,6 +3,14 @@
 Composition/Deliverable: **1440×2560 true 2K · no 4K unless Justin asks**.
 Local kit ready 2026-11-22 00:22 Asia/Shanghai. No social platform posting, no repo change, no upload.
 
+
+## 2026-11-22 00:40 Asia/Shanghai · 封面与文案纠正（视频未改）
+- 按技能与锁定模板重出双封面和 `PUBLISH.md`；旧稿备份在 `backup_cover_publish_20261122/`。
+- 成片 MP4 未重新编码、未重封装、未改文件。SHA256 仍为 `14458db3e2db36a4466f25886ff4f6ecf970bd3757204685e3dda58ebbc4d5ce`。
+- 封面改回锁定模板结构（Bebas / Oswald / Noto Sans CJK SC，B 白底色块条，A 垂直水平居中）。中文前置 Gestalt；英文不再用 NO NAME。底图裁去浏览器标签与地址栏，保留 Gestalt · Elo 1931。
+- PUBLISH 改为口语，删除规则标签 / 痕迹标签 / 不是 Elo / CI / 均分 / 勿混读等内部说明；A 补 CTA 问句。口径为「厂商未公布」，不用「没公开名字」。
+- 随后只改 A：换官方榜单另一裁切（仍无浏览器壳），让 Gestalt · Elo 1931 出现在居中黄胶囊上方；B 与 MP4 未动。PUBLISH 仅将「百分之九十」改为「90%」。
+
 ## Delivery
 - Video: `/workspace/gestalt_stealth_design_20261121/outputs/gestalt_stealth_design_2k.mp4`
 - Bytes: 17808866
@@ -51,6 +59,7 @@ Local kit ready 2026-11-22 00:22 Asia/Shanghai. No social platform posting, no r
 - Pages: https://stefli.github.io/wechat/tvp/gestalt-stealth-design/
 - Release: https://github.com/stefli/wechat/releases/tag/tvp-gestalt-stealth-design
 - Asset: https://github.com/stefli/wechat/releases/download/tvp-gestalt-stealth-design/gestalt_stealth_design_2k.mp4
+- 本次只更新封面与文案，未重传或改动 2K 视频。
 
 ## 未做
-- 不发社交。GitHub Release / Pages 由本次本地发布流程接上。
+- 不发社交。封面与文案由本次本地发布流程更新到已有 Pages。
