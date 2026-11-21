@@ -1,7 +1,25 @@
 {
-  "updated": "2026-11-21T22:34:53+08:00",
+  "updated": "2026-11-21T22:47:35+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "genie4-api",
+      "title": "Project Genie：开放入口，不是再首发",
+      "date": "2026-11-21",
+      "cover_a": "genie4-api/cover_A.jpg",
+      "cover_b": "genie4-api/cover_B.jpg",
+      "publish": "genie4-api/PUBLISH.md",
+      "copy_page": "genie4-api/",
+      "note": "11月18日更新体验、19日开放开发者入口 · 官方蚂蚁世界演示开场 · 不是模型再首发 · 仅旁观 · 云阳旁白（edge-tts 云阳） · 真2K · B主推",
+      "updated": "2026-11-21",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-genie4-api/project_genie_api_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-genie4-api",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 33505992,
+      "video_sha256": "df1cfe6aa5e3e490b1990bf43d40470465eb1edf58a55ba02cbdedf8bbebba8a",
+      "video_duration": 47.0,
+      "video_version": "original-yunyang"
+    },
     {
       "slug": "superhuman-go",
       "title": "Superhuman Go：文档里直接派活，邮箱先备草稿",
