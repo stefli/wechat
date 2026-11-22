@@ -1,7 +1,24 @@
 {
-  "updated": "2026-11-22T20:20:01+08:00",
+  "updated": "2026-11-22T20:31:03+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "shanghai-ailab-pi4",
+      "title": "上海人工智能实验室Pi4：花样滑冰重建成带轨迹的几何",
+      "date": "2026-11-22",
+      "cover_a": "shanghai-ailab-pi4/cover_A.jpg",
+      "cover_b": "shanghai-ailab-pi4/cover_B.jpg",
+      "publish": "shanghai-ailab-pi4/PUBLISH.md",
+      "copy_page": "shanghai-ailab-pi4/",
+      "note": "论文2026年11月17日 · 官方结果演示开场 · 非独立实测/未本地跑通 · 云阳旁白 · 真2K · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-shanghai-ailab-pi4/shanghai_ailab_pi4_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-shanghai-ailab-pi4",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 48973940,
+      "video_sha256": "45a5a950915c2604ad6dc685d709a199a92844e5c47d7b7a3f60e5fe52bf1a8d",
+      "video_duration": 51.904
+    },
     {
       "slug": "foundation-phantom-mkii",
       "title": "Foundation Phantom MKII：举起200磅杠铃，官方路测还能浇水",
