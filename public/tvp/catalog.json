@@ -1,7 +1,24 @@
 {
-  "updated": "2026-11-22T01:43:47+08:00",
+  "updated": "2026-11-22T20:20:01+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "foundation-phantom-mkii",
+      "title": "Foundation Phantom MKII：举起200磅杠铃，官方路测还能浇水",
+      "date": "2026-11-22",
+      "cover_a": "foundation-phantom-mkii/cover_A.jpg",
+      "cover_b": "foundation-phantom-mkii/cover_B.jpg",
+      "publish": "foundation-phantom-mkii/PUBLISH.md",
+      "copy_page": "foundation-phantom-mkii/",
+      "note": "产品页标注北京时间2026年11月21日 · 官方负重与浇水测试 · 仅旁观未独立实测 · 云阳旁白 · 真2K · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-foundation-phantom-mkii/foundation_phantom_mkii_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-foundation-phantom-mkii",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 17555417,
+      "video_sha256": "9b5ee9c43a2453a1e11d4732f00d7e0c794d0705af31933af45794f232f8bbee",
+      "video_duration": 48.568
+    },
     {
       "slug": "pika-enact",
       "title": "Pika Enact：边生成边导戏，目前是研究预览",
