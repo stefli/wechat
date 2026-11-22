@@ -32,6 +32,14 @@
       },
       "revision": 1,
       "operationId": "A-1795330014065-5"
+    },
+    "[\"tvp\",\"legacy-a\",\"douyin\"]": {
+      "value": {
+        "s": "published",
+        "at": "2026-10-03"
+      },
+      "revision": 1,
+      "operationId": "C-1795330018272-7"
     }
   }
 }
