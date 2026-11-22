@@ -1,7 +1,24 @@
 {
-  "updated": "2026-11-22T21:28:39+08:00",
+  "updated": "2026-11-22T23:16:37+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "tesla-fsd-supervised-v15-flash15",
+      "title": "特斯拉FSD第15版｜15秒档快播试稿（实长17.2秒）",
+      "date": "2026-11-22",
+      "cover_a": "tesla-fsd-supervised-v15-flash15/cover_A.jpg",
+      "cover_b": "tesla-fsd-supervised-v15-flash15/cover_B.jpg",
+      "publish": "tesla-fsd-supervised-v15-flash15/PUBLISH.md",
+      "copy_page": "tesla-fsd-supervised-v15-flash15/",
+      "note": "15秒档试稿 · 实长17.2秒 · 仍须主动监督 · 未宣布中国开放 · 非Robotaxi · 云阳旁白 · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-tesla-fsd-supervised-v15-flash15/tesla_fsd_supervised_v15_flash15_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-tesla-fsd-supervised-v15-flash15",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 13430741,
+      "video_sha256": "cef2871c62a77406b760de74c7cc49c69810a99578cb6d95453ac5e7429a5fd7",
+      "video_duration": 17.2
+    },
     {
       "slug": "tesla-fsd-supervised-v15",
       "title": "特斯拉监督版FSD第15版：实景视图，仍要人盯着开",
