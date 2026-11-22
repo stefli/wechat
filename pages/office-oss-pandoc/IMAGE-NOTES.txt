@@ -1,0 +1,57 @@
+本篇帮到读者：把 Markdown 文本稿转成同事能打开的 .docx；知道如何保留标题、表格、列表、插图、脚注；知道生成文件不等于附件完整，要检查缺图警告和关键数字。
+本篇主情绪：松一口气（辅：有底气）
+本篇结构：悬念倒叙（痛点钩子后以完整产物作为验收目标，再回到材料→安装→转换→验收→经验；开头不剧透数字，具体步骤不能跳过）
+本篇行文：long-take · 长镜头叙事（已读 INDEX 和 06-long-take 全文；以一份文稿交接场景贯穿，不通篇bullet；遵守更高优先跟学顺序，不把“前半叙事”扩成无操作散文）
+轮换：近3篇01 cool-breakdown/对比开场、02 field-notes/时间线、03 reader-qa/单坑深挖；本篇模板和骨架均不撞。05另用checklist-voice/清单决策。
+
+当前证据状态：桌面原图已齐；官网许可/维护截图按Justin最新指令跳过。原始日志/材料保留，不新增测试数字。
+素材：shots/为真实桌面webp，evidence/为原始裁切和真实文档渲染，publish-shots/为正文JPEG97（4:4:4），COPY按文件名逐张全量base64嵌入。
+封面：cover-combined.jpg 1283×383，左900+右383，JPEG95/4:4:4，海军蓝两栏都有产品字标+任务文字+真实结果示例；自绘文件图标用于产品识别，不冒称官方Logo。左右结果图均实测裁切并保持清晰，没有缩成原脚本的小结果图。
+
+正文图01: publish-shots/fig01-docx-gui.jpg
+来源 shots/fig16-docx-full-page.webp
+图说目标：Linux LibreOffice打开转换后的DOCX，金额表和插图都能看到。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 a49850aededdcd547a77c3a890926a2605ed03c43f810aca034b8ff479a7aadb
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图02: publish-shots/fig02-materials.jpg
+来源 shots/fig18-materials-directory.webp
+图说目标：材料目录，红框是采购周报.md和采购进度.png；其余文件为本轮生成结果。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 9b2a2a513da1440921b923616dec14320d620bcb86191a3fa2c43968e87a4662
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图03: publish-shots/fig03-source.jpg
+来源 shots/fig13-markdown-source.webp
+图说目标：源稿含表格、列表、图片相对路径和脚注；红框是图片引用。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 c1c28045f932d58081c1a8a91105806e4abcd76b5d5a6308980ddaca9e65a928
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图04: publish-shots/fig04-terminal-convert.jpg
+来源 shots/fig15-terminal-convert.webp
+图说目标：真实转换命令、exit:0及680/19659/28983字节。上方保留了实际语言警告。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 9e5cd0cfd1f759fff477dca8a4d93ead4c4170ffdb14cac54c96513c6050f8ce
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图05: publish-shots/fig05-document-acceptance.jpg
+来源 evidence/fig02-docx-acceptance.jpg
+图说目标：真实DOCX渲染核验，原红框分别包含编号、金额表、插图和脚注。非软件界面。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 5275c0947a2a073c5e98a62b8f7c02e915d00cd5587a319e5629cbcfb148c75c
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图06: publish-shots/fig06-missing-warning.jpg
+来源 shots/fig17-missing-image-warning.webp
+图说目标：缺图时仍exit:0，警告replacing image with description；98/9956字节。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 5afda33364d7dab620d45754e63f1b8a641a00631155bf3953f23a7a3bbd08a5
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图07: publish-shots/fig07-missing-result.jpg
+来源 shots/fig18-missing-image-docx.webp
+图说目标：Linux编辑器打开缺图结果，原图片位置变成不存在的附件描述。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 8512539b249e1cf0afd048337cbb892e39d5bc9e828d9e14d5f9af3c5094c10f
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+红框二审：终端先测字形行区间，再在行间留边；为x=0的首字保留6px黑色外边距，左框线放到原图外，不压首字。只裁空白/任务栏及无关画面，没有改命令或结果。
+隐私：文件管理器无左快捷栏，终端仅laoli$；读者路径为/home/laoli/Documents/；发布图无真实用户/主机/邮箱、无工作时钟、无fixtures/outputs例外。qpdf的左栏是当前文件页面缩略图，不是快捷目录。
+广告位：仅纯文字标签无背景，计数见AD-SLOTS.txt、SELF-CHECK.json。
+本篇无音视频样片，不创建Release或虚构下载链。
+浏览器手机预览/点击复制测试未执行：当前执行器无桌面委派工具；静态控件及复制纯标题事件已核。

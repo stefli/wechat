@@ -1,0 +1,63 @@
+{
+  "slug": "office-oss-pandoc",
+  "selected": "周报转成能改的 Word，表格和插图也能一起带过去",
+  "editorial_title_score": 9.3,
+  "ad_counts": {
+    "ad1_before": 1905,
+    "ad1_after": 1072,
+    "ad2_before": 1072,
+    "ad2_after": 787,
+    "ad2_after_no_cta": 710
+  },
+  "body_chars_no_space": 3776,
+  "figures": [
+    {
+      "file": "fig01-docx-gui.jpg",
+      "sha256": "a49850aededdcd547a77c3a890926a2605ed03c43f810aca034b8ff479a7aadb"
+    },
+    {
+      "file": "fig02-materials.jpg",
+      "sha256": "9b2a2a513da1440921b923616dec14320d620bcb86191a3fa2c43968e87a4662"
+    },
+    {
+      "file": "fig03-source.jpg",
+      "sha256": "c1c28045f932d58081c1a8a91105806e4abcd76b5d5a6308980ddaca9e65a928"
+    },
+    {
+      "file": "fig04-terminal-convert.jpg",
+      "sha256": "9e5cd0cfd1f759fff477dca8a4d93ead4c4170ffdb14cac54c96513c6050f8ce"
+    },
+    {
+      "file": "fig05-document-acceptance.jpg",
+      "sha256": "5275c0947a2a073c5e98a62b8f7c02e915d00cd5587a319e5629cbcfb148c75c"
+    },
+    {
+      "file": "fig06-missing-warning.jpg",
+      "sha256": "5afda33364d7dab620d45754e63f1b8a641a00631155bf3953f23a7a3bbd08a5"
+    },
+    {
+      "file": "fig07-missing-result.jpg",
+      "sha256": "8512539b249e1cf0afd048337cbb892e39d5bc9e828d9e14d5f9af3c5094c10f"
+    }
+  ],
+  "opening": "周报已经写完，表格也整理好了，临到交接，却还差一个文件格式。同事要的是能继续修改的Word文档，手里的稿子却是Markdown——一种用简单符号标记标题、表格和列表的文本文件。重新复制一遍不难，难的是复制之后还得重新摆表、找图，再核一次金额。我不想把已经做过的整理工作再做一遍。这次就拿一份自造的采购周报试试：把文本稿和配图放在一起，让Pandoc负责转换，再打开文档检查。不是拿真实客户材料练手，也不是给一张截图换个文件后缀。今晚要办成的事很具体：把这份周报交成能继续改的文档。可文件生成之后，原来的表格和配图究竟跟过去了没有？我先从打开文档的那个画面说起，再把材料和操作一步步往前还原。",
+  "issues": [],
+  "u_count": 2,
+  "strong_count": 27,
+  "independent_dom_ad_counts": {
+    "ad1_before": 1905,
+    "ad1_after": 1072,
+    "ad2_before": 1072,
+    "ad2_after": 787
+  },
+  "title_pool_full_and_sorted": true,
+  "pure_title_copy_handlers": true,
+  "copy_controls": {
+    "h2_styles": 20,
+    "title_colors": 10,
+    "dividers": 5,
+    "default_visible_titles": 3
+  },
+  "static_checks_passed": true,
+  "browser_click_or_mobile_preview_tested": false
+}

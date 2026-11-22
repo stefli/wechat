@@ -1,0 +1,67 @@
+{
+  "slug": "office-oss-qpdf",
+  "selected": "整份 PDF 不用都发？抽出要交的几页，再接上附件",
+  "editorial_title_score": 9.4,
+  "ad_counts": {
+    "ad1_before": 1142,
+    "ad1_after": 1535,
+    "ad2_before": 1535,
+    "ad2_after": 737,
+    "ad2_after_no_cta": 665
+  },
+  "body_chars_no_space": 3426,
+  "figures": [
+    {
+      "file": "fig01-materials.jpg",
+      "sha256": "275cdbbbf6ed93bd6ba50b34d13ac16a209acc12829a403fcd3c16af1ec6818a"
+    },
+    {
+      "file": "fig02-input-pages.jpg",
+      "sha256": "1c69e07f859258c024632e20c702ff1592a0bf39f428770736cab5d153517354"
+    },
+    {
+      "file": "fig03-terminal-select-merge.jpg",
+      "sha256": "a4f8d7dcd30bf9fdb647ad366d4a7a7b178d6b727b421ae464c304e4e1919f8d"
+    },
+    {
+      "file": "fig04-final-gui.jpg",
+      "sha256": "394448a0b64f0236ff74ceadc6253a25e64ff079846fe70e67bbc0bb3d9cb14d"
+    },
+    {
+      "file": "fig05-final-pages.jpg",
+      "sha256": "cc6759b29e652db172cd74c0a11e2d5277b5954804c012b5244b73a33f72b055"
+    },
+    {
+      "file": "fig08-gui-order.jpg",
+      "sha256": "25ff5381e0da28778186d8875df8ad32ffd62613e01c7a8cf71db8e3128046b4"
+    },
+    {
+      "file": "fig06-check.jpg",
+      "sha256": "a57996cdf21da92f7f9170dc11e0e41d90df6e585321059ce356b1d10485a05d"
+    },
+    {
+      "file": "fig07-out-of-range.jpg",
+      "sha256": "f31bff28f2e4b0ff87a964aa8f9621ee000efd70b8a5798bced0be667377a351"
+    }
+  ],
+  "opening": "一整份PDF里，真正要交的只有几页，附件却又在另一个文件里。整份发过去会夹带无关内容，拆成好几个文件发，又得解释先看哪个、后看哪个。今晚我想把这件事整理成一个动作：先留下要交的页，再把附件接在后面，最后只留一份发送版。用的就是qpdf，不换一条更长的工具链。要紧的不是合并按钮有没有反应，而是收到的人打开以后，看到的页是不是你打算交的那些，顺序会不会错。这次就拿自造示例走完，并把能继续做、该停下来的条件列清楚。",
+  "issues": [],
+  "u_count": 1,
+  "strong_count": 34,
+  "independent_dom_ad_counts": {
+    "ad1_before": 1142,
+    "ad1_after": 1535,
+    "ad2_before": 1535,
+    "ad2_after": 737
+  },
+  "title_pool_full_and_sorted": true,
+  "pure_title_copy_handlers": true,
+  "copy_controls": {
+    "h2_styles": 20,
+    "title_colors": 10,
+    "dividers": 5,
+    "default_visible_titles": 3
+  },
+  "static_checks_passed": true,
+  "browser_click_or_mobile_preview_tested": false
+}

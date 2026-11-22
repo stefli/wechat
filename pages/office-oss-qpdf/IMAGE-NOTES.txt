@@ -1,0 +1,63 @@
+本篇帮到读者：从PDF抽出指定页，与附件合成一份发送版；按页标签核验顺序及漏页；会测量压缩前后大小，不把“再压缩”当必然变小。
+本篇主情绪：有底气（辅：不被忽悠）
+本篇结构：清单/决策（材料→安装→抽页→合并→验收；压缩作为可选决策中后段，不分人群开场）
+本篇行文：checklist-voice · 决策口吻（已读INDEX、07-checklist-voice全文；以痛点+今晚任务+悬念开头，默认建议/例外/停止条件放中后段，清单附原因）
+轮换：不同于近3篇01 cool-breakdown/对比开场、02 field-notes/时间线、03 reader-qa/单坑深挖，也不同于04 long-take/悬念倒叙。
+
+当前证据状态：桌面原图已齐；官网许可/维护截图按Justin最新指令跳过。原始日志/材料保留，不新增测试数字。
+素材：shots/为真实桌面webp，evidence/为原始裁切和真实文档渲染，publish-shots/为正文JPEG97（4:4:4），COPY按文件名逐张全量base64嵌入。
+封面：cover-combined.jpg 1283×383，左900+右383，JPEG95/4:4:4，海军蓝两栏都有产品字标+任务文字+真实结果示例；自绘文件图标用于产品识别，不冒称官方Logo。左右结果图均实测裁切并保持清晰，没有缩成原脚本的小结果图。
+
+正文图01: publish-shots/fig01-materials.jpg
+来源 shots/fig12-materials-directory.webp
+图说目标：红框是采购材料.pdf与附件.pdf，目录还显示本轮中间文件及验收文本。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 275cdbbbf6ed93bd6ba50b34d13ac16a209acc12829a403fcd3c16af1ec6818a
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图02: publish-shots/fig02-input-pages.jpg
+来源 evidence/fig01-input-pages.jpg
+图说目标：原材料完整四页的真实渲染拼图，页标签A1/A2/A3/A4；非软件界面。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 1c69e07f859258c024632e20c702ff1592a0bf39f428770736cab5d153517354
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图03: publish-shots/fig03-terminal-select-merge.jpg
+来源 shots/fig15-terminal-select-merge-compress.webp
+图说目标：抽页后3183字节，合并后5328字节，两次exit:0；只截本篇抽页合并主线。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 a4f8d7dcd30bf9fdb647ad366d4a7a7b178d6b727b421ae464c304e4e1919f8d
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图04: publish-shots/fig04-final-gui.jpg
+来源 shots/fig17-final-gui-a1.webp
+图说目标：Linux软件打开最终PDF，左边是本文件四页缩略图，红框是A1页标签及编号。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 394448a0b64f0236ff74ceadc6253a25e64ff079846fe70e67bbc0bb3d9cb14d
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图05: publish-shots/fig05-final-pages.jpg
+来源 evidence/fig02-final-pages.jpg
+图说目标：最终完整四页真实渲染，A1→A3→B1→B2；非软件界面。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 cc6759b29e652db172cd74c0a11e2d5277b5954804c012b5244b73a33f72b055
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图06: publish-shots/fig08-gui-order.jpg
+来源 shots/fig17-final-gui-{a1,a3,b1,b2}.webp
+图说目标：按实际翻页顺序截取的四个GUI页眉，完整内容另见最终四页渲染。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 25ff5381e0da28778186d8875df8ad32ffd62613e01c7a8cf71db8e3128046b4
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图07: publish-shots/fig06-check.jpg
+来源 shots/fig18-out-of-range-check.webp
+图说目标：qpdf页数结果4、结构检查提示及exit:0，保留不能检测一切错误的原始提示。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 a57996cdf21da92f7f9170dc11e0e41d90df6e585321059ce356b1d10485a05d
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+正文图08: publish-shots/fig07-out-of-range.jpg
+来源 shots/fig18-out-of-range-check.webp
+图说目标：抽第9页出现number 9 out of range，exit:2。
+裁框坐标见evidence/PUBLISH-IMAGES.json对应项；SHA256 f31bff28f2e4b0ff87a964aa8f9621ee000efd70b8a5798bced0be667377a351
+已打开原图、原裁切/文档渲染、最终JPEG目验；边框完整罩住目标，不压字。
+
+红框二审：终端先测字形行区间，再在行间留边；为x=0的首字保留6px黑色外边距，左框线放到原图外，不压首字。只裁空白/任务栏及无关画面，没有改命令或结果。
+隐私：文件管理器无左快捷栏，终端仅laoli$；读者路径为/home/laoli/Documents/；发布图无真实用户/主机/邮箱、无工作时钟、无fixtures/outputs例外。qpdf的左栏是当前文件页面缩略图，不是快捷目录。
+广告位：仅纯文字标签无背景，计数见AD-SLOTS.txt、SELF-CHECK.json。
+本篇无音视频样片，不创建Release或虚构下载链。
+浏览器手机预览/点击复制测试未执行：当前执行器无桌面委派工具；静态控件及复制纯标题事件已核。
