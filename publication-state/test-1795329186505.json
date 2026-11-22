@@ -3,11 +3,11 @@
   "records": {
     "[\"tvp\",\"verification-only\",\"douyin\"]": {
       "value": {
-        "s": "published",
+        "s": "skip",
         "at": "2026-11-21"
       },
-      "revision": 1,
-      "operationId": "A-1795329189911-1"
+      "revision": 2,
+      "operationId": "B-1795329194202-2"
     }
   }
 }
