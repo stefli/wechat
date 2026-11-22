@@ -31,7 +31,7 @@ PUBLIC = ROOT / "public"
 PAGES_INDEX = ROOT / "pages" / "index.html"
 PUBLIC_CSS = PUBLIC / "index.css"
 PAGES_CSS = ROOT / "pages" / "index.css"
-LIBRARY_FILES = ("library.js", "library.css", "library-status.json")
+LIBRARY_FILES = ("library.js", "library.css", "library-status.json", "library-ui.mjs", "sync-core.mjs", "github-transport.mjs", "pat-session.mjs", "publication-sync-help.html")
 SHANGHAI = ZoneInfo("Asia/Shanghai")
 
 CHROME_HEADINGS = {
@@ -306,7 +306,7 @@ def render(rows: list[dict]) -> str:
   <meta name="color-scheme" content="light dark"/>
   <title>图文稿件库 · 老李的AI江湖</title>
   <link rel="stylesheet" href="./index.css"/>
-  <link rel="stylesheet" href="./library.css"/>
+  <link rel="stylesheet" href="./library.css?v=20261122-pat1"/>
 </head>
 <body>
   <div class="wrap">
@@ -323,7 +323,7 @@ def render(rows: list[dict]) -> str:
 {body}
     </ul>
   </div>
-  <script src="./library.js" defer></script>
+  <script src="./library.js?v=20261122-pat1" defer></script>
 </body>
 </html>
 """
