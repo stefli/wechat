@@ -24,6 +24,14 @@
       },
       "revision": 1,
       "operationId": "B-1795330220877-4"
+    },
+    "[\"tvp\",\"offline-a\",\"douyin\"]": {
+      "value": {
+        "s": "published",
+        "at": "2026-11-19"
+      },
+      "revision": 1,
+      "operationId": "A-1795330225325-5"
     }
   }
 }
