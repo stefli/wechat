@@ -1,7 +1,24 @@
 {
-  "updated": "2026-11-22T20:31:03+08:00",
+  "updated": "2026-11-22T21:28:39+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "tesla-fsd-supervised-v15",
+      "title": "特斯拉监督版FSD第15版：实景视图，仍要人盯着开",
+      "date": "2026-11-22",
+      "cover_a": "tesla-fsd-supervised-v15/cover_A.jpg",
+      "cover_b": "tesla-fsd-supervised-v15/cover_B.jpg",
+      "publish": "tesla-fsd-supervised-v15/PUBLISH.md",
+      "copy_page": "tesla-fsd-supervised-v15/",
+      "note": "北京时间2026年11月22日宣布推送 · 仍须主动监督 · 未宣布中国开放 · 非Robotaxi · 云阳旁白 · 真2K · B主推",
+      "updated": "2026-11-22",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-tesla-fsd-supervised-v15/tesla_fsd_supervised_v15_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-tesla-fsd-supervised-v15",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 36615974,
+      "video_sha256": "d726e1bb078583e1316f263997e75bb0ac98b837735d09fd3f720fa0f3e49ea4",
+      "video_duration": 50.938
+    },
     {
       "slug": "shanghai-ailab-pi4",
       "title": "上海人工智能实验室Pi4：花样滑冰重建成带轨迹的几何",
