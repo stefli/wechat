@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "records": {
+    "[\"tvp\",\"verification-only\",\"douyin\"]": {
+      "value": {
+        "s": "published",
+        "at": "2026-11-21"
+      },
+      "revision": 1,
+      "operationId": "A-1795329189911-1"
+    }
+  }
+}
