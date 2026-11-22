@@ -422,7 +422,7 @@
         </div>
         <div class="article-stage">
           <div class="article-scroll">
-            <div id="body"><section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;background:#FFFFFF;text-align:left"><p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">群里常有人问一句很实在的话：这份 PDF 里的中文我看得见，单号和金额却拿不到手。有的转换跑完，打开结果还是空的。这种时候人会怀疑，是文件坏了，还是自己用错了工具。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">今晚要办成的事很明确：用 <span style="color:#155E75;font-weight:700">pdftotext</span> 把「本来就有字」的 PDF 抽成文本，先看单号和金额在不在。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">下面按你会问的几句来答。命令和截图都是我实际跑过的。</p><p data-mp-hr="1" style="margin:22px 0;padding:0;font-size:12px;line-height:1;color:#94A3B8;text-align:center;border-top:1px dashed #CBD5E1">&nbsp;</p><h2 data-mp-h="1" data-mp-h-text="手头要准备什么样的 PDF？" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>手头要准备什么样的 PDF？<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left"><strong>先分清：这是给「已经有文字」的 PDF 用的，不是给照片做识别的。</strong></p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">我准备了两份中文文本型 PDF。一份是系列01 用过的同一份示例，单据编号 QT-2026-1103，合计 1,072.00 元；另一份是新做的示例，单据编号 SM-2026-1122，合计 3,580.00 元，客户写成「江南机电有限公司（示例）」。两份都是嵌入了中文字体的文本 PDF，不是扫描件。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">另外我留了英文文本 PDF 和没有文字层的扫描件，只用来检查边界，<strong>你跟做主路径不需要准备这两类文件，也不必取得我的同一份样本。</strong><u>先用可以公开练习的材料，不要拿真实合同去试。</u></p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">我在 Linux 上用的是下面这个临时目录。<strong>/tmp 是临时目录，系统重启后可能被清理。</strong>要反复用，请换成自己的长期目录。</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">mkdir -p /tmp/laoli-demo-office-oss-pdftotext/fixtures
+            <div id="body"><section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;text-align:left"><p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">群里常有人问一句很实在的话：这份 PDF 里的中文我看得见，单号和金额却拿不到手。有的转换跑完，打开结果还是空的。这种时候人会怀疑，是文件坏了，还是自己用错了工具。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">今晚要办成的事很明确：用 <span style="color:#155E75;font-weight:700">pdftotext</span> 把「本来就有字」的 PDF 抽成文本，先看单号和金额在不在。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">下面按你会问的几句来答。命令和截图都是我实际跑过的。</p><p data-mp-hr="1" style="margin:22px 0;padding:0;font-size:12px;line-height:1;color:#94A3B8;text-align:center;border-top:1px dashed #CBD5E1">&nbsp;</p><h2 data-mp-h="1" data-mp-h-text="手头要准备什么样的 PDF？" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>手头要准备什么样的 PDF？<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left"><strong>先分清：这是给「已经有文字」的 PDF 用的，不是给照片做识别的。</strong></p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">我准备了两份中文文本型 PDF。一份是系列01 用过的同一份示例，单据编号 QT-2026-1103，合计 1,072.00 元；另一份是新做的示例，单据编号 SM-2026-1122，合计 3,580.00 元，客户写成「江南机电有限公司（示例）」。两份都是嵌入了中文字体的文本 PDF，不是扫描件。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">另外我留了英文文本 PDF 和没有文字层的扫描件，只用来检查边界，<strong>你跟做主路径不需要准备这两类文件，也不必取得我的同一份样本。</strong><u>先用可以公开练习的材料，不要拿真实合同去试。</u></p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">我在 Linux 上用的是下面这个临时目录。<strong>/tmp 是临时目录，系统重启后可能被清理。</strong>要反复用，请换成自己的长期目录。</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">mkdir -p /tmp/laoli-demo-office-oss-pdftotext/fixtures
 mkdir -p /tmp/laoli-demo-office-oss-pdftotext/outputs
 cd /tmp/laoli-demo-office-oss-pdftotext</code></pre><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left"><strong>用你自己的一份 PDF 就能开始。</strong>先在阅读器里打开一份含编号和金额的练习 PDF，试着拖选并复制一小段文字；能复制只是起步检查，不保证所有内容都能正常抽出。记下原件里的编号和金额，稍后用它们验收。</p><ul style="margin:0 0 14px;padding:0 0 0 1.4em;font-size:15px;line-height:1.75;color:#334155;"><li style="margin:0 0 6px;padding:0;line-height:1.75;">在文件管理器里打开 <strong>/tmp/laoli-demo-office-oss-pdftotext/fixtures</strong>，这是本例放原 PDF 材料的子文件夹。</li><li style="margin:0 0 6px;padding:0;line-height:1.75;">把选好的 PDF <strong>复制</strong>进去，保留原件，再把副本重命名为 <strong>native-quote.pdf</strong>；确认后缀仍是 .pdf，不要重复成 .pdf.pdf。</li><li style="margin:0 0 6px;padding:0;line-height:1.75;">如果还想试第二份，再复制另一份可选中文字的 PDF，重命名为 <strong>native-notice-sm1122.pdf</strong>。第二份可选，只有一份也可以走完主路径。</li></ul><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">这样后面的命令可以直接沿用文件名。下面第一行是必需材料，第二行仅在你准备了第二份时才会存在：</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">fixtures/native-quote.pdf
 fixtures/native-notice-sm1122.pdf</code></pre><p data-mp-hr="1" style="margin:22px 0;padding:0;font-size:12px;line-height:1;color:#94A3B8;text-align:center;border-top:1px dashed #CBD5E1">&nbsp;</p><h2 data-mp-h="1" data-mp-h-text="这个工具怎么装？" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>这个工具怎么装？<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left"><strong>pdftotext 是开源项目 Poppler 附带的命令行工具，做的是把 PDF 里已有的字转成纯文本。</strong>下面的安装主路适用于 Debian / Ubuntu：先联网，确认账户有 sudo 管理员权限；没有权限请管理员协助。</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">sudo apt-get update &amp;&amp; sudo apt-get install -y poppler-utils</code></pre><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">安装出现网络、权限或软件包错误，先停下来处理。装好后依次检查命令路径和帮助：</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">command -v pdftotext
@@ -613,24 +613,20 @@ function fb(t,b){
 }
 function stripBgProps(root){
   function wipe(el){
-    if(!el) return;
+    if(!el || !el.getAttribute) return;
     var tag=(el.tagName||"").toLowerCase();
-    if(tag==="pre"||tag==="code") return;
-    if(el.style){
-      el.style.removeProperty("background");
-      el.style.removeProperty("background-color");
-      el.style.removeProperty("background-image");
-    }
-    if(!el.getAttribute) return;
+    var keepBg = (tag==="pre"||tag==="code");
     var st=el.getAttribute("style");
-    if(!st||!/background/i.test(st)) return;
+    if(!st) return;
     var kept=[];
     var parts=st.split(";");
     for(var i=0;i<parts.length;i++){
       var p=parts[i].trim();
       if(!p) continue;
       var k=p.split(":")[0].trim().toLowerCase();
-      if(k==="background"||k==="background-color"||k==="background-image") continue;
+      if(!k) continue;
+      if(!keepBg && (k==="background" || k.indexOf("background-")===0)) continue;
+      if(k==="border-radius" || k==="box-shadow" || k==="outline") continue;
       kept.push(p);
     }
     if(kept.length) el.setAttribute("style", kept.join(";")+";");
@@ -645,17 +641,32 @@ function cpBody(b){
   if(!src) return;
   applyHStyle();
   applyHrStyle();
-  var html=src.innerHTML;
   var host=document.createElement("div");
-  host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;";
-  host.innerHTML=html;
+  host.innerHTML=src.innerHTML;
   stripBgProps(host);
-  document.body.appendChild(host);
-  var r=document.createRange(); r.selectNodeContents(host);
+  var html=host.innerHTML;
+  var text=host.innerText || host.textContent || "";
+  function onCopy(e){
+    if(!e.clipboardData) return;
+    e.clipboardData.setData("text/html", html);
+    e.clipboardData.setData("text/plain", text);
+    e.preventDefault();
+  }
+  document.addEventListener("copy", onCopy);
+  var tmp=document.createElement("div");
+  tmp.setAttribute("contenteditable","true");
+  tmp.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;";
+  tmp.textContent=".";
+  document.body.appendChild(tmp);
+  var r=document.createRange(); r.selectNodeContents(tmp);
   var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-  try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
+  var okCmd=false;
+  try{ okCmd=document.execCommand("copy"); }catch(e){ okCmd=false; }
   s.removeAllRanges();
-  host.remove();
+  tmp.remove();
+  document.removeEventListener("copy", onCopy);
+  if(okCmd) ok(b);
+  else alert("复制失败，请长按正文手动复制");
 }
 applyHStyle();
 applyHrStyle();

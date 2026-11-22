@@ -416,7 +416,7 @@
         </div>
         <div class="article-stage">
           <div class="article-scroll">
-            <div id="body"><section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;background:#FFFFFF;text-align:left"><p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">对账表分散在几份 CSV 里。你打开一份，往下复制，再打开另一份。还没开始汇总，就得先盯着表头，担心多贴了一行，或者把重复发来的记录又算进去。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">麻烦还不只在合并。客户编号有开头的零，备注里也可能带逗号。表看着差不多，一次复制或一次自动转格式，就可能让后面算出来的数失去依据。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">这次我用 Miller 做一条短流程：把同表头的示例 CSV 合起来，去掉完全相同的整行，再按客户算总额。先不碰复杂的业务匹配。能不能把这件日常小事做得清楚，又让每一步都有表可查？</p><h2 data-mp-h="1" data-mp-h-text="先把材料放在一起，别急着算" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>先把材料放在一起，别急着算<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">在“我的文档”里新建<strong>CSV对账</strong>文件夹。先按下面全文保存<strong>周一.csv、周二.csv</strong>；后面做格式检查时，再保存另外两份边界 CSV。内容都是独立制作的练习材料，不是客户表，也不依赖上一篇文章。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">下文用<strong>/home/laoli/Documents/CSV对账/</strong>。照做时换成自己电脑上的实际位置。保留输入文件，生成文件另起名字；已有重要的同名结果就先移到别处，别让重定向写出把它覆盖。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">用下面内容制作两份 CSV。用纯文本编辑器分别保存为<strong>UTF-8 编码</strong>的周一.csv、周二.csv，不要把后缀存成 .csv.txt。先核表头：客户编号、订单号、物料、金额分、备注，顺序一致。字段名保留下面的英文，命令会按名字找列。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left"><strong>周一.csv：</strong></p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">customer_id,order_id,item,amount_cents,note
+            <div id="body"><section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;text-align:left"><p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">对账表分散在几份 CSV 里。你打开一份，往下复制，再打开另一份。还没开始汇总，就得先盯着表头，担心多贴了一行，或者把重复发来的记录又算进去。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">麻烦还不只在合并。客户编号有开头的零，备注里也可能带逗号。表看着差不多，一次复制或一次自动转格式，就可能让后面算出来的数失去依据。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">这次我用 Miller 做一条短流程：把同表头的示例 CSV 合起来，去掉完全相同的整行，再按客户算总额。先不碰复杂的业务匹配。能不能把这件日常小事做得清楚，又让每一步都有表可查？</p><h2 data-mp-h="1" data-mp-h-text="先把材料放在一起，别急着算" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>先把材料放在一起，别急着算<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">在“我的文档”里新建<strong>CSV对账</strong>文件夹。先按下面全文保存<strong>周一.csv、周二.csv</strong>；后面做格式检查时，再保存另外两份边界 CSV。内容都是独立制作的练习材料，不是客户表，也不依赖上一篇文章。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">下文用<strong>/home/laoli/Documents/CSV对账/</strong>。照做时换成自己电脑上的实际位置。保留输入文件，生成文件另起名字；已有重要的同名结果就先移到别处，别让重定向写出把它覆盖。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">用下面内容制作两份 CSV。用纯文本编辑器分别保存为<strong>UTF-8 编码</strong>的周一.csv、周二.csv，不要把后缀存成 .csv.txt。先核表头：客户编号、订单号、物料、金额分、备注，顺序一致。字段名保留下面的英文，命令会按名字找列。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left"><strong>周一.csv：</strong></p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">customer_id,order_id,item,amount_cents,note
 0007,PO-001,轴承,125000,&quot;含税,含运费&quot;
 0012,PO-002,密封圈,8850,&quot;规格 &quot;&quot;A&quot;&quot;&quot;
 0007,PO-003,胶带,1990,常规
@@ -622,24 +622,20 @@ function fb(t,b){
 }
 function stripBgProps(root){
   function wipe(el){
-    if(!el) return;
+    if(!el || !el.getAttribute) return;
     var tag=(el.tagName||"").toLowerCase();
-    if(tag==="pre"||tag==="code") return;
-    if(el.style){
-      el.style.removeProperty("background");
-      el.style.removeProperty("background-color");
-      el.style.removeProperty("background-image");
-    }
-    if(!el.getAttribute) return;
+    var keepBg = (tag==="pre"||tag==="code");
     var st=el.getAttribute("style");
-    if(!st||!/background/i.test(st)) return;
+    if(!st) return;
     var kept=[];
     var parts=st.split(";");
     for(var i=0;i<parts.length;i++){
       var p=parts[i].trim();
       if(!p) continue;
       var k=p.split(":")[0].trim().toLowerCase();
-      if(k==="background"||k==="background-color"||k==="background-image") continue;
+      if(!k) continue;
+      if(!keepBg && (k==="background" || k.indexOf("background-")===0)) continue;
+      if(k==="border-radius" || k==="box-shadow" || k==="outline") continue;
       kept.push(p);
     }
     if(kept.length) el.setAttribute("style", kept.join(";")+";");
@@ -654,17 +650,32 @@ function cpBody(b){
   if(!src) return;
   applyHStyle();
   applyHrStyle();
-  var html=src.innerHTML;
   var host=document.createElement("div");
-  host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;";
-  host.innerHTML=html;
+  host.innerHTML=src.innerHTML;
   stripBgProps(host);
-  document.body.appendChild(host);
-  var r=document.createRange(); r.selectNodeContents(host);
+  var html=host.innerHTML;
+  var text=host.innerText || host.textContent || "";
+  function onCopy(e){
+    if(!e.clipboardData) return;
+    e.clipboardData.setData("text/html", html);
+    e.clipboardData.setData("text/plain", text);
+    e.preventDefault();
+  }
+  document.addEventListener("copy", onCopy);
+  var tmp=document.createElement("div");
+  tmp.setAttribute("contenteditable","true");
+  tmp.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;";
+  tmp.textContent=".";
+  document.body.appendChild(tmp);
+  var r=document.createRange(); r.selectNodeContents(tmp);
   var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-  try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
+  var okCmd=false;
+  try{ okCmd=document.execCommand("copy"); }catch(e){ okCmd=false; }
   s.removeAllRanges();
-  host.remove();
+  tmp.remove();
+  document.removeEventListener("copy", onCopy);
+  if(okCmd) ok(b);
+  else alert("复制失败，请长按正文手动复制");
 }
 applyHStyle();
 applyHrStyle();

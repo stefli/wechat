@@ -416,7 +416,7 @@
         </div>
         <div class="article-stage">
           <div class="article-scroll">
-            <div id="body"><section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;background:#FFFFFF;text-align:left"><p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">报价单发来的是 PDF，物料和金额都看得见。可要把它并进采购明细，鼠标一拖，复制出来的字却不再按列排。重新抄一遍，最不放心的还不是物料名称，而是编码开头的零和金额的小数位。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">表格有边框，字也清楚，看起来只差一个“提取”按钮。我也容易顺着这个直觉，觉得让工具把纸面上的格子搬出来，应该没有太多悬念。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">这次我用 pdfplumber 处理一份自造中文报价单。目标很简单：把物料和金额提成一张能继续核对的表。不过，“眼睛看到一张表”和“程序读到一张表”，真的是一回事吗？</p><h2 data-mp-h="1" data-mp-h-text="第1步：先建一个空的练习文件夹" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>第1步：先建一个空的练习文件夹<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">在“我的文档”里新建一个空的<strong>报价抽表</strong>文件夹。下面会在这里生成一份文本型报价 PDF，再生成它的纯图片版；物料和金额都写在脚本里，是自造练习，不用准备客户材料。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">下文目录写作<strong>/home/laoli/Documents/报价抽表/</strong>。你照做时，换成自己电脑里这个文件夹的实际位置。保留原 PDF，不要用唯一一份正式单据试命令；也别直接复用已经存在的重要 CSV 文件名，后面的写出操作会覆盖同名文件。</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">mkdir -p &quot;/home/laoli/Documents/报价抽表&quot;
+            <div id="body"><section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;text-align:left"><p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">报价单发来的是 PDF，物料和金额都看得见。可要把它并进采购明细，鼠标一拖，复制出来的字却不再按列排。重新抄一遍，最不放心的还不是物料名称，而是编码开头的零和金额的小数位。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">表格有边框，字也清楚，看起来只差一个“提取”按钮。我也容易顺着这个直觉，觉得让工具把纸面上的格子搬出来，应该没有太多悬念。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">这次我用 pdfplumber 处理一份自造中文报价单。目标很简单：把物料和金额提成一张能继续核对的表。不过，“眼睛看到一张表”和“程序读到一张表”，真的是一回事吗？</p><h2 data-mp-h="1" data-mp-h-text="第1步：先建一个空的练习文件夹" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>第1步：先建一个空的练习文件夹<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">在“我的文档”里新建一个空的<strong>报价抽表</strong>文件夹。下面会在这里生成一份文本型报价 PDF，再生成它的纯图片版；物料和金额都写在脚本里，是自造练习，不用准备客户材料。</p><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">下文目录写作<strong>/home/laoli/Documents/报价抽表/</strong>。你照做时，换成自己电脑里这个文件夹的实际位置。保留原 PDF，不要用唯一一份正式单据试命令；也别直接复用已经存在的重要 CSV 文件名，后面的写出操作会覆盖同名文件。</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">mkdir -p &quot;/home/laoli/Documents/报价抽表&quot;
 cd &quot;/home/laoli/Documents/报价抽表&quot;</code></pre><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">pdfplumber 是一个读取 PDF 文字和表格的 Python 开源库。<strong>官方 README 说明，它更适合机器生成的 PDF。</strong>官方仓库使用 MIT 许可证，允许使用、修改和再分发，需保留相应版权及许可声明；官方近期仍有发布。官方介绍是一回事，下面这份材料能抽成什么样，要看实际输出。</p><h2 data-mp-h="1" data-mp-h-text="第2步：装进独立 Python 环境" style="margin:28px 0 14px;padding:0;font-size:17px;line-height:1.45;font-weight:700;color:#0F172A;text-align:center"><span style="color:#94A3B8;font-weight:400;margin-right:10px">—</span>第2步：装进独立 Python 环境<span style="color:#94A3B8;font-weight:400;margin-left:10px">—</span></h2><p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">这次实际运行环境是<strong>Linux</strong>，下面给 Debian／Ubuntu 的安装主路。需要联网、可用的软件源和 <strong>sudo 管理员权限</strong>。ReportLab、文泉驿字体和 Poppler 渲染命令只用来制作练习输入；实际抽表仍由 pdfplumber 完成。打开终端，逐行执行；软件包安装、进入目录或后续任一步失败，都先停下来，不要跳到抽表。</p><pre style="margin:12px 0 16px;padding:0;background:#F1F5F9;border-radius:8px;overflow:auto;border:none;outline:none;box-shadow:none;"><code style="display:block;padding:14px 16px;background:#F1F5F9;color:#0F172A;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;border:none;">sudo apt-get update &amp;&amp; sudo apt-get install -y python3 python3-venv poppler-utils fonts-wqy-zenhei
 command -v python3
 python3 --version
@@ -671,24 +671,20 @@ function fb(t,b){
 }
 function stripBgProps(root){
   function wipe(el){
-    if(!el) return;
+    if(!el || !el.getAttribute) return;
     var tag=(el.tagName||"").toLowerCase();
-    if(tag==="pre"||tag==="code") return;
-    if(el.style){
-      el.style.removeProperty("background");
-      el.style.removeProperty("background-color");
-      el.style.removeProperty("background-image");
-    }
-    if(!el.getAttribute) return;
+    var keepBg = (tag==="pre"||tag==="code");
     var st=el.getAttribute("style");
-    if(!st||!/background/i.test(st)) return;
+    if(!st) return;
     var kept=[];
     var parts=st.split(";");
     for(var i=0;i<parts.length;i++){
       var p=parts[i].trim();
       if(!p) continue;
       var k=p.split(":")[0].trim().toLowerCase();
-      if(k==="background"||k==="background-color"||k==="background-image") continue;
+      if(!k) continue;
+      if(!keepBg && (k==="background" || k.indexOf("background-")===0)) continue;
+      if(k==="border-radius" || k==="box-shadow" || k==="outline") continue;
       kept.push(p);
     }
     if(kept.length) el.setAttribute("style", kept.join(";")+";");
@@ -703,17 +699,32 @@ function cpBody(b){
   if(!src) return;
   applyHStyle();
   applyHrStyle();
-  var html=src.innerHTML;
   var host=document.createElement("div");
-  host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;";
-  host.innerHTML=html;
+  host.innerHTML=src.innerHTML;
   stripBgProps(host);
-  document.body.appendChild(host);
-  var r=document.createRange(); r.selectNodeContents(host);
+  var html=host.innerHTML;
+  var text=host.innerText || host.textContent || "";
+  function onCopy(e){
+    if(!e.clipboardData) return;
+    e.clipboardData.setData("text/html", html);
+    e.clipboardData.setData("text/plain", text);
+    e.preventDefault();
+  }
+  document.addEventListener("copy", onCopy);
+  var tmp=document.createElement("div");
+  tmp.setAttribute("contenteditable","true");
+  tmp.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;";
+  tmp.textContent=".";
+  document.body.appendChild(tmp);
+  var r=document.createRange(); r.selectNodeContents(tmp);
   var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-  try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
+  var okCmd=false;
+  try{ okCmd=document.execCommand("copy"); }catch(e){ okCmd=false; }
   s.removeAllRanges();
-  host.remove();
+  tmp.remove();
+  document.removeEventListener("copy", onCopy);
+  if(okCmd) ok(b);
+  else alert("复制失败，请长按正文手动复制");
 }
 applyHStyle();
 applyHrStyle();

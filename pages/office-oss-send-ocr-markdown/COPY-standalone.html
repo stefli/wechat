@@ -423,7 +423,7 @@
         <div class="article-stage">
           <div class="article-scroll">
             <div id="body">
-<section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;background:#FFFFFF;text-align:left">
+<section style="margin:0;padding:0;font-size:15px;line-height:1.75;color:#334155;text-align:left">
 <p data-mp-account-slot="1" style="margin:8px 0 20px;padding:0;font-size:13px;line-height:1.7;color:#94A3B8;text-align:center;">【公众号账号】</p>
 <p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">周五晚上对报价单，是我这类人很熟的场面。页面底下的合计金额，眼睛一看就知道在哪，鼠标拖过去，却选不中一个字。这种扫描件本质上是一张图，不是一份真正带文字的文档。很多人只好对着屏幕手抄，再填进表格里。</p>
 <p style="margin:0 0 14px;padding:0;font-size:15px;line-height:1.75;color:#334155;letter-spacing:0.02em;text-align:left">我想解决的不是再找一个「全能办公助手」，而是把材料变成电脑上能搜索、能复制的字。扫描件和已经是 Word、Excel 的电子稿，不是同一条路：扫描件要先补文字；电子稿才适合转成文本，方便稍后贴给模型。</p>
@@ -712,21 +712,62 @@ function fb(t,b){
   try{document.execCommand("copy"); ok(b)}catch(e){alert("请长按手动复制")}
   a.remove();
 }
+function stripBgProps(root){
+  function wipe(el){
+    if(!el || !el.getAttribute) return;
+    var tag=(el.tagName||"").toLowerCase();
+    var keepBg = (tag==="pre"||tag==="code");
+    var st=el.getAttribute("style");
+    if(!st) return;
+    var kept=[];
+    var parts=st.split(";");
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i].trim();
+      if(!p) continue;
+      var k=p.split(":")[0].trim().toLowerCase();
+      if(!k) continue;
+      if(!keepBg && (k==="background" || k.indexOf("background-")===0)) continue;
+      if(k==="border-radius" || k==="box-shadow" || k==="outline") continue;
+      kept.push(p);
+    }
+    if(kept.length) el.setAttribute("style", kept.join(";")+";");
+    else el.removeAttribute("style");
+  }
+  wipe(root);
+  var all=root.querySelectorAll("*");
+  for(var i=0;i<all.length;i++) wipe(all[i]);
+}
 function cpBody(b){
   var src=document.getElementById("body");
   if(!src) return;
   applyHStyle();
   applyHrStyle();
-  var html=src.innerHTML;
   var host=document.createElement("div");
-  host.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;";
-  host.innerHTML=html;
-  document.body.appendChild(host);
-  var r=document.createRange(); r.selectNodeContents(host);
+  host.innerHTML=src.innerHTML;
+  stripBgProps(host);
+  var html=host.innerHTML;
+  var text=host.innerText || host.textContent || "";
+  function onCopy(e){
+    if(!e.clipboardData) return;
+    e.clipboardData.setData("text/html", html);
+    e.clipboardData.setData("text/plain", text);
+    e.preventDefault();
+  }
+  document.addEventListener("copy", onCopy);
+  var tmp=document.createElement("div");
+  tmp.setAttribute("contenteditable","true");
+  tmp.style.cssText="position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;overflow:hidden;";
+  tmp.textContent=".";
+  document.body.appendChild(tmp);
+  var r=document.createRange(); r.selectNodeContents(tmp);
   var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-  try{document.execCommand("copy"); ok(b)}catch(e){alert("复制失败，请长按正文手动复制")}
+  var okCmd=false;
+  try{ okCmd=document.execCommand("copy"); }catch(e){ okCmd=false; }
   s.removeAllRanges();
-  host.remove();
+  tmp.remove();
+  document.removeEventListener("copy", onCopy);
+  if(okCmd) ok(b);
+  else alert("复制失败，请长按正文手动复制");
 }
 applyHStyle();
 applyHrStyle();
