@@ -8,6 +8,14 @@
       },
       "revision": 2,
       "operationId": "B-1795330005388-2"
+    },
+    "[\"tvp\",\"concurrent-a\",\"douyin\"]": {
+      "value": {
+        "s": "published",
+        "at": "2026-11-20"
+      },
+      "revision": 1,
+      "operationId": "A-1795330009721-3"
     }
   }
 }
