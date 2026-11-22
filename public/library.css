@@ -174,16 +174,3 @@ html[data-lib="tvp"] .lib-dirty {
     margin-top: -0.35rem;
   }
 }
-
-/* GitHub status settings: no third-party resources. */
-.lib-sync-state{padding:10px 12px;border-left:4px solid #3669b7;background:#edf4ff;color:#18354e;font-size:14px;line-height:1.65;overflow-wrap:anywhere}
-.lib-sync-state[data-phase="offline"],.lib-sync-state[data-phase="auth-required"],.lib-sync-state[data-phase="conflict"]{background:#fff2dc;border-color:#b86d12}
-.lib-settings{margin:12px 0;padding:12px;border:1px solid #bccbd8;border-radius:10px;background:#fafcfe;color:#172e42;font-size:14px;line-height:1.7;text-align:left}
-.lib-settings summary{cursor:pointer;font-weight:700}.lib-settings p{margin:9px 0!important;font-size:14px!important;line-height:1.7!important;color:#284257!important;max-width:none!important}
-.lib-settings .lib-pat-form{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}.lib-settings label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.lib-settings input[type="password"]{min-width:190px;max-width:100%;padding:9px;border:1px solid #9fb1c4;border-radius:6px;background:white;color:#132c40}
-.lib-settings button,.lib-conflicts button{padding:7px 10px;border:1px solid #9fb1c4;border-radius:6px;background:white;color:#153c60;cursor:pointer;margin:3px}
-.lib-settings a{display:inline-block;margin:3px 10px 3px 0;color:#17579a}.lib-settings input[type="checkbox"]{width:18px;height:18px}.lib-remember{font-size:13px}
-.lib-conflicts{padding:12px;border:2px solid #c87a13;border-radius:9px;background:#fff4db;color:#39240c;text-align:left}.lib-conflict{padding:10px 0;border-bottom:1px solid #d9bb83;font-size:14px;overflow-wrap:anywhere}.lib-conflict span{display:block}
-.pub-date{max-width:119px;padding:3px 2px;border:1px solid #b9c8d5;border-radius:5px;background:#fff;color:#243f54;font-size:11px}.lib-toolbar button:disabled,.lib-settings button:disabled,.pub-chip:disabled{opacity:.55;cursor:wait}
-@media(max-width:600px){.lib-settings input[type="password"]{width:100%;min-width:0}.lib-settings .lib-pat-form>label:first-child{width:100%}.lib-settings{padding:10px}.pub-date{max-width:106px}.lib-sync-state{font-size:13px}}
