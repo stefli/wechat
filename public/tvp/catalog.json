@@ -1,7 +1,41 @@
 {
-  "updated": "2026-11-27T16:15:59+08:00",
+  "updated": "2026-11-28T00:54:30+08:00",
   "base": "https://stefli.github.io/wechat/tvp/",
   "topics": [
+    {
+      "slug": "minimax-h3-family",
+      "title": "MiniMax H3 家族：广告改完不用再干等",
+      "date": "2026-11-28",
+      "cover_a": "minimax-h3-family/cover_A.jpg",
+      "cover_b": "minimax-h3-family/cover_B.jpg",
+      "publish": "minimax-h3-family/PUBLISH.md",
+      "copy_page": "minimax-h3-family/",
+      "note": "H3于2026年7月31日发布、8月3日开源；家族速度档中文博客11月24日、英文博客11月26日 · 官方广告片开场 · 云阳旁白 · 真2K · B主推",
+      "updated": "2026-11-28",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-minimax-h3-family/minimax_h3_family_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-minimax-h3-family",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 32124817,
+      "video_sha256": "98975e9bcfebd51f654aa6661e69774f66b030ba56fa9a33ab94dae2be1c4f8c",
+      "video_duration": 48.302
+    },
+    {
+      "slug": "sensenova-u1-6",
+      "title": "商汤 SenseNova U1.6：先出稿，再改掉错字",
+      "date": "2026-11-28",
+      "cover_a": "sensenova-u1-6/cover_A.jpg",
+      "cover_b": "sensenova-u1-6/cover_B.jpg",
+      "publish": "sensenova-u1-6/PUBLISH.md",
+      "copy_page": "sensenova-u1-6/",
+      "note": "官方2026年11月24日发布并开源 · 官方错字海报开场 · 云阳旁白 · 真2K · B主推",
+      "updated": "2026-11-28",
+      "video_2k": "https://github.com/stefli/wechat/releases/download/tvp-sensenova-u1-6/sensenova_u16_2k.mp4",
+      "release": "https://github.com/stefli/wechat/releases/tag/tvp-sensenova-u1-6",
+      "voice": "云阳旁白（edge-tts 云阳）",
+      "video_bytes": 14456070,
+      "video_sha256": "9233351f9a48855cdd2e4bca1f0a5dd6eae42b86cd7991bf1e4a216cd5a20708",
+      "video_duration": 48.782
+    },
     {
       "slug": "ai2-robotrack",
       "title": "Ai2 RoboTrack：一次示范，对准试管移液",
